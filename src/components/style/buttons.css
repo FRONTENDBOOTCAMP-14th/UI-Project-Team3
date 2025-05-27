@@ -12,10 +12,10 @@ div {
   padding-inline: 0.3125rem;
   background-color: var(--white);
   color: var(--black);
-  border-radius: 30px;
+  border-radius: 1.875rem;
   font-size: var(--text-base);
   font-weight: var(--font-semibold);
-  border: 1px solid var(--light-gray);
+  border: 0.0625rem solid var(--light-gray);
 
   &:hover {
     cursor: pointer;
@@ -34,7 +34,7 @@ div {
 
   &.full {
     inline-size: 100%;
-    height: 4rem;
+    block-size: 4rem;
   }
 
   &.small {
@@ -48,6 +48,6 @@ div {
   }
 
   &:focus-visible {
-    outline: 3px solid var(--blue);
+    outline: 0.1875rem solid var(--blue);
   }
 }
