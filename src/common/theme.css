@@ -1,0 +1,25 @@
+:root {
+  --black: #111;
+  --white: #fff;
+  --red: #b40000;
+  --gray: #9e9ea0;
+  --dark-gray: #707072;
+  --light-gray: #cacacb;
+  --green: #007d48;
+
+  --text-2xs: 0.75rem; /* 12px */
+  --text-xs: 0.8125rem; /* 13px */
+  --text-sm: 0.9375rem; /* 15px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.0625rem; /* 17px */
+  --text-xl: 1.125rem; /* 18px */
+  --text-2xl: 1.1875rem; /* 19px */
+  --text-3xl: 1.375rem; /* 22px */
+  --text-4xl: 1.5rem; /* 24px */
+  --text-5xl: 2.25rem; /* 36px */
+
+  --font-light: 300;
+  --font-normal: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+}
