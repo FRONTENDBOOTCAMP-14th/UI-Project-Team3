@@ -12,10 +12,23 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../common/index.css" />
     <link rel="stylesheet" href="./style/main.css" />
+    <!-- header와 footer 불러오기 -->
+    <script type="module">
+      const loadHTML = (selector, url) => {
+        fetch(url)
+          .then((res) => res.text())
+          .then((html) => {
+            document.querySelector(selector).innerHTML = html;
+          });
+      };
+
+      loadHTML('#footer', './footer.html');
+    </script>
   </head>
   <body>
     <a href="../../index.html">메인 페이지 이동</a>
     <br />
     <h1></h1>
+    <footer id="footer"></footer>
   </body>
 </html>
