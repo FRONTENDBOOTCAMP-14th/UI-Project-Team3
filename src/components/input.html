@@ -1,49 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>input요소 재황용가능하게</title>
     <link rel="shortcut icon" href="../../public/favicon/likelion.ico" type="image/x-icon" />
-<link rel="icon" href="../../public/favicon/likelion.svg" type="image/svg" />
-<link rel="preload" as="font" href="../../public/font/suit/SUIT-Variable.woff2" />
-<link rel="stylesheet" href="../../public/font/suit/SUIT-Variable.css" />
-<link rel="stylesheet" href="../../common/index.css" />
-<link rel="stylesheet" href="./styles/input.css" />
+    <link rel="icon" href="../../public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="../../public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="../../public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="../../common/index.css" />
+    <link rel="stylesheet" href="./styles/input.css" />
+  </head>
   <body>
     <a href="/index.html">메인 페이지 이동</a>
     <br />
     <h1>input요소</h1>
     <!-- Input Component -->
-<div class="input-group">
-  <label for="input-id" class="input-label sr-only">레이블 텍스트</label>
+    <div class="input-group">
+      <label for="input-id" class="input-label sr-only">레이블 텍스트</label>
 
-  <div class="input-wrapper has-icon">
-    <input
-      type="text"
-      id="input-id"
-      name="input-name"
-      class="input-field"
-      placeholder="placeholder 텍스트"
-      aria-label="접근성 텍스트"
-    />
-    <!-- 아이콘 영역: 필요할 경우만 보여줌 -->
-    <span class="input-icon" aria-hidden="true"></span>
-  </div>
-</div>
-<!-- 비밀번호 -->
-<div class="input-group">
-  <label for="password" class="input-label sr-only">비밀번호</label>
-  <div class="input-wrapper has-icon">
-    <input
-      type="password"
-      id="password"
-      name="password"
-      class="input-field"
-      placeholder="비밀번호"
-      aria-label="비밀번호"
-    />
-  </div>
-</div>
-</body>
+      <div class="input-wrapper has-icon">
+        <input type="text" id="input-id" name="input-name" class="input-field" placeholder="placeholder 텍스트" aria-label="접근성 텍스트" />
+        <!-- 아이콘 영역: 필요할 경우만 사용 -->
+        <span class="input-icon" aria-hidden="true"></span>
+      </div>
+    </div>
+    <!-- 비밀번호 -->
+    <div class="input-group">
+      <label for="password" class="input-label sr-only">비밀번호</label>
+      <div class="input-wrapper has-icon">
+        <input type="password" id="password" name="password" class="input-field" placeholder="비밀번호" aria-label="비밀번호" />
+      </div>
+    </div>
+  </body>
 </html>
