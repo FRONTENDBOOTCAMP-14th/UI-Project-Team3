@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header Components</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../common/index.css" />
+    <link rel="stylesheet" href="./style/header.css" />
+    <script type="module" src="./js/header.js"></script>
+  </head>
+  <body>
+    <!-- 데스크탑 헤더 -->
+    <div class="main-header">
+      <ul>
+        <li><a href="/">매장 찾기</a></li>
+        <li><a href="/">고객센터</a></li>
+        <li><a href="/">가입하기</a></li>
+        <li><a href="/">로그인</a></li>
+      </ul>
+    </div>
+
+    <!-- 네브바 -->
+    <div>
+      <!-- 상단 메뉴 -->
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a href="/" aria-label="나이키 홈으로">
+            <img src="../assets/images/nikelogo.svg" alt="나이키 로고" />
+          </a>
+        </div>
+        <div class="nav-menu-icons">
+          <ul class="icons-list">
+            <li class="icon">
+              <button type="button">
+                <img src="../assets/images/search.svg" alt="" />
+              </button>
+            </li>
+            <li class="icon">
+              <a href="/">
+                <img src="../assets/images/login.svg" alt="" />
+              </a>
+            </li>
+            <li class="icon">
+              <a href="/">
+                <img src="../assets/images/basket.svg" alt="" />
+              </a>
+            </li>
+            <li class="icon menu-open">
+              <img src="../assets/images/menu.svg" alt="" />
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- 사이드 메뉴 -->
+      <aside class="aside-menu">
+        <div class="div-button">
+          <button type="button" class="close-button" id="menu-close" aria-label="사이드 메뉴 닫기">✕</button>
+        </div>
+        <nav class="aside-menu-nav">
+          <div class="button-group">
+            <a class="button fill small" href="/">가입하기</a>
+            <a class="button small" href="/">로그인</a>
+          </div>
+          <ul class="aside-menu-lists">
+            <li class="menu-list">
+              <span>New & Featured</span>
+              <span><img src="../assets/images/arrow-right.svg" alt="" /></span>
+            </li>
+            <li class="menu-list">
+              <span>Men</span>
+              <span><img src="../assets/images/arrow-right.svg" alt="" /></span>
+            </li>
+            <li class="menu-list">
+              <span>Women</span>
+              <span><img src="../assets/images/arrow-right.svg" alt="" /></span>
+            </li>
+            <li class="menu-list">
+              <span>Kids</span>
+              <span>
+                <img src="../assets/images/arrow-right.svg" alt="" />
+              </span>
+            </li>
+            <li class="menu-list">
+              <span>Sale</span>
+              <span><img src="../assets/images/arrow-right.svg" alt="" /></span>
+            </li>
+          </ul>
+          <ul class="customer-service">
+            <li class="service-list">
+              <a href="/">
+                <span><img src="../assets/images/questionmark.svg" alt="" /></span>
+                <span>고객센터</span>
+              </a>
+            </li>
+            <li class="service-list">
+              <a href="/">
+                <span><img src="../assets/images/basket.svg" alt="" /></span>
+                <span>장바구니</span>
+              </a>
+            </li>
+            <li class="service-list">
+              <a href="/">
+                <span><img src="../assets/images/boxicon.svg" alt="" /></span>
+                <span>주문</span>
+              </a>
+            </li>
+            <li class="service-list">
+              <a href="/">
+                <span><img src="../assets/images/storeicon.svg" alt="" /></span>
+                <span>매장 찾기</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="overlay" aria-hidden="true"></div>
+    </div>
+  </body>
+</html>

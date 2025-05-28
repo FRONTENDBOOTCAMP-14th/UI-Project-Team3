@@ -1,11 +1,3 @@
-body {
-  margin: 50px;
-}
-
-div {
-  margin-block: 20px;
-}
-
 .button {
   inline-size: auto;
   padding-block: 1.125rem;
