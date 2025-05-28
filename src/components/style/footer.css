@@ -20,11 +20,11 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   align-items: center;
-  padding-inline: 1.5rem;
+  margin-inline: 1.5rem;
   font-size: 0.875rem;
 
   @media (width >= 40rem) {
-    padding-inline: 3rem;
+    margin-inline: 3rem;
     max-inline-size: 120rem;
   }
 }
@@ -63,12 +63,29 @@
       padding-block-start: 3.8125rem;
     }
 
-    > a {
+    > .btn-arrow {
+      position: relative;
+      inline-size: 100%;
+      padding-inline-end: 28px;
       padding-block: 1.25rem;
-      background-image: url('/src/assets/images/arrow-down.svg');
-      background-repeat: no-repeat;
-      background-position: center right;
-      background-size: 1.5rem;
+      text-align: left;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url('/src/assets/images/arrow-down.svg');
+        background-size: cover;
+        transition: transform 0.3s ease;
+      }
+
+      &[aria-expanded='true']::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
     }
   }
 }
