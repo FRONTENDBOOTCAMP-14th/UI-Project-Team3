@@ -1,1 +1,2 @@
-import "./style.css"
+import './style.css';
+import './components/js/header.js';
