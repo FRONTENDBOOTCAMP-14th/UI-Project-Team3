@@ -1,16 +1,23 @@
 'use strict';
 
-const openBtn = document.querySelector('.menu-open');
-const sideMenu = document.querySelector('.aside-menu');
-const overlay = document.querySelector('.overlay');
-const closeBtn = document.querySelector('.close-button');
+export function headerFunction() {
+  const openBtn = document.querySelector('.menu-open');
+  const sideMenu = document.querySelector('.aside-menu');
+  const overlay = document.querySelector('.overlay');
+  const closeBtn = document.querySelector('.close-button');
 
-openBtn.addEventListener('click', () => {
-  sideMenu.classList.add('active');
-  overlay.classList.add('active');
-});
+  if (!openBtn || !sideMenu || !overlay || !closeBtn) return;
 
-closeBtn.addEventListener('click', () => {
-  sideMenu.classList.remove('active');
-  overlay.classList.remove('active');
-});
+  openBtn.addEventListener('click', () => {
+    sideMenu.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  const colseMenu = () => {
+    sideMenu.classList.remove('active');
+    overlay.classList.remove('active');
+  };
+
+  closeBtn.addEventListener('click', colseMenu);
+  overlay.addEventListener('click', colseMenu);
+}

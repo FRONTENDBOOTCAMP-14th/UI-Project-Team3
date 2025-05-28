@@ -202,6 +202,11 @@
 }
 
 /* 오버레이 */
+.overlay {
+  pointer-events: none;
+  opacity: 0;
+}
+
 .overlay.active {
   position: fixed;
   top: 0;
@@ -210,6 +215,6 @@
   height: 100vh;
   background-color: var(--dark-gray);
   z-index: 900;
-  pointer-events: none;
+  pointer-events: auto;
   opacity: 0.6;
 }
