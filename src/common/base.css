@@ -5,3 +5,7 @@ body {
   line-height: 1.75;
   color: var(--black);
 }
+
+a {
+  text-decoration: none;
+}
