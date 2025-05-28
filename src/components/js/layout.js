@@ -10,4 +10,4 @@ const loadHTML = async (selector, url, callback) => {
 };
 
 loadHTML('#header', '../components/header.html', headerFunction);
-loadHTML('#footer', './footer.html');
+loadHTML('#footer', '../components/footer.html');
