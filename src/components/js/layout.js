@@ -1,4 +1,5 @@
 import { headerFunction } from './header.js';
+import { footerFunction } from './footer.js';
 
 const loadHTML = async (selector, url, callback) => {
   await fetch(url)
@@ -10,4 +11,4 @@ const loadHTML = async (selector, url, callback) => {
 };
 
 loadHTML('#header', '../components/header.html', headerFunction);
-loadHTML('#footer', './footer.html');
+loadHTML('#footer', '../components/footer.html', footerFunction);

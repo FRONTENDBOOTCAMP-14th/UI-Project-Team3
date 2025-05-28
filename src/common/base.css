@@ -15,6 +15,13 @@ address {
   font-style: normal;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
 /* mobile일 경우만 보이는 속성 */
 .mo-block {
   display: block;
