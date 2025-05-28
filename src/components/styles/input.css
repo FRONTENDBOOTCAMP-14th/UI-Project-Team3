@@ -1,0 +1,57 @@
+@import '../../common/theme.css';
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* label은 기본 스타일 */
+.input-label {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--black, #111);
+}
+
+/* input-wrapper: 아이콘 유무 상관없이 정렬 유지 */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* 기본 input 스타일 */
+.input-field {
+  width: 100%;
+  padding: 0.5rem 0.75rem; /* top-bottom: 8px, left-right: 12px */
+  font-size: var(--text-base, 1rem);
+  color: var(--black, #111);
+  background-color: var(--white, #fff);
+  border: 1px solid var(--light-gray, #cacacb);
+  border-radius: 0.5rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+/* focus 효과 */
+.input-field:focus {
+  outline: none;
+  border-color: var(--green, #007d48);
+  box-shadow: 0 0 0 2px rgba(0, 125, 72, 0.2);
+}
+
+/* icon이 있을 때 오른쪽 padding 추가 */
+.input-wrapper.has-icon .input-field {
+  padding-right: 2.5rem; /* 아이콘 영역 확보 */
+}
+
+/* 아이콘 영역 (span or button 가능) */
+.input-icon {
+  position: absolute;
+  right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  pointer-events: none; /* 클릭 안 되게 */
+}
