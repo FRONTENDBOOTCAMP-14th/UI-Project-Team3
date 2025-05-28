@@ -2,3 +2,16 @@
 body{
   margin: 50px;
 }
+
+.item-card{
+  background: crimson;
+  inline-size: 25.1151515rem;
+  block-size: 25.1151515rem;
+}
+
+.product-info{
+  inline-size: 7.8125rem;
+  block-size: 3rem;
+  border: 1px solid blue;
+}
+
