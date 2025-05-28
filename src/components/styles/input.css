@@ -1,9 +1,10 @@
 @import '../../common/theme.css';
+
 .input-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 100%;
+  inline-size: 100%;
 }
 
 /* label은 기본 스타일 */
@@ -17,13 +18,14 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
+  inline-size: 100%;
 }
 
 /* 기본 input 스타일 */
 .input-field {
-  width: 100%;
-  padding: 0.5rem 0.75rem; /* top-bottom: 8px, left-right: 12px */
+  inline-size: 100%;
+  padding-block: 0.5rem; /* top-bottom: 8px */
+  padding-inline: 0.75rem; /* left-right: 12px */
   font-size: var(--text-base, 1rem);
   color: var(--black, #111);
   background-color: var(--white, #fff);
@@ -41,17 +43,17 @@
 
 /* icon이 있을 때 오른쪽 padding 추가 */
 .input-wrapper.has-icon .input-field {
-  padding-right: 2.5rem; /* 아이콘 영역 확보 */
+  padding-inline-end: 2.5rem; /* 오른쪽만 여백 추가 */
 }
 
 /* 아이콘 영역 (span or button 가능) */
 .input-icon {
   position: absolute;
-  right: 0.75rem;
+  inset-inline-end: 0.75rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
   pointer-events: none; /* 클릭 안 되게 */
 }
