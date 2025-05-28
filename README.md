@@ -38,6 +38,17 @@
 
 5. 중첩 태그 사용시 최대 3단계 이상은 사용하지 않는다.
 6. 사용단위는 rem을 권장한다.
+7. 논리속성 사용한다.
+
+```
+header {
+  inline-size:100%; (O)
+  width:100% (X)
+
+  padding-inline-start: 1rem; (O)
+  padding-left: 1rem; (X)
+}
+```
 
 ### CSS 네이밍 규칙
 

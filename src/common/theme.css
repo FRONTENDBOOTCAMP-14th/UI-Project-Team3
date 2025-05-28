@@ -22,4 +22,9 @@
   --font-normal: 400;
   --font-semibold: 600;
   --font-bold: 700;
+
+  /* BreakPoint */
+  --breakpoint-sm: 40rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
 }
