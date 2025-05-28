@@ -12,27 +12,7 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../common/index.css" />
     <link rel="stylesheet" href="./style/main.css" />
-<<<<<<< HEAD
-
-    <!-- header와 footer 불러오기 -->
-    <script type="module">
-      import { headerFunction } from '../components/js/header.js';
-
-      const loadHTML = async (selector, url, callback) => {
-        await fetch(url)
-          .then((res) => res.text())
-          .then((html) => {
-            document.querySelector(selector).innerHTML = html;
-            if (callback) callback();
-          });
-      };
-
-      loadHTML('#header', '../components/header.html', headerFunction);
-      loadHTML('#footer', '../components/footer.html');
-    </script>
-=======
     <script type="module" src="../components/js/layout.js"></script>
->>>>>>> develop
   </head>
   <body>
     <header id="header"></header>
