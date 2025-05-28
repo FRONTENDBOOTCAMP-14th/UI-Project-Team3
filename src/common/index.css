@@ -2,3 +2,4 @@
 @import './a11y.css';
 @import './reset.css';
 @import './base.css';
+@import '../components/style/buttons.css';
