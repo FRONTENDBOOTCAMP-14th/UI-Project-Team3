@@ -20,6 +20,14 @@ export function headerFunction() {
     }
   });
 
+  document.addEventListener('keydown', (e) => {
+    console.log(e.key);
+    if (e.key === 'Escape') {
+      sideMenu.classList.remove('active');
+      overlay.classList.remove('active');
+    }
+  });
+
   const colseMenu = () => {
     sideMenu.classList.remove('active');
     overlay.classList.remove('active');
