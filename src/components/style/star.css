@@ -1,0 +1,15 @@
+/* 평점 컴포넌트 */
+.star-rating {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .star {
+    inline-size: 1rem;
+    block-size: 1rem;
+    background-image: url('../../assets/images/star.svg');
+
+    &.fill {
+      background-image: url('../../assets/images/star-fill.svg');
+    }
+  }
+}
