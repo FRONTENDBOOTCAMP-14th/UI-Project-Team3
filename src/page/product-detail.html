@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="나이키 프로젝트 실습용 상품 상세 페이지입니다." />
+    <meta name="author" content="UI Project Team3" />
+    <title>나이키 상품 상세 페이지</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../common/index.css" />
+    <link rel="stylesheet" href=".//style/product-detail.css" />
+    <script type="module" src="../components/js/layout.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <nav id="navbar"></nav>
+    <main>
+      <h1 class="sr-only">나이키 상품 상세</h1>
+      <div class="product-detail-wrapper">
+        <div class="product-detail-thumbnail-box">
+          <div class="image-carousel">
+            <ul>
+              <li>
+                <figure>
+                  <button type="button">
+                    <picture>
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                    </picture>
+                  </button>
+                  <figcaption class="sr-only">왼쪽 옆면</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <button type="button">
+                    <picture>
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                    </picture>
+                  </button>
+                  <figcaption class="sr-only">밑면</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <button type="button">
+                    <picture>
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                    </picture>
+                  </button>
+                  <figcaption class="sr-only">오른쪽 옆면</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <button type="button">
+                    <picture>
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                    </picture>
+                  </button>
+                  <figcaption class="sr-only">윗면</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <button type="button">
+                    <picture>
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                    </picture>
+                  </button>
+                  <figcaption class="sr-only">사선 앞모습</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <button type="button">
+                    <picture>
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                    </picture>
+                  </button>
+                  <figcaption class="sr-only">사선 뒷모습</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <button type="button">
+                    <picture>
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                    </picture>
+                  </button>
+                  <figcaption class="sr-only">초근접 윗면</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <button type="button">
+                    <picture>
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                    </picture>
+                  </button>
+                  <figcaption class="sr-only">초근접 오른쪽 밑면</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+          <div class="big-thumbnail-box">
+            <figure>
+              <picture>
+                <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+              </picture>
+              <figcaption class="sr-only">오른쪽 옆면</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="product-detail-info-box">
+          <div class="product-detail-title">
+            <p class="">친환경 소재</p>
+            <h2 class="product-name">나이키 잼</h2>
+            <p class="product-kinds">여성 신발</p>
+            <p class="product-price">139,000 원</p>
+          </div>
+          <div class="product-detail-info">
+            <div class="product-type-box">
+              <ul>
+                <li>
+                  <figure>
+                    <a href="/">
+                      <picture>
+                        <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
+                        <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
+                        <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                      </picture>
+                    </a>
+                    <figcaption class="sr-only">왼쪽 옆면</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <a href="/"> </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+/* 상품 상세 */
+.product-detail-wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
+  margin-inline: 1.5rem;
+  font-size: 0.875rem;
+}
