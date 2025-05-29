@@ -27,8 +27,25 @@
     <!-- 글자 크기 만큼 사용하고 싶을때 Class명에 small -->
     <!-- 네모난 버튼 사용하고 싶을때 Class명에 square -->
 
-    <!-- 아이콘 있는 버튼 -->
-    <button type="button" class="button icon-right full">아이콘버튼<span class="icon-heart"></span></button>
+    <!-- 아이콘이 오른쪽에 있는 버튼 : Class명에 icon-right, 자식요소에 background 이미지 추가-->
+    <button type="button" class="button icon-right full">오른쪽아이콘버튼<span class="icon-heart"></span></button>
     <br />
+    <!-- 아이콘이 왼쪽에 있는 버튼 : Class명에 icon-right, 자식요소에 background 이미지 추가-->
+    <button type="button" class="button icon-left full"><span class="icon-star"></span>왼쪽아이콘버튼</button>
+    <br />
+    <!-- 사각형 둥근 모서리 버튼(모서리 크기 : 4px, Class명에 radius-size-4) -->
+    <button class="button small square radius-size-4" type="button">사각형둥근모서리버튼</button>
+    <br />
+    <br />
+    <!-- text link -->
+    <a href="/" class="text-link-button" target="_self">상품 상세 정보 보기 </a>
+    <br />
+    <br />
+    <!-- 둥근 버튼, Class명에 circle, 기본값 배경색 흰색(gray 색상 ), 이미지에 맞춰서 클래스 추가(arrow-right 클래스는 샘플로 넣으거라 삭제요청), 대체텍스트도 이미지 용도에 맞춰서 적어주세요 -->
+    <button type="button" class="button circle arrow-left"><span class="sr-only">이전 버튼</span></button>
+    <button type="button" class="button circle arrow-right"><span class="sr-only">다음 버튼</span></button>
+
+    <button type="button" class="button circle gray arrow-left"><span class="sr-only">이전 버튼</span></button>
+    <button type="button" class="button circle gray arrow-right"><span class="sr-only">다음 버튼</span></button>
   </body>
 </html>

@@ -7,10 +7,10 @@
   .star {
     inline-size: 1rem;
     block-size: 1rem;
-    background-image: url('../../assets/images/star.svg');
+    background-image: url('../../assets/images/icon-star.svg');
 
     &.fill {
-      background-image: url('../../assets/images/star-fill.svg');
+      background-image: url('../../assets/images/icon-star-fill.svg');
     }
   }
 }
