@@ -46,36 +46,10 @@
       max-inline-size: 28.6875rem;
       padding-block-start: 3.8125rem;
     }
-
-    > .btn-arrow {
-      position: relative;
-      inline-size: 100%;
-      padding-inline-end: 28px;
-      padding-block: 1.25rem;
-      text-align: left;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        width: 1.5rem;
-        height: 1.5rem;
-        background-image: url('/src/assets/images/arrow-down.svg');
-        background-size: cover;
-        transition: transform 0.3s ease;
-      }
-
-      &[aria-expanded='true']::after {
-        transform: translateY(-50%) rotate(180deg);
-      }
-    }
   }
 }
 
-.footer-sub-menu {
-  display: none;
+.footer-sub-menu.detail-accrodion {
   padding-block-end: 0.625rem;
 
   @media (width >= 40rem) {

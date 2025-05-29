@@ -1,0 +1,29 @@
+/* 아코디언 컴포넌트 */
+.btn-arrow {
+  position: relative;
+  inline-size: 100%;
+  padding-inline-end: 28px;
+  padding-block: 1.25rem;
+  text-align: left;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url('../../assets/images/arrow-down.svg');
+    background-size: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &[aria-expanded='true']::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.detail-accrodion {
+  display: none;
+}
