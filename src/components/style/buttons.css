@@ -1,3 +1,17 @@
+body {
+  margin: 3.125rem;
+  background-color: #f5ebdc;
+}
+
+div {
+  margin: 1.25rem;
+}
+
+h2 {
+  margin-bottom: 0.625rem;
+  margin-left: 1.25rem;
+}
+
 .button {
   inline-size: auto;
   padding-block: 1.125rem;
@@ -41,5 +55,32 @@
 
   &:focus-visible {
     outline: 0.1875rem solid var(--blue);
+  }
+}
+
+.shopping-cart {
+  background: var(--white);
+  min-inline-size: 8.6875rem;
+  block-size: 2.5rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 1.875rem;
+  font-weight: 400;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.0938rem solid var(--light-gray);
+  }
+}
+
+.edit {
+  background: var(--white);
+  padding: 6px 16px;
+  border: 1px solid var(--light-gray);
+  border-radius: 28px;
+  font-weight: 400;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.0938rem solid var(--light-gray);
   }
 }
