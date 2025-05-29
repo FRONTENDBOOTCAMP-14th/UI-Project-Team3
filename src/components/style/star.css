@@ -2,6 +2,7 @@
 .star-rating {
   display: flex;
   flex-flow: row nowrap;
+  gap: 0.125rem;
 
   .star {
     inline-size: 1rem;
