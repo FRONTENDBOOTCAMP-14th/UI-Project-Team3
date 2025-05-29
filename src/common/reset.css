@@ -65,7 +65,7 @@ select {
 
 body,
 html {
-  height: 100%;
+  height: auto;
   scroll-behavior: smooth;
 }
 

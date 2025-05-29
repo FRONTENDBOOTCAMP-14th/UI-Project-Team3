@@ -20,6 +20,7 @@ button {
   padding: 0;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 /* mobile일 경우만 보이는 속성 */
