@@ -10,3 +10,32 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+address {
+  font-style: normal;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+/* mobile일 경우만 보이는 속성 */
+.mo-block {
+  display: block;
+
+  @media (width >= 40rem) {
+    display: none;
+  }
+}
+
+/* pc일 경우만 보이는 속성 */
+.pc-block {
+  display: none;
+
+  @media (width >= 40rem) {
+    display: block;
+  }
+}
