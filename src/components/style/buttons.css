@@ -1,26 +1,17 @@
-body {
-  margin: 3.125rem;
-  background-color: #f5ebdc;
-}
-
-div {
-  margin: 1.25rem;
-}
-
-h2 {
-  margin-bottom: 0.625rem;
-  margin-left: 1.25rem;
-}
-
 .button {
   inline-size: auto;
   padding-block: 1.125rem;
   padding-inline: 0.3125rem;
   background-color: var(--white);
+  color: var(--black);
   border-radius: 1.875rem;
+  font-size: var(--text-base);
   font-weight: var(--font-semibold);
   border: 0.0625rem solid var(--light-gray);
-  text-align: center;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     cursor: pointer;
@@ -58,7 +49,7 @@ h2 {
     border-radius: 0;
 
     /* 네모박스 모서리가 둥근 버튼 (모서리 사이즈 : 4px) */
-    &.radius-size-4 {
+    &.rouneded-size-4 {
       border-radius: 0.25rem;
     }
   }
@@ -87,6 +78,7 @@ h2 {
         block-size: 100%;
         background: url('../../assets/images/icon-heart.svg') no-repeat;
         background-size: contain;
+        background-position: center;
       }
     }
 
@@ -101,6 +93,7 @@ h2 {
         block-size: 100%;
         background: url('../../assets/images/icon-star-fill.svg') no-repeat;
         background-size: contain;
+        background-position: center;
       }
     }
   }
@@ -139,6 +132,16 @@ h2 {
       background-position: center;
     }
   }
+
+  /* text width type */
+  &.weight-normal {
+    font-weight: 400;
+
+    &:hover {
+      cursor: pointer;
+      border: 0.0938rem solid var(--light-gray);
+    }
+  }
 }
 
 /* text link */
@@ -154,32 +157,5 @@ h2 {
     width: 100%;
     height: 0.0625rem;
     background-color: currentColor;
-  }
-}
-
-.shopping-cart {
-  background: var(--white);
-  min-inline-size: 8.6875rem;
-  block-size: 2.5rem;
-  border: 0.0625rem solid var(--light-gray);
-  border-radius: 1.875rem;
-  font-weight: 400;
-
-  &:hover {
-    cursor: pointer;
-    border: 0.0938rem solid var(--light-gray);
-  }
-}
-
-.edit {
-  background: var(--white);
-  padding: 0.375rem 1rem;
-  border: 0.0625rem solid var(--light-gray);
-  border-radius: 1.75rem;
-  font-weight: 400;
-
-  &:hover {
-    cursor: pointer;
-    border: 0.0938rem solid var(--light-gray);
   }
 }
