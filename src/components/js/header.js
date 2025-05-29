@@ -13,6 +13,13 @@ export function headerFunction() {
     overlay.classList.add('active');
   });
 
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) {
+      sideMenu.classList.remove('active');
+      overlay.classList.remove('active');
+    }
+  });
+
   const colseMenu = () => {
     sideMenu.classList.remove('active');
     overlay.classList.remove('active');
