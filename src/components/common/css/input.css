@@ -1,4 +1,5 @@
 @import '../../../common/theme.css';
+@import './component-layout.css';
 
 .signup-form {
   width: 100%;
