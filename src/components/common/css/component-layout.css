@@ -1,0 +1,9 @@
+/* 컴포넌트 레이아웃 */
+.component-wrapper {
+  margin: 3.125rem;
+
+  .component-box {
+    .title {
+    }
+  }
+}

@@ -1,12 +1,4 @@
-/* 컴포넌트 레이아웃 */
-.component-wrapper {
-  margin: 3.125rem;
-
-  .component-box {
-    .title {
-    }
-  }
-}
+@import './component-layout.css';
 
 /* 아코디언 컴포넌트 */
 .btn-arrow {
