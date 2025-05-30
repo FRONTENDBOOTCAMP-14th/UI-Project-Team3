@@ -184,8 +184,8 @@
 .product-size-box {
   ul {
     display: flex;
-    flex-flow: row nowrap;
-    column-gap: 0.4375rem;
+    flex-flow: row wrap;
+    gap: 0.4375rem;
   }
 }
 
@@ -202,6 +202,16 @@
 
 /* 상품 상세 정보 아코디언 컴포넌트 */
 .product-detail-accordion-wrapper {
+  .btn-accrodion {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .rgt {
+      margin-inline-end: 0.75rem;
+    }
+  }
   .detail-accrodion {
     p {
       margin-block-end: 1.375rem;
@@ -210,5 +220,15 @@
     .dot-list li {
       margin-block-end: 1em;
     }
+  }
+}
+
+/* 추천 제품 컴포넌트 */
+.recommend-product-box {
+  h2 {
+    margin-block-end: 0.625rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
   }
 }
