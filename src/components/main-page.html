@@ -3,27 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>main-page-component</title>
-    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
-    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
-    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
-    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
-    <link rel="stylesheet" href="/src/common/index.css" />
-    <link rel="stylesheet" href="/src/css/styles" />
+    <title>main-page components</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../common/index.css" />
+    <link rel="stylesheet" href="./style/buttons.css" />
+    <link rel="stylesheet" href="./style/main-page.css" />
   </head>
   <body>
     <a href="/index.html">메인 페이지 이동</a>
     <br />
     <h1>main-page-component</h1>
+    <h2>홍보카드 컴포넌트</h2>
     <article class="promo-card">
-      <figure>
-        <img src="assets/img/promo-image-default.jpg" alt="카드 이미지" />
+      <figure class="promo-card__media">
+        <img src="../../src/assets/images/main-page/img-promo-collaboJac.svg" alt="Serena Williams wearing the Nike × Jacquemus collection" />
       </figure>
-      <section>
-        <h2 class="promo-title">아무나 오를 수 없는 승자의 자리.</h2>
-        <p class="promo-subtitle">전부를 내건 이들만이 차지하는 것.</p>
-        <a href="#" class="promo-button">자세히 보기</a>
-      </section>
+      <header class="promo-card__content">
+        <!-- <p class="promo-card__additional-explanation" hidden>신제품</p> -->
+        <p class="promo-card__additional-explanation">새로운 컬렉션</p>
+        <h1 class="promo-card__title">나이키 X 자크뮈스</h1>
+        <p class="promo-card__subtitle">세련된 실루엣과 감각적인 컬러가 조화를 이루는 나이키 X 자크뮈스 컬렉션은 스포츠웨어에 새로운 변화를 불러일으킵니다.</p>
+        <a href="#" class="promo-card__button">컬렉션 구매하기</a>
+      </header>
+    </article>
+    <br />
+    <h2>특징카드 컴포넌트</h2>
+    <article class="product-feature-card">
+      <figure class="product-feature-card__media">
+        <!-- 이미지 파일명: 형태-의미-상태 -->
+        <img src="../../src/assets/images/main-page/img-featured-metcon9-wide.png" alt="나이키 메트콘 9 트레이닝화" />
+      </figure>
+
+      <!-- figcaption 을 쓰면 접두-접미 설명이 길어질 때 제한적이기에 header 로 분리 -->
+      <header class="product-feature-card__info">
+        <h2 class="product-feature-card__name">나이키 메트콘 9</h2>
+        <a href="#" class="btn btn--primary">구매하기</a>
+      </header>
     </article>
   </body>
 </html>
