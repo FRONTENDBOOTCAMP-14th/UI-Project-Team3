@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="나이키 공식 온라인스토어, 회원가입 페이지(상업용X)" />
+    <meta name="author" content="UI Project Team3" />
+    <title>나이키 회원가입 페이지</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../common/index.css" />
+    <link rel="stylesheet" href="./style/signup.css" />
+    <script type="module" src="../components/js/signup.js"></script>
+  </head>
+  <body>
+    <a class="sr-only" href="../../index.html">메인 페이지 이동</a>
+    <h1 class="sr-only">나이키 회원가입 페이지</h1>
+
+    <!-- 첫 번째 화면: 회원가입 폼 -->
+    <main class="page-wrapper signup-screen" id="signup-screen">
+      <!-- 나이키 로고 -->
+      <svg width="76" height="60" viewBox="0 0 76 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M67.854 20L24.8132 38.2574C21.2297 39.7777 18.2152 40.5363 15.7859 40.5363C13.0525 40.5363 11.0613 39.5717 9.83849 37.6459C8.25274 35.1611 8.94589 31.1656 11.6662 26.9479C13.2814 24.4826 15.3347 22.22 17.3356 20.0556C16.8648 20.8207 12.7092 27.7358 17.2539 30.9923C18.153 31.6463 19.4314 31.9667 21.0041 31.9667C22.2662 31.9667 23.7146 31.7607 25.3069 31.3455L67.854 20Z" fill="#111111" />
+      </svg>
+
+      <p class="signup-title">이제 나이키 멤버가 되어볼까요?</p>
+
+      <form class="signup-form" id="signup-form">
+        <!-- 이름/성 -->
+        <div class="input-row">
+          <div class="input-group">
+            <label for="first-name" class="sr-only">이름</label>
+            <input type="text" id="first-name" name="first-name" class="input-field" placeholder="이름" required />
+          </div>
+          <div class="input-group">
+            <label for="last-name" class="sr-only">성</label>
+            <input type="text" id="last-name" name="last-name" class="input-field" placeholder="성" required />
+          </div>
+        </div>
+
+        <!-- 비밀번호 -->
+        <div class="input-group">
+          <label for="password" class="sr-only">비밀번호</label>
+          <input type="password" id="password" name="password" class="input-field" placeholder="비밀번호" required />
+        </div>
+        <ul class="password-hint-list" id="password-hints">
+          <li id="length-check" class="invalid">
+            <span class="icon">✕</span>
+            최소 8자
+          </li>
+          <li id="complexity-check" class="invalid">
+            <span class="icon">✕</span>
+            알파벳 대문자 및 소문자 조합, 최소 1개 이상의 숫자
+          </li>
+        </ul>
+
+        <!-- 생년월일 -->
+        <div class="input-group">
+          <label for="birth" class="sr-only">생년월일</label>
+          <div class="input-wrapper has-icon">
+            <input type="text" id="birth" name="birth" class="input-field" placeholder="YYYYMMDD" pattern="\d{8}" inputmode="numeric" maxlength="8" title="생년월일 8자리 숫자 (예: 20001231)" aria-label="생년월일" required />
+            <span class="input-icon" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <!-- 기본 약관 동의 -->
+        <label class="checkbox-label">
+          <input type="checkbox" id="basic-terms" required />
+          나이키의 <a href="#" class="link">개인정보 처리방침</a> 및 <a href="#" class="link">이용약관</a>에 동의합니다.
+        </label>
+
+        <!-- 계정 만들기 버튼 -->
+        <button type="submit" class="button fill" id="create-account-btn">계정 만들기</button>
+      </form>
+    </main>
+
+    <!-- 두 번째 화면: 약관 동의 -->
+    <main class="page-wrapper terms-screen" id="terms-screen">
+      <!-- 나이키 로고 -->
+      <svg width="76" height="60" viewBox="0 0 76 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M67.854 20L24.8132 38.2574C21.2297 39.7777 18.2152 40.5363 15.7859 40.5363C13.0525 40.5363 11.0613 39.5717 9.83849 37.6459C8.25274 35.1611 8.94589 31.1656 11.6662 26.9479C13.2814 24.4826 15.3347 22.22 17.3356 20.0556C16.8648 20.8207 12.7092 27.7358 17.2539 30.9923C18.153 31.6463 19.4314 31.9667 21.0041 31.9667C22.2662 31.9667 23.7146 31.7607 25.3069 31.3455L67.854 20Z" fill="#111111" />
+      </svg>
+
+      <div class="terms-content">
+        <h2 class="terms-title">계속 진행하시려면 아래 권한에 동의해 주세요.</h2>
+        <p class="description">나이키에 오신 것을 환영합니다! 법률 약관이 업데이트 되었습니다. 진행하시기 전에 내용을 검토하고 동의해주세요.</p>
+        <p class="terms-subtitle">* 필수 항목</p>
+
+        <div class="terms-checkboxes">
+          <!-- 모든 약관 동의 -->
+          <div class="checkbox-item">
+            <input type="checkbox" id="all-agree" />
+            <div class="checkbox-content">
+              <div class="title">모든 약관에 동의합니다</div>
+            </div>
+          </div>
+
+          <!-- 이용약관 -->
+          <div class="checkbox-item">
+            <input type="checkbox" id="usage-terms" class="required-checkbox" required />
+            <div class="checkbox-content">
+              <div class="title">이용약관에 동의합니다 <span class="required-mark">*</span></div>
+            </div>
+          </div>
+
+          <!-- 개인정보 수집 -->
+          <div class="checkbox-item">
+            <input type="checkbox" id="privacy-collection" class="required-checkbox" required />
+            <div class="checkbox-content">
+              <div class="title">개인정보 수집 및 이용에 동의합니다 <span class="required-mark">*</span></div>
+            </div>
+          </div>
+
+          <!-- 개인정보 제3자 제공 -->
+          <div class="checkbox-item">
+            <input type="checkbox" id="privacy-third-party" class="required-checkbox" required />
+            <div class="checkbox-content">
+              <div class="title">개인정보의 제3자 제공 및 국외 이전에 동의합니다 <span class="required-mark">*</span></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="description">이 약관에 동의하지 않을 수 있지만, 그럴 경우 나이키 계정에 로그인할 수 없으며 새로운 계정을 생성할 수도 없습니다.</p>
+
+        <div class="terms-actions">
+          <button type="button" class="button outline" id="cancel-btn">취소</button>
+          <button type="button" class="button fill" id="continue-btn" disabled>계속</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
