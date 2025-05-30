@@ -133,6 +133,18 @@
       background-size: 1.5rem;
       background-position: center;
     }
+
+    &.home {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      inline-size: 2.5rem;
+      block-size: 2.5rem;
+      background-image: url('../../../assets/images/icon-home.svg');
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      background-position: center;
+    }
   }
 
   /* text width type */
