@@ -2,8 +2,8 @@
 @import './a11y.css';
 @import './reset.css';
 @import './base.css';
-@import '../components/style/footer.css';
-@import '../components/style/buttons.css';
-@import '../components/style/header.css';
-@import '../components/style/accrodion.css';
-@import '../components/style/navbar.css';
+@import '../components/common/css/footer.css';
+@import '../components/common/css/buttons.css';
+@import '../components/common/css/header.css';
+@import '../components/common/css/accrodion.css';
+@import '../components/common/css/navbar.css';

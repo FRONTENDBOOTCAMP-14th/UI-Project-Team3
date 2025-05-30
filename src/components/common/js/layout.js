@@ -10,6 +10,6 @@ const loadHTML = async (selector, url, callback) => {
     });
 };
 
-loadHTML('#header', '../components/header.html');
-loadHTML('#navbar', '../components/navbar.html', headerFunction);
-loadHTML('#footer', '../components/footer.html', accrodionFunction);
+loadHTML('#header', '../components/common/header.html');
+loadHTML('#navbar', '../components/common/navbar.html', headerFunction);
+loadHTML('#footer', '../components/common/footer.html', accrodionFunction);
