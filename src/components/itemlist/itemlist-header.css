@@ -102,6 +102,10 @@
     display: none;
   }
 
+  & li:hover {
+    opacity: 0.8;
+  }
+
   @media (width >= 64rem) {
     display: none;
   }
@@ -125,6 +129,11 @@
     padding-inline: 1.25rem;
     padding-block: 0.1875rem;
     border-radius: 1.875rem;
+
+    &:hover {
+      background-color: var(--white);
+      border: 1px solid var(--black);
+    }
   }
 
   @media (width >= 64rem) {

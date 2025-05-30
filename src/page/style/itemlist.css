@@ -1,0 +1,20 @@
+@import '../../components/itemlist/itemlist-header.css';
+@import '../../components/itemlist/itemlist-filter.css';
+
+body.scrollhidden {
+  overflow-y: hidden;
+}
+
+.item-list-container {
+  margin-inline: 1.5rem;
+  margin-block-end: 5.8781rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.125rem 0.375rem;
+
+  @media (width >= 40rem) {
+    margin-inline: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}

@@ -1,13 +1,28 @@
 .itemlist-filter-wrapper {
   background-color: var(--white);
   padding-block: 1.25rem;
-  position: relative;
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
 
   h3 {
     font-size: var(--text-base);
     font-weight: var(--font-normal);
     padding-inline: 1.25rem;
     margin-block-end: 5.125rem;
+  }
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  &.hidden {
+    display: none;
   }
 }
 
