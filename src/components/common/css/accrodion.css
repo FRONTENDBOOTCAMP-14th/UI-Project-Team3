@@ -1,3 +1,13 @@
+/* 컴포넌트 레이아웃 */
+.component-wrapper {
+  margin: 3.125rem;
+
+  .component-box {
+    .title {
+    }
+  }
+}
+
 /* 아코디언 컴포넌트 */
 .btn-arrow {
   position: relative;
@@ -14,7 +24,7 @@
     transform: translateY(-50%);
     width: 1.5rem;
     height: 1.5rem;
-    background-image: url('../../assets/images/arrow-down.svg');
+    background-image: url('../../../assets/images/arrow-down.svg');
     background-size: cover;
     transition: transform 0.3s ease;
   }

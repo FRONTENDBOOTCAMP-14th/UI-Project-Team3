@@ -1,0 +1,39 @@
+.itemlist-card {
+  min-inline-size: 11.0625rem;
+
+  .card-description {
+    padding-inline: 0.75rem;
+    padding-block: 0.75rem;
+    font-size: var(--text-sm);
+
+    .badge {
+      color: var(--red);
+      font-weight: var(--font-semibold);
+    }
+
+    .product-name {
+      font-weight: var(--font-semibold);
+      font-size: var(--text-sm);
+    }
+
+    .product-subtitle,
+    .product-color {
+      color: var(--gray);
+    }
+
+    .product-price {
+      font-size: var(--text-base);
+      font-weight: var(--font-semibold);
+      margin-block-start: 0.75rem;
+    }
+
+    @media (width >= 40rem) {
+      font-size: var(--text-base);
+
+      .product-name {
+        font-weight: var(--font-semibold);
+        font-size: var(--text-base);
+      }
+    }
+  }
+}

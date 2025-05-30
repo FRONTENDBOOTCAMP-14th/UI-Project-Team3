@@ -6,7 +6,7 @@
 
 /* 상품 사진 하단에 버튼을 제외한 정보를 정렬할 div */
 /* 구분선은 주석처리 했음 */
-.container {
+.product-info-box {
   /* border: 1px solid green;  */
   margin-top: 0.4375rem;
   display: flex;

@@ -76,7 +76,7 @@
         display: block;
         inline-size: 100%;
         block-size: 100%;
-        background: url('../../assets/images/icon-heart.svg') no-repeat;
+        background: url('../../../assets/images/icon-heart.svg') no-repeat;
         background-size: contain;
         background-position: center;
       }
@@ -91,7 +91,7 @@
         display: block;
         inline-size: 100%;
         block-size: 100%;
-        background: url('../../assets/images/icon-star-fill.svg') no-repeat;
+        background: url('../../../assets/images/icon-star-fill.svg') no-repeat;
         background-size: contain;
         background-position: center;
       }
@@ -116,7 +116,7 @@
     &.arrow-left {
       inline-size: 2.25rem;
       block-size: 2.25rem;
-      background-image: url('../../assets/images/arrow-right.svg');
+      background-image: url('../../../assets/images/arrow-right.svg');
       background-repeat: no-repeat;
       background-size: 1.5rem;
       background-position: center;
@@ -126,7 +126,7 @@
     &.arrow-right {
       inline-size: 2.25rem;
       block-size: 2.25rem;
-      background-image: url('../../assets/images/arrow-right.svg');
+      background-image: url('../../../assets/images/arrow-right.svg');
       background-repeat: no-repeat;
       background-size: 1.5rem;
       background-position: center;

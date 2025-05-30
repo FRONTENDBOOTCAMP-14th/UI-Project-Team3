@@ -1,3 +1,5 @@
+@import '../../../common/theme.css';
+
 .signup-form {
   width: 100%;
   display: flex;
@@ -5,9 +7,10 @@
   gap: 1.5rem;
 }
 
-.input-row {
+.input-group {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .input-group {
