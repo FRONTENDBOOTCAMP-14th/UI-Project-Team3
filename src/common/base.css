@@ -27,6 +27,10 @@ img {
   display: block;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 /* mobile일 경우만 보이는 속성 */
 .mo-block {
   display: block;

@@ -162,6 +162,7 @@
 .text-link-button {
   position: relative;
   display: inline-block;
+  font-weight: 500;
 
   &::after {
     content: '';
@@ -172,4 +173,8 @@
     height: 0.0625rem;
     background-color: currentColor;
   }
+}
+
+.text-underline {
+  text-decoration: underline;
 }

@@ -1,7 +1,6 @@
 'use strict';
 
 export function accrodionFunction() {
-  console.log('Accordion function 실행됨!');
   const accordionBtns = document.querySelectorAll('.btn-accrodion');
 
   function toggleAccordion(btn) {
