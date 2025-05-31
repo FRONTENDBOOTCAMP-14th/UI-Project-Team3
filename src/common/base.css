@@ -5,6 +5,10 @@ body {
   line-height: 1.75;
   color: var(--black);
 }
+/* 사이드,필터 메뉴 스크롤시 body스크롤 잠금 */
+body.scrollhidden {
+  overflow: hidden;
+}
 
 a {
   text-decoration: none;
