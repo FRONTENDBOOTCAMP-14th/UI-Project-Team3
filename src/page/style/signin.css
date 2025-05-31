@@ -1,3 +1,5 @@
+@import '../.././common/theme.css';
+
 .login-wrapper {
   inline-size: 100%;
   max-inline-size: 28rem; /* 448px */
