@@ -209,8 +209,15 @@
       }
 
       button {
-        border-radius: 0.5rem;
         overflow: hidden;
+        inline-size: 7.8125rem;
+        block-size: 7.8125rem;
+        border-radius: 0.5rem;
+
+        @media (width >= 40rem) {
+          inline-size: 4.375rem;
+          block-size: 4.375rem;
+        }
       }
 
       button:focus-visible,
