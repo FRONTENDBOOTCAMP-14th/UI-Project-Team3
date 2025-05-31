@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
-    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../common/index.css" />
     <link rel="stylesheet" href="./style/product-detail.css" />
     <script type="module" src="../components/common/js/layout.js"></script>
@@ -145,7 +145,7 @@
               </picture>
               <figcaption class="sr-only">왼쪽 옆면</figcaption>
             </figure>
-            <div class="carousel-box" aria-label="제품 이미지 슬라이드">
+            <div class="carousel-box" role="region" aria-label="제품 이미지 슬라이드">
               <button type="button" class="button circle arrow-left"><span class="sr-only">이전 이미지</span></button>
               <button type="button" class="button circle arrow-right"><span class="sr-only">다음 이미지</span></button>
             </div>
@@ -173,6 +173,18 @@
                         <source srcset="../assets/images/product-detail-page/img-product-brown.avif" type="image/avif" />
                         <source srcset="../assets/images/product-detail-page/img-product-brown.jpg" type="image/jpeg" />
                         <img src="../assets/images/product-detail-page/img-product-brown.jpg" alt="나이키 잼 갈색 신발" />
+                      </picture>
+                    </button>
+                    <figcaption class="sr-only">오른쪽 옆면</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <button type="button">
+                      <picture>
+                        <source srcset="../assets/images/product-detail-page/img-product-black.avif" type="image/avif" />
+                        <source srcset="../assets/images/product-detail-page/img-product-black.jpg" type="image/jpeg" />
+                        <img src="../assets/images/product-detail-page/img-product-black.jpg" alt="나이키 잼 검은색 신발" />
                       </picture>
                     </button>
                     <figcaption class="sr-only">오른쪽 옆면</figcaption>
@@ -306,24 +318,81 @@
             <h2>추천 제품</h2>
 
             <div class="rec-list-slide">
-              <div class="carousel-box" aria-label="추천 제품 이미지 슬라이드">
+              <div class="carousel-box" role="region" aria-label="추천 제품 이미지 슬라이드">
                 <button type="button" class="button circle gray arrow-left"><span class="sr-only">이전 이미지</span></button>
                 <button type="button" class="button circle gray arrow-right"><span class="sr-only">다음 이미지</span></button>
               </div>
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>
+                  <div class="itemlist-card-wrapper">
+                    <a href="/" aria-label="나이키 줌 보메로 5 상세페이지로 이동">
+                      <figure class="itemlist-card">
+                        <picture>
+                          <source srcset="../assets/images/item-image/shoes02.avif" type="image/avif" />
+                          <source srcset="../assets/images/item-image/shoes02.png" type="image/png" />
+                          <img src="../assets/images/item-image/shoes02.png" alt="나이키 줌 보메로 5 여성 신발" />
+                        </picture>
+                        <figcaption class="card-description">
+                          <p class="badge">신제품</p>
+                          <h3 class="product-name">나이키 줌 보메로 5</h3>
+                          <p class="product-subtitle">여성 신발</p>
+                          <p class="product-color">1개 색상</p>
+                          <p class="product-price">209,000 원</p>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="itemlist-card-wrapper">
+                    <a href="/" aria-label="나이키 에어맥스 SC 트렌드 상세페이지로 이동">
+                      <figure class="itemlist-card">
+                        <picture>
+                          <source srcset="../assets/images/item-image/shoes03.avif" type="image/avif" />
+                          <source srcset="../assets/images/item-image/shoes03.png" type="image/png" />
+                          <img src="../assets/images/item-image/shoes03.png" alt="나이키 에어맥스 SC 트렌드 여성 신발" />
+                        </picture>
+                        <figcaption class="card-description">
+                          <p class="badge">신제품</p>
+                          <h3 class="product-name">나이키 에어맥스 SC 트렌드</h3>
+                          <p class="product-subtitle">여성 신발</p>
+                          <p class="product-color">1개 색상</p>
+                          <p class="product-price">119,000 원</p>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="itemlist-card-wrapper">
+                    <a href="/" aria-label="나이키 스우시 1 상세페이지로 이동">
+                      <figure class="itemlist-card">
+                        <picture>
+                          <source srcset="../assets/images/item-image/shoes04.avif" type="image/avif" />
+                          <source srcset="../assets/images/item-image/shoes04.png" type="image/png" />
+                          <img src="../assets/images/item-image/shoes04.png" alt="나이키 스우시 1 여성 신발" />
+                        </picture>
+                        <figcaption class="card-description">
+                          <p class="badge">신제품</p>
+                          <h3 class="product-name">나이키 스우시 1</h3>
+                          <p class="product-subtitle">베이비 신발</p>
+                          <p class="product-color">1개 색상</p>
+                          <p class="product-price">69,000 원</p>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
         </div>
         <!-- // 추천 제품 -->
       </div>
-      <div class="fixed-button-box mo-block">
-        <button class="button full fill square" type="button">장바구니</button>
-      </div>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer" style="margin-block-end: 64px"></footer>
+    <div class="fixed-button-box mo-block">
+      <button class="button full fill square" type="button">장바구니</button>
+    </div>
   </body>
 </html>
