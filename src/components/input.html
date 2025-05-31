@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>input요소 재활용 가능하게</title>
+    <title>input요소 재황용가능하게</title>
     <link rel="shortcut icon" href="../../public/favicon/likelion.ico" type="image/x-icon" />
     <link rel="icon" href="../../public/favicon/likelion.svg" type="image/svg" />
     <link rel="preload" as="font" href="../../public/font/suit/SUIT-Variable.woff2" />
@@ -12,49 +12,30 @@
     <link rel="stylesheet" href="./style/input.css" />
   </head>
   <body>
-    <a href="/index.html">메인 페이지 이동</a>
+    <a href="/index.html" class="button circle home"><span class="sr-only">메인 페이지 이동</span></a>
     <br />
-    <h1>input요소</h1>
+    <div class="component-wrapper">
+      <div class="component-box buttons-component">
+        <h1 class="title">input요소</h1>
 
-    <h2>이메일 입력 서식</h2>
-    <section id="email-section">
-      <h2 class="sr-only">로그인</h2>
-      <form class="login-form">
+        <!-- Input Component -->
         <div class="input-group">
-          <label for="email" class="input-label sr-only">이메일</label>
-          <div class="input-wrapper">
-            <input type="email" id="email" name="email" class="input-field" placeholder="이메일" required />
+          <label for="input-id" class="input-label sr-only">레이블 텍스트</label>
+
+          <div class="input-wrapper has-icon">
+            <input type="text" id="input-id" name="input-name" class="input-field" placeholder="placeholder 텍스트" aria-label="접근성 텍스트" />
+            <!-- 아이콘 영역: 필요할 경우만 사용 -->
+            <span class="input-icon" aria-hidden="true"></span>
           </div>
         </div>
-      </form>
-    </section>
-
-    <h2>비밀번호</h2>
-    <form class="login-form" id="password-form">
-      <div class="input-group">
-        <label for="password" class="input-label sr-only">비밀번호</label>
-        <div class="input-wrapper has-icon">
-          <input type="password" id="password" name="password" class="input-field" placeholder="비밀번호" required />
+        <!-- 비밀번호 -->
+        <div class="input-group">
+          <label for="password" class="input-label sr-only">비밀번호</label>
+          <div class="input-wrapper has-icon">
+            <input type="password" id="password" name="password" class="input-field" placeholder="비밀번호" aria-label="비밀번호" />
+          </div>
         </div>
       </div>
-
-      <h2>약관 동의 체크 박스</h2>
-      <div class="checkbox-item">
-        <input type="checkbox" id="checkbox-id" class="required-checkbox" required />
-        <div class="checkbox-content">
-          <div class="title">약관설명 <span class="required-mark">*</span></div>
-          <div class="description">선택적으로 설명이 들어갑니다</div>
-        </div>
-      </div>
-
-      <h2>생년월일 입력 필드 + 아이콘 컴포넌트</h2>
-      <div class="input-group">
-        <label for="birth" class="sr-only">생년월일</label>
-        <div class="input-wrapper has-icon">
-          <input type="text" id="birth" name="birth" class="input-field" placeholder="YYYYMMDD" pattern="\d{8}" inputmode="numeric" maxlength="8" title="생년월일 8자리 숫자 (예: 20001231)" aria-label="생년월일" required />
-          <span class="input-icon" aria-hidden="true"></span>
-        </div>
-      </div>
-    </form>
+    </div>
   </body>
 </html>
