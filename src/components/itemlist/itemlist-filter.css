@@ -87,6 +87,7 @@
 
       & li:last-child {
         padding-bottom: 3.1875rem;
+        margin-block-start: 0;
       }
     }
   }
