@@ -1,5 +1,7 @@
 'use strict';
 
+import { keyFocus } from '../../components/common/js/header.js';
+
 const rangeBtn = document.querySelector('.range-button');
 const filterSublists = document.querySelector('.filter-sublists');
 const arrowBtn = document.querySelector('.range-button-icon');
@@ -8,40 +10,7 @@ const mbFilterBtn = document.querySelector('.mb-filter-btn');
 const mbCloseFilterBtn = document.querySelector('.mb-filter-close-button');
 const deskFilterBtn = document.querySelector('.desk-filter-button');
 const buttonText = document.querySelector('.filter-button-text');
-
 let releaseFocus = null;
-
-// Tab가능한 모든 요소 가져오기
-function trapFocus(container) {
-  const focusableElements = container.querySelectorAll('a[href], button:not([disabled]), input:not([disabled])');
-  const firstEl = focusableElements[0];
-  const lastEl = focusableElements[focusableElements.length - 1];
-
-  function handleTab(e) {
-    if (e.key !== 'Tab') return;
-
-    if (e.shiftKey) {
-      // Shift + Tab
-      if (document.activeElement === firstEl) {
-        e.preventDefault();
-        lastEl.focus();
-      }
-    } else {
-      // Tab
-      if (document.activeElement === lastEl) {
-        e.preventDefault();
-        firstEl.focus();
-      }
-    }
-  }
-
-  container.addEventListener('keydown', handleTab);
-
-  // 포커스를 첫 번째 요소로 이동
-  firstEl?.focus();
-
-  return () => container.removeEventListener('keydown', handleTab);
-}
 
 // 태블릿크기 이상시 초기화
 let wasMobile = window.innerWidth < 1024;
@@ -92,7 +61,7 @@ mbFilterBtn.addEventListener('click', () => {
   document.body.classList.add('scrollhidden');
 
   function onTransitionEnd() {
-    releaseFocus = trapFocus(filterWrapper);
+    releaseFocus = keyFocus(filterWrapper);
     filterWrapper.removeEventListener('transitionend', onTransitionEnd);
   }
 

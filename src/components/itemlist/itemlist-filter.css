@@ -1,7 +1,7 @@
 .itemlist-filter-wrapper {
   background-color: var(--white);
   padding-block: 1.25rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
