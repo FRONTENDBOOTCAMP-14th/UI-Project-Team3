@@ -110,7 +110,7 @@ body {
   transform: translateY(-50%);
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url();
+  background-image: url(../../assets/images/Icon24px.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
