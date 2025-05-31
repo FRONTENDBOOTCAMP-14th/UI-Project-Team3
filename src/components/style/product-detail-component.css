@@ -146,6 +146,7 @@
     display: none;
 
     @media (width >= 40rem) {
+      display: block;
       position: absolute;
       bottom: 1.5rem;
       right: 1.5rem;
