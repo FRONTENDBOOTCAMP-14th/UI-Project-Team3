@@ -80,6 +80,8 @@
 
   @media (width >= 64rem) {
     h2 {
+      font-size: var(--text-xl);
+
       .desk-only {
         display: inline;
       }
@@ -92,14 +94,18 @@
   flex-wrap: nowrap;
   align-items: center;
   column-gap: 2.25rem;
-  overflow: auto hidden;
+  overflow: scroll hidden;
   white-space: nowrap;
   max-inline-size: 100%;
-  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  & li {
+    flex: 0 0 auto;
   }
 
   & li:hover {
