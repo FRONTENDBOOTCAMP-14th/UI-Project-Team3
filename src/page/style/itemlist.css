@@ -1,0 +1,36 @@
+@import '../../components/itemlist/itemlist-header.css';
+@import '../../components/itemlist/itemlist-filter.css';
+
+body.scrollhidden {
+  overflow-y: hidden;
+}
+
+.itemlist-main {
+  display: flex;
+  gap: 3rem;
+  padding-inline: 1.5rem;
+
+  @media (width >= 60rem) {
+    padding-inline: 3rem;
+  }
+}
+
+.item-list-container {
+  margin-inline: 1.5rem;
+  margin-block-end: 5.8781rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.125rem 0.375rem;
+
+  @media (width >= 40rem) {
+    margin-inline: 0;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+
+  @media (width >= 80rem) {
+    margin-inline: 0;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
