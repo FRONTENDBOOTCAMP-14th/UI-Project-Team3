@@ -206,6 +206,7 @@
         inline-size: 100%;
         block-size: 100%;
         background: rgb(211 211 211 / 0.5);
+        border-radius: 0.5rem;
       }
 
       button {
@@ -213,6 +214,7 @@
         inline-size: 7.8125rem;
         block-size: 7.8125rem;
         border-radius: 0.5rem;
+        border: 1px solid transparent;
 
         @media (width >= 40rem) {
           inline-size: 4.375rem;

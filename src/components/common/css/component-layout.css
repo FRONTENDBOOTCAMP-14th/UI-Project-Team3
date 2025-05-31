@@ -1,4 +1,9 @@
 /* 컴포넌트 레이아웃 */
+.component-h1-title {
+  margin-block-start: 1.875rem;
+  text-align: center;
+}
+
 .grid-component-wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
