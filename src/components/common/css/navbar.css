@@ -1,15 +1,35 @@
 #navbar {
   position: sticky;
   top: 0;
-  z-index: 950;
+  z-index: 999;
+  transition: transform 0.3s ease;
+  overflow-x: clip;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  &.overflow {
+    overflow-x: visible;
+  }
+
+  &.show {
+    transform: translateY(0);
+  }
+
+  @media (width >= 64rem) {
+    overflow-x: visible;
+  }
 }
 
 /* 상단 메뉴 */
 .navbar-wrapper {
   display: flex;
   align-items: center;
+  padding-block: 0.3125rem;
   padding-inline: 1.5rem;
   background-color: var(--white);
+  position: relative;
 
   @media (width >= 64rem) {
     padding-inline: 3rem;
@@ -32,6 +52,46 @@
 
       &:hover span {
         border-bottom: 0.0625rem solid var(--black);
+      }
+
+      .list-item-sub {
+        position: absolute;
+        top: 85%;
+        left: 0;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        inline-size: 100%;
+        background-color: var(--white);
+        border-radius: 0.625rem;
+        padding-inline: 1.25rem;
+        padding-block: 1.25rem;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(0.7rem);
+        transition: all 0.2s ease;
+        pointer-events: none;
+
+        & li:first-child {
+          font-size: var(--text-base);
+          font-weight: var(--font-semibold);
+        }
+
+        & li {
+          color: var(--dark-gray);
+          padding-block: 0.625rem;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+      &:hover .list-item-sub {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
       }
     }
 
@@ -120,13 +180,14 @@
   top: 0;
   right: 0;
   min-inline-size: 19.375rem;
-  block-size: 100vh;
+  max-block-size: 100vh;
+  overflow-y: auto;
+  block-size: calc(100vh + 4.375rem);
   z-index: 999;
   background-color: var(--white);
-  visibility: hidden;
   opacity: 0;
   transform: translateX(100%);
-  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
 
   &.active {
     visibility: visible;
@@ -153,8 +214,8 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    width: 1.8125rem;
-    height: 1.8125rem;
+    inline-size: 1.8125rem;
+    block-size: 1.8125rem;
     font-size: var(--text-3xl);
     line-height: 1.5;
 
@@ -170,7 +231,7 @@
 }
 
 .aside-menu-nav {
-  width: 100%;
+  inline-size: 100%;
   padding-inline-start: 2.625rem;
 
   .button-group {
@@ -201,6 +262,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      & .arrow-icon {
+        transition: transform 0.3s ease;
+      }
+
+      & .arrow-icon.rotate {
+        transform: rotate(90deg);
+      }
     }
 
     span {
@@ -209,9 +278,30 @@
       }
     }
 
-    &:hover {
+    &:hover button {
       opacity: 0.8;
       cursor: pointer;
+    }
+
+    .sub-menu-list {
+      font-size: var(--text-sm);
+      max-block-size: 0;
+      overflow: hidden;
+      transition: max-block-size 0.3s ease;
+      padding-inline: 0.1875rem;
+
+      &.dropdown {
+        max-block-size: 17.5rem;
+      }
+
+      li {
+        padding-block: 0.5rem;
+        color: var(--dark-gray);
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
   }
 }
@@ -220,7 +310,7 @@
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
-  margin-block-start: 3.125rem;
+  margin-block: 3.125rem;
   margin-inline-end: 1.125rem;
 
   .service-list {
@@ -247,6 +337,7 @@
 .overlay {
   pointer-events: none;
   opacity: 0;
+  overflow: hidden;
 
   @media (width >= 64rem) {
     display: none;
@@ -257,10 +348,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  inline-size: 100%;
+  block-size: calc(100vh + 4.375rem);
   background-color: var(--dark-gray);
-  z-index: 900;
+  z-index: 800;
   pointer-events: auto;
   opacity: 0.6;
 }

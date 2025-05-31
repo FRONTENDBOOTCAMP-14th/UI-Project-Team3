@@ -2,11 +2,12 @@
 @import '../../components/itemlist/itemlist-filter.css';
 
 body.scrollhidden {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .itemlist-main {
   display: flex;
+  justify-content: center;
   gap: 3rem;
   padding-inline: 1.5rem;
 
