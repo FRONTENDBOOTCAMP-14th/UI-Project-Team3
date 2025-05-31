@@ -162,6 +162,7 @@
 .text-link-button {
   position: relative;
   display: inline-block;
+  font-weight: 500;
 
   &::after {
     content: '';
