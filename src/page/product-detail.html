@@ -11,7 +11,7 @@
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../common/index.css" />
-    <link rel="stylesheet" href=".//style/product-detail.css" />
+    <link rel="stylesheet" href="./style/product-detail.css" />
     <script type="module" src="../components/common/js/layout.js"></script>
   </head>
   <body>
@@ -21,15 +21,25 @@
       <h1 class="sr-only">나이키 상품 상세</h1>
       <div class="product-detail-wrapper">
         <div class="product-detail-thumbnail-box">
+          <!-- 상품 정보 -->
+          <div class="product-info-box mo-block">
+            <p class="pro-badge">친환경 소재</p>
+            <h2 class="pro-title">나이키 잼</h2>
+            <p class="pro-sub-title">여성 신발</p>
+            <p class="pro-price">139,000 원</p>
+          </div>
+          <!-- // 상품 정보 -->
+
+          <!-- 작은 썸네일 슬라이드 이미지 -->
           <div class="image-carousel">
             <ul>
               <li>
                 <figure>
                   <button type="button">
                     <picture>
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
-                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small01.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small01.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-product-small01.jpg" alt="나이키 잼 신발" />
                     </picture>
                   </button>
                   <figcaption class="sr-only">왼쪽 옆면</figcaption>
@@ -39,9 +49,9 @@
                 <figure>
                   <button type="button">
                     <picture>
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
-                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small02.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small02.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-product-small02.jpg" alt="나이키 잼 신발" />
                     </picture>
                   </button>
                   <figcaption class="sr-only">밑면</figcaption>
@@ -51,9 +61,9 @@
                 <figure>
                   <button type="button">
                     <picture>
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
-                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small03.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small03.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-product-small03.jpg" alt="나이키 잼 신발" />
                     </picture>
                   </button>
                   <figcaption class="sr-only">오른쪽 옆면</figcaption>
@@ -63,9 +73,9 @@
                 <figure>
                   <button type="button">
                     <picture>
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
-                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small04.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small04.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-product-small04.jpg" alt="나이키 잼 신발" />
                     </picture>
                   </button>
                   <figcaption class="sr-only">윗면</figcaption>
@@ -75,9 +85,9 @@
                 <figure>
                   <button type="button">
                     <picture>
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
-                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small05.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small05.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-product-small05.jpg" alt="나이키 잼 신발" />
                     </picture>
                   </button>
                   <figcaption class="sr-only">사선 앞모습</figcaption>
@@ -87,9 +97,9 @@
                 <figure>
                   <button type="button">
                     <picture>
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
-                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small06.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small06.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-product-small06.jpg" alt="나이키 잼 신발" />
                     </picture>
                   </button>
                   <figcaption class="sr-only">사선 뒷모습</figcaption>
@@ -99,9 +109,9 @@
                 <figure>
                   <button type="button">
                     <picture>
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
-                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small03.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small03.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-product-small03.jpg" alt="나이키 잼 신발" />
                     </picture>
                   </button>
                   <figcaption class="sr-only">초근접 윗면</figcaption>
@@ -111,56 +121,204 @@
                 <figure>
                   <button type="button">
                     <picture>
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
-                      <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
-                      <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small04.avif" type="image/avif" />
+                      <source srcset="../assets/images/product-detail-page/img-product-small04.jpg" type="image/jpeg" />
+                      <img src="../assets/images/product-detail-page/img-product-small04.jpg" alt="나이키 잼 신발" />
                     </picture>
                   </button>
                   <figcaption class="sr-only">초근접 오른쪽 밑면</figcaption>
                 </figure>
               </li>
             </ul>
+            <span class="mask-box"></span>
           </div>
+          <!-- // 작은 썸네일 슬라이드 이미지 -->
+
+          <!-- 상품 상세 썸네일 큰 이미지 -->
           <div class="big-thumbnail-box">
+            <span class="star-badge"><span class="icon-star"></span>평점 높음</span>
             <figure>
               <picture>
                 <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
                 <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
                 <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
               </picture>
-              <figcaption class="sr-only">오른쪽 옆면</figcaption>
+              <figcaption class="sr-only">왼쪽 옆면</figcaption>
             </figure>
+            <div class="carousel-box" aria-label="제품 이미지 슬라이드">
+              <button type="button" class="button circle arrow-left"><span class="sr-only">이전 이미지</span></button>
+              <button type="button" class="button circle arrow-right"><span class="sr-only">다음 이미지</span></button>
+            </div>
           </div>
+          <!-- // 상품 상세 큰이미지 -->
         </div>
         <div class="product-detail-info-box">
-          <div class="product-detail-title">
-            <p class="">친환경 소재</p>
-            <h2 class="product-name">나이키 잼</h2>
-            <p class="product-kinds">여성 신발</p>
-            <p class="product-price">139,000 원</p>
+          <!-- 상품 정보 -->
+          <div class="product-info-box pc-block">
+            <p class="pro-badge">친환경 소재</p>
+            <h2 class="pro-title">나이키 잼</h2>
+            <p class="pro-sub-title">여성 신발</p>
+            <p class="pro-price">139,000 원</p>
           </div>
+          <!-- // 상품 정보 -->
+
           <div class="product-detail-info">
-            <div class="product-type-box">
+            <!-- 상품 색상 종류 정보 -->
+            <div class="product-color-box">
               <ul>
                 <li>
                   <figure>
-                    <a href="/">
+                    <button type="button">
                       <picture>
-                        <source srcset="../assets/images/product-detail-page/img-nike-jam.avif" type="image/avif" />
-                        <source srcset="../assets/images/product-detail-page/img-nike-jam.jpg" type="image/jpeg" />
-                        <img src="../assets/images/product-detail-page/img-nike-jam.jpg" alt="나이키 잼 신발" />
+                        <source srcset="../assets/images/product-detail-page/img-product-brown.avif" type="image/avif" />
+                        <source srcset="../assets/images/product-detail-page/img-product-brown.jpg" type="image/jpeg" />
+                        <img src="../assets/images/product-detail-page/img-product-brown.jpg" alt="나이키 잼 갈색 신발" />
                       </picture>
-                    </a>
-                    <figcaption class="sr-only">왼쪽 옆면</figcaption>
+                    </button>
+                    <figcaption class="sr-only">오른쪽 옆면</figcaption>
                   </figure>
                 </li>
                 <li>
-                  <a href="/"> </a>
+                  <figure>
+                    <button type="button">
+                      <picture>
+                        <source srcset="../assets/images/product-detail-page/img-product-black.avif" type="image/avif" />
+                        <source srcset="../assets/images/product-detail-page/img-product-black.jpg" type="image/jpeg" />
+                        <img src="../assets/images/product-detail-page/img-product-black.jpg" alt="나이키 잼 검은색 신발" />
+                      </picture>
+                    </button>
+                    <figcaption class="sr-only">오른쪽 옆면</figcaption>
+                  </figure>
                 </li>
+              </ul>
+            </div>
+            <!-- // 상품 색상 종류 정보 -->
+
+            <!-- 상품 사이즈 종류 정보 -->
+            <div class="product-size-box">
+              <ul>
+                <li>
+                  <button type="button" class="button small square rouneded-size-4">220<span class="sr-only">사이즈</span></button>
+                </li>
+                <li>
+                  <button type="button" class="button small square rouneded-size-4">225<span class="sr-only">사이즈</span></button>
+                </li>
+                <li>
+                  <button type="button" class="button small square rouneded-size-4">230<span class="sr-only">사이즈</span></button>
+                </li>
+                <li>
+                  <button type="button" class="button small square rouneded-size-4">235<span class="sr-only">사이즈</span></button>
+                </li>
+                <li>
+                  <button type="button" class="button small square rouneded-size-4">240<span class="sr-only">사이즈</span></button>
+                </li>
+                <li>
+                  <button type="button" class="button small square rouneded-size-4">245<span class="sr-only">사이즈</span></button>
+                </li>
+                <li>
+                  <button type="button" class="button small square rouneded-size-4">250<span class="sr-only">사이즈</span></button>
+                </li>
+                <li>
+                  <button type="button" class="button small square rouneded-size-4">255<span class="sr-only">사이즈</span></button>
+                </li>
+                <li>
+                  <button type="button" class="button small square rouneded-size-4">260<span class="sr-only">사이즈</span></button>
+                </li>
+              </ul>
+            </div>
+            <!-- // 상품 사이즈 종류 정보 -->
+
+            <!-- 상품 상세 버튼 -->
+            <div class="product-btn-box">
+              <button class="button full fill" type="button">장바구니</button>
+              <button type="button" class="button icon-left full"><span class="icon-heart"></span>위시리스트</button>
+            </div>
+            <!-- // 상품 상세 버튼 -->
+
+            <!-- 회색 박스 문구 -->
+            <div class="gray-box">
+              <p>이 제품은 무게 기준 20% 이상 재생 소재를 사용해 제작되었습니다.</p>
+            </div>
+            <!-- // 회색 박스 문구 -->
+
+            <p>나이키가 세계적인 무대에 오르는 브레이크 댄서를 위해 제작한 첫 신발인 잼과 함께 몸과 마음, 정신을 하나로 만들어 보세요. 신발의 모든 디테일을 꼼꼼히 제작했기 때문에 자신 있게 사이퍼에 도전할 수 있습니다. 유연한 갑피가 몸을 따라 움직이며 내구성이 뛰어난 레이어드 디자인으로 플로어 동작도 문제 없습니다. 중창에는 텍스처 처리된 핸드 그립이 적용되어 필요한 부위에 안정성을 더해줍니다. 그리고 프리즈 자세를 취하면 위아래가 뒤집힌 로고가 오른쪽에 보이는 재미를 더했습니다.</p>
+            <!-- 비순차 목록 -->
+            <ul class="dot-list">
+              <li>현재 컬러: 다크 드리프트우드/헴프/세일/블랙</li>
+              <li>스타일 번호: FN0314-200</li>
+            </ul>
+            <!-- // 비순차 목록 -->
+
+            <!-- 상품 상세 정보 보기 텍스트 링크 -->
+            <a href="/" class="text-link-button" target="_self">상품 상세 정보 보기</a>
+            <!-- // 상품 상세 정보 보기 텍스트 링크 -->
+
+            <!-- 상품 상세 정보 아코디언 -->
+            <div class="product-detail-accordion-wrapper">
+              <ul class="accrodion-list">
+                <li>
+                  <button type="button" class="btn-accrodion btn-arrow" aria-expanded="false">무료 배송 및 반품</button>
+                  <div class="detail-accrodion">아코디언 내용</div>
+                </li>
+                <li>
+                  <button type="button" class="btn-accrodion btn-arrow" aria-expanded="false">제작 과정</button>
+                  <div class="detail-accrodion">아코디언 내용</div>
+                </li>
+                <li>
+                  <button type="button" class="btn-accrodion btn-arrow" aria-expanded="false">
+                    <span class="lft">리뷰 (20)</span>
+                    <span class="rgt">
+                      <span class="star-rating" aria-hidden="true">
+                        <span class="star fill"></span>
+                        <span class="star fill"></span>
+                        <span class="star fill"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                      </span>
+                      <span class="sr-only">만점 5점에 평점 3점</span>
+                    </span>
+                  </button>
+                  <div class="detail-accrodion">아코디언 내용</div>
+                </li>
+                <li>
+                  <button type="button" class="btn-accrodion btn-arrow" aria-expanded="false">추가 정보</button>
+                  <div class="detail-accrodion">
+                    <p>상품정보제공고시</p>
+                    <ul class="dot-list">
+                      <li>제조연월: 수입제품으로 각 제품별 입고 시기에 따라 상이하여 정확한 제조연월 제공이 어렵습니다. 제조연월을 확인하시려면 고객센터에 문의하시기 바라며, 정확한 제조연월은 배송받으신 제품의 라벨을 참고하시기 바랍니다.</li>
+                      <li>A/S 책임자와 전화번호: (유)나이키코리아 온라인 스토어 고객센터 / 080-022-0182</li>
+                      <li>세탁방법 및 취급시 주의사항: 자세한 내용은 '<a href="/" class="text-underline" target="_self">자세히 보기</a>'를 클릭하여 확인 부탁드립니다.</li>
+                      <li>미성년자 권리 보호 안내: 자세한 내용은 '<a href="/" class="text-underline" target="_self">자세히 보기</a>' 를 클릭하여 확인 부탁드립니다.</li>
+                      <li>품질보증기준: 품질보증기간-섬유 및 일반 소재(구입 후 6개월), 가죽소재(구입 후 1년). 유통 중 손상되었거나 품질에 이상이 있는 제품에 한하여 소비자 피해 보상 규정에 의거 보상하여 드립니다. 단, 제품에 부착되어 있는 사용방법 및 취급 시 주의사항에 따라 제품을 관리해 주시고, 소비자 부주의로 인한 품질 이상 및 변형에 대해서는 책임을 지지 않습니다.</li>
+                      <li>제조자/수입품의 경우 수입자를 함께 표기: Nike. Inc / (유)나이키코리아</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- // 아코디언 컴포넌트 -->
+          </div>
+        </div>
+
+        <!-- 추천 제품 -->
+        <div class="recommend-product-wrapper">
+          <div class="recommend-product-box">
+            <h2>추천 제품</h2>
+
+            <div class="rec-list-slide">
+              <div class="carousel-box" aria-label="추천 제품 이미지 슬라이드">
+                <button type="button" class="button circle gray arrow-left"><span class="sr-only">이전 이미지</span></button>
+                <button type="button" class="button circle gray arrow-right"><span class="sr-only">다음 이미지</span></button>
+              </div>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </div>
           </div>
         </div>
+        <!-- // 추천 제품 -->
       </div>
     </main>
     <footer id="footer"></footer>

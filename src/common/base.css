@@ -31,6 +31,15 @@ img {
   text-decoration: underline;
 }
 
+main {
+  padding-block: 5rem;
+
+  @media (width >= 60rem) {
+    padding-inline: 3rem;
+    padding-block: 5.1875rem 0.8125rem;
+  }
+}
+
 /* mobile일 경우만 보이는 속성 */
 .mo-block {
   display: block;
