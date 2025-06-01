@@ -114,6 +114,7 @@
 
       .product-color-box {
         overflow-x: auto;
+        overflow-y: hidden;
 
         @media (width >= 40rem) {
           overflow-x: visible;

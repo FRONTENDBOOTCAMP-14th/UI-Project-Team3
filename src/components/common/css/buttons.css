@@ -144,6 +144,7 @@
       background-repeat: no-repeat;
       background-size: 1.5rem;
       background-position: center;
+      z-index: 99;
     }
   }
 
