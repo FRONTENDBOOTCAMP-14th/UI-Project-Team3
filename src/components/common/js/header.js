@@ -40,6 +40,7 @@ export function headerFunction() {
   const closeBtn = document.querySelector('.close-button');
   const navbar = document.getElementById('navbar');
   const sideFilterMenu = document.querySelector('.itemlist-filter-wrapper');
+  const storelist = document.querySelector('.list-wrapper');
   let removeFocusTrap = null;
 
   if (!openBtn || !sideMenu || !overlay || !closeBtn || !navbar) return;
@@ -128,16 +129,15 @@ export function headerFunction() {
     if (event.shiftKey) return;
 
     // 사이드 필터바, 사이드 메뉴 스크롤 시 무시
+    const isInsdeStoreList = storelist?.contains(event.target);
     const isInsideFilter = sideFilterMenu?.contains(event.target);
     const isInsideAside = sideMenu?.classList.contains('active') && sideMenu.contains(event.target);
-    if (isInsideFilter || isInsideAside) return;
+    if (isInsideFilter || isInsideAside || isInsdeStoreList) return;
 
     if (event.deltaY > 0) {
       navbar.classList.add('hidden');
-      navbar.classList.remove('show');
     } else if (event.deltaY < 0) {
       navbar.classList.remove('hidden');
-      navbar.classList.add('show');
     }
   };
 

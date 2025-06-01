@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="나이키의 모든 것, 나이키 공식 온라인스토어(상업용X)" />
+    <meta name="author" content="UI Project Team3" />
+    <title>나이키 매장 찾기</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../components/style/input.css" />
+    <link rel="stylesheet" href="../common/index.css" />
+    <link rel="stylesheet" href="./style/findstore.css" />
+    <script type="module" src="../components/common/js/layout.js"></script>
+    <script type="module" src="./js/findstore.js"></script>
+    <script type="module" src="../main.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <nav id="navbar"></nav>
+    <!-- 메인 컨텐츠 -->
+    <main class="findstore-main">
+      <div class="findstore-left-contents">
+        <h2>나이키 매장 찾기</h2>
+        <div class="form-wrapper">
+          <form action="#">
+            <div class="input-group input-position">
+              <label for="store-search" class="search-label">위치 검색</label>
+              <div class="input-wrapper has-icon">
+                <input type="text" id="store-search" name="store-search" class="input-field findstore-input" aria-label="위치 검색" />
+                <button type="submit" class="input-icon findstore-icon" aria-hidden="true"></button>
+              </div>
+            </div>
+            <div class="store-number">
+              <p>근처 매장: 15 개</p>
+            </div>
+          </form>
+
+          <div class="button-wrapper">
+            <button class="button-map active" type="button" aria-label="지도 보기 버튼"><span>Map</span></button>
+            <button class="button-list" type="button" aria-label="매장 위치 보기 버튼"><span>List</span></button>
+          </div>
+
+          <div class="list-wrapper">
+            <div class="store-description">
+              <a href="/" aria-label="매장 정보">
+                <section>
+                  <h3>나이키 서울</h3>
+                  <p>명동길 14 눈스퀘어 1층</p>
+                  <p>중구, 서울특별시, 04536, KR</p>
+                  <p><strong class="sales-open">영업 중</strong> • 영업 종료 시간: 오후 10:00</p>
+                </section>
+              </a>
+            </div>
+
+            <div class="store-description">
+              <a href="/" aria-label="매장 정보">
+                <section>
+                  <h3>나이키 신세계 명동</h3>
+                  <p>소공로 63 신세계백화점 4층</p>
+                  <p>중구, 서울특별시, 04530, KR</p>
+                  <p><strong class="sales-open">영업 중</strong> • 영업 종료 시간: 오후 8:00</p>
+                </section>
+              </a>
+            </div>
+
+            <div class="store-description">
+              <a href="/" aria-label="매장 정보">
+                <section>
+                  <h3>나이키 롯데 명동</h3>
+                  <p>남대문로 73 롯데백화점 AVENUEL 6층</p>
+                  <p>중구, 서울특별시, 04533, KR</p>
+                  <p><strong class="sales-open">영업 중</strong> • 영업 종료 시간: 오후 8:00</p>
+                </section>
+              </a>
+            </div>
+
+            <div class="store-description">
+              <a href="/" aria-label="매장 정보">
+                <section>
+                  <h3>Nike Well Collective - 롯데 서울역</h3>
+                  <p>한강대로 405 롯데아울렛서울역점 2F</p>
+                  <p>용산구, 서울특별시, 04320, KR</p>
+                  <p><strong>영업 종료</strong> • 영업 종료 시간: 오후 9:00</p>
+                </section>
+              </a>
+            </div>
+
+            <div class="store-description">
+              <a href="/" aria-label="매장 정보">
+                <section>
+                  <h3>나이키 현대 동대문</h3>
+                  <p>장충단로13길 20 현대시티아울렛 5F</p>
+                  <p>중구, 서울특별시, 04563, KR</p>
+                  <p><strong class="sales-open">영업 중</strong> • 영업 종료 시간: 오후 8:00</p>
+                </section>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrapper active">
+        <div class="findstore-map-bg" role="img" aria-label="Nike 매장 지도 보기"></div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>

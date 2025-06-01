@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Page components</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../../common/index.css" />
+    <link rel="stylesheet" href="./cs-com.css" />
+    <script type="module">
+      import { accrodionFunction } from '../common/js/accrodion.js';
+
+      accrodionFunction();
+    </script>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>Customer Page components</h1>
+    <br />
+
+    <!-- Quick Service -->
+    <section class="qs-section">
+      <div class="common-head">
+        <h2>빠른 지원</h2>
+        <p>클릭 한 번으로 자주 묻는 질문에 대한 답변을 확인할 수 있습니다.</p>
+      </div>
+      <div>
+        <ul class="accrodion-list cs-qs-lists">
+          <li>
+            <button type="button" class="btn-accrodion btn-arrow qs-button" aria-expanded="false">반품/교환 및 환불</button>
+            <ul class="detail-accrodion cs-qs-links">
+              <li><a href="/">나이키의 반품정책은 어떻게 되나요?</a></li>
+              <li><a href="/">나이키의 반품 방법은 어떻게 되나요?</a></li>
+              <li><a href="/">나이키는 교환 서비스를 제공하나요?</a></li>
+              <li><a href="/">더보기</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-accrodion btn-arrow qs-button" aria-expanded="false">출고 및 배송</button>
+            <ul class="detail-accrodion cs-qs-links">
+              <li><a href="/">나이키에는 어떤 배송 옵션이 있나요?</a></li>
+              <li><a href="/">주문한 제품 중 왜 일부만 먼저 배송되었나요?</a></li>
+              <li><a href="/">온라인(나이키 앱, 나이키닷컴)에서 구매한 제품을 매장에서 픽업할 수 있나요?</a></li>
+              <li><a href="/">더보기</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-accrodion btn-arrow qs-button" aria-expanded="false">주문 및 결제</button>
+            <ul class="detail-accrodion cs-qs-links">
+              <li><a href="/">결제 방법에는 어떤 것이 있나요?</a></li>
+              <li><a href="/">주문을 취소하거나 주문 내용을 변경할 수 있나요?</a></li>
+              <li><a href="/">주문 및 배송 상황은 어떻게 조회하나요?</a></li>
+              <li><a href="/">더보기</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-accrodion btn-arrow qs-button" aria-expanded="false">쇼핑하기</button>
+            <ul class="detail-accrodion cs-qs-links">
+              <li><a href="/">쿠폰은 어떻게 사용하나요?(생일 쿠폰, 웰컴 쿠폰 등)</a></li>
+              <li><a href="/">나이키의 사이즈 정보는 어떻게 알 수 있나요?</a></li>
+              <li><a href="/">제품 구매 시, 참고할 수 있는 나이키(제품/사이즈)가이드가 있나요?</a></li>
+              <li><a href="/">더보기</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-accrodion btn-arrow qs-button" aria-expanded="false">나이키 멤버십/ Apps(Nike, SNKRS)</button>
+            <ul class="detail-accrodion cs-qs-links">
+              <li><a href="/">나이키 멤버가 되면 어떤 혜택을 받나요?</a></li>
+              <li><a href="/">Draw는 어떻게 응모하나요?</a></li>
+              <li><a href="/">SNKRS 결제 방법은 어떻게 되나요?</a></li>
+              <li><a href="/">더보기</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn-accrodion btn-arrow qs-button" aria-expanded="false">공지 및 기타 정책</button>
+            <ul class="detail-accrodion cs-qs-links">
+              <li><a href="/">공지상항 및 고객알림</a></li>
+              <li><a href="/">나이키의 A/S 절차는 어떻게 되나요?</a></li>
+              <li><a href="/">나이키의 품질 보증 기간은 어떻게 되나요?</a></li>
+              <li><a href="/">더보기</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="cu-section">
+      <div class="common-head">
+        <h2>문의 하기</h2>
+      </div>
+      <div class="cu-lists-wrapper">
+        <ul class="cu-lists-wrapper">
+          <li class="cu-list">
+            <span class="cu-icon" aria-hidden="true"></span>
+            <a href="/" aria-label="제품 및 주문 관련 지원 정보">
+              <h3>제품 및 주문</h3>
+              <p>나이키와 채팅하기</p>
+              <time datetime="09:00-20:00">9:00 - 20:00</time>
+              <p>월요일 - 일요일(설/추석 연휴 제외)</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
