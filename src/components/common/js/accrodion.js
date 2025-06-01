@@ -2,20 +2,33 @@
 
 export function accrodionFunction() {
   const accordionBtns = document.querySelectorAll('.btn-accrodion');
+  const openStates = new Map(); // 버튼별 열림 상태 기억
 
   function toggleAccordion(btn) {
     const subMenu = btn.parentElement.querySelector('.detail-accrodion');
     if (!subMenu) return;
 
     const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!isExpanded));
-    subMenu.style.display = isExpanded ? 'none' : 'block';
+    const shouldExpand = !isExpanded;
+
+    btn.setAttribute('aria-expanded', String(shouldExpand));
+    subMenu.style.display = shouldExpand ? 'block' : 'none';
+
+    openStates.set(btn, shouldExpand);
   }
 
   function resetAccordions() {
     accordionBtns.forEach((btn) => {
       const subMenu = btn.parentElement.querySelector('.detail-accrodion');
       if (!subMenu) return;
+
+      const isOpen = openStates.get(btn);
+
+      if (typeof isOpen === 'boolean') {
+        btn.setAttribute('aria-expanded', String(isOpen));
+        subMenu.style.display = isOpen ? 'block' : 'none';
+        return;
+      }
 
       if (btn.classList.contains('mo-block')) {
         if (window.innerWidth >= 640) {
@@ -33,6 +46,8 @@ export function accrodionFunction() {
   }
 
   accordionBtns.forEach((btn) => {
+    openStates.set(btn, false); // 초기에는 모두 닫힘
+
     btn.addEventListener('click', (e) => {
       const isMoOnly = btn.classList.contains('mo-block');
 
@@ -43,9 +58,9 @@ export function accrodionFunction() {
     });
   });
 
-  // 초기 상태 설정
+  // 초기 상태
   resetAccordions();
 
-  // 창 크기 변경 시 초기화
-  window.addEventListener('resize', resetAccordions);
+  // orientationchange나 focusout 이벤트는 사용 가능
+  window.addEventListener('orientationchange', resetAccordions);
 }
