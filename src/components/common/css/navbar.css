@@ -13,10 +13,6 @@
     overflow-x: visible;
   }
 
-  &.show {
-    transform: translateY(0);
-  }
-
   @media (width >= 64rem) {
     overflow-x: visible;
   }
@@ -180,9 +176,8 @@
   top: 0;
   right: 0;
   min-inline-size: 19.375rem;
-  max-block-size: 100vh;
   overflow-y: auto;
-  block-size: calc(100vh + 4.375rem);
+  block-size: 100%;
   z-index: 999;
   background-color: var(--white);
   opacity: 0;

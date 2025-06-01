@@ -136,10 +136,8 @@ export function headerFunction() {
 
     if (event.deltaY > 0) {
       navbar.classList.add('hidden');
-      navbar.classList.remove('show');
     } else if (event.deltaY < 0) {
       navbar.classList.remove('hidden');
-      navbar.classList.add('show');
     }
   };
 
