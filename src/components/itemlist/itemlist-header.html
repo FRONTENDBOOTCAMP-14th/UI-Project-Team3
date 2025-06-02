@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ItemList Page Header</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../../common/index.css" />
+    <link rel="stylesheet" href="./itemlist-header.css" />
+
+    <script type="module">
+      const rangeBtn = document.querySelector('.range-button');
+      const filterSublists = document.querySelector('.filter-sublists');
+      const arrowBtn = document.querySelector('.range-button-icon');
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024) {
+          filterSublists.classList.remove('active');
+          arrowBtn.style.transform = 'rotate(0deg)';
+        }
+      });
+
+      rangeBtn.addEventListener('click', () => {
+        filterSublists.classList.toggle('active');
+
+        const isRotated = arrowBtn.style.transform === 'rotate(180deg)';
+        arrowBtn.style.transform = isRotated ? 'rotate(0deg)' : 'rotate(180deg)';
+        arrowBtn.style.transition = 'transform 0.3s ease';
+      });
+    </script>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>ItemList Page Header</h1>
+    <br />
+    <div class="itemlist-header-wrapper">
+      <div class="itemlist-heading">
+        <h2>신제품<span class="desk-only">(749)</span></h2>
+      </div>
+      <div class="itemlist-menu-group">
+        <button class="filter-button" type="button" aria-haspopup="true" aria-label="필터 메뉴 버튼">
+          <span>필터 숨기기</span>
+          <img src="../../assets/images/filter.svg" alt="" />
+        </button>
+        <button class="filter-button range-button" type="button" aria-haspopup="true" aria-controls="sort-menu">
+          <span>정렬 기준</span>
+          <img class="range-button-icon" src="../../assets/images/arrow-down.svg" alt="" />
+        </button>
+        <ul class="filter-sublists" id="sort-menu" role="menu">
+          <li>
+            <button type="button">
+              <span>추천순</span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <span>최신순</span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <span>높은 가격순</span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <span>낮은 가격순</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <ul class="itemlist-menu-items">
+        <li>
+          <a href="/">
+            <span>신발</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>탑 & 티셔츠</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>후디 & 크루</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>재킷 & 베스트</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>팬츠 & 타이츠</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>쇼츠</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>스포츠 브라</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>트랙수트</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>점프수트 & 롬퍼스</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>스커트 & 드레스</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>양말</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>용품</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="itemlist-border-wrapper">
+      <div class="text">
+        <span>741개의 결과</span>
+      </div>
+      <div>
+        <button class="button small filter-button" type="button">
+          <span>필터</span>
+          <img src="../../assets/images/filter.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

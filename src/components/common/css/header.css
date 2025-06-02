@@ -56,7 +56,7 @@
       border-radius: 0.625rem;
       padding-inline: 1.25rem;
       padding-block: 1.25rem;
-      z-index: 999;
+      z-index: 9999;
       opacity: 0;
       visibility: hidden;
       transform: translateY(0.7rem);

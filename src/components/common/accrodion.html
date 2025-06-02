@@ -12,18 +12,37 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../../common/index.css" />
     <link rel="stylesheet" href="../common/css/accrodion.css" />
-    <script type="module" src="./js/accrodion.js"></script>
+    <script type="module">
+      import { accrodionFunction } from './js/accrodion.js';
+
+      accrodionFunction();
+    </script>
   </head>
   <body>
-    <a href="/index.html">메인 페이지 이동</a>
+    <a href="/index.html" class="button circle home"><span class="sr-only">메인 페이지 이동</span></a>
     <br />
+    <h1 class="component-h1-title">공통 컴포넌트_아코디언</h1>
     <div class="component-wrapper">
       <div class="component-box accrodion-component">
-        <h1 class="title">아코디언 컴포넌트</h1>
-        <!-- 아코디언 컴포넌트 -->
-        <button type="button" class="btn-accrodion btn-arrow" aria-expanded="false">아코디언 제목</button>
-        <div class="detail-accrodion">아코디언 내용</div>
-        <!-- // 아코디언 컴포넌트 -->
+        <h2 class="component-title">아코디언 컴포넌트</h2>
+        <div class="component-item">
+          <!-- 아코디언 컴포넌트 -->
+          <ul class="accrodion-list">
+            <li>
+              <button type="button" class="btn-accrodion btn-arrow" aria-expanded="false">아코디언 제목</button>
+              <div class="detail-accrodion">아코디언 내용</div>
+            </li>
+            <li>
+              <button type="button" class="btn-accrodion btn-arrow" aria-expanded="false">아코디언 제목</button>
+              <div class="detail-accrodion">아코디언 내용</div>
+            </li>
+            <li>
+              <button type="button" class="btn-accrodion btn-arrow" aria-expanded="false">아코디언 제목</button>
+              <div class="detail-accrodion">아코디언 내용</div>
+            </li>
+          </ul>
+          <!-- // 아코디언 컴포넌트 -->
+        </div>
       </div>
     </div>
   </body>

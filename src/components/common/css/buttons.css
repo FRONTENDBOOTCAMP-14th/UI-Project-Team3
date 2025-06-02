@@ -1,3 +1,5 @@
+@import './component-layout.css';
+
 .button {
   inline-size: auto;
   padding-block: 1.125rem;
@@ -131,6 +133,19 @@
       background-size: 1.5rem;
       background-position: center;
     }
+
+    &.home {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      inline-size: 2.5rem;
+      block-size: 2.5rem;
+      background-image: url('../../../assets/images/icon-home.svg');
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      background-position: center;
+      z-index: 99;
+    }
   }
 
   /* text width type */
@@ -148,6 +163,7 @@
 .text-link-button {
   position: relative;
   display: inline-block;
+  font-weight: 500;
 
   &::after {
     content: '';

@@ -1,0 +1,305 @@
+@import '../.././common/theme.css';
+
+/* 공통 래퍼 스타일 */
+.page-wrapper {
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 100vh;
+}
+
+/* 첫 번째 화면 스타일 */
+.signup-screen {
+  display: block;
+}
+
+.signup-screen.hidden {
+  display: none;
+}
+
+.signup-title {
+  font-size: var(--text-4xl-half);
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-group {
+  flex: 1;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.25rem;
+  background-color: var(--white);
+  padding: 0.625rem 1rem;
+}
+
+.input-field {
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: var(--text-base);
+  color: var(--black);
+  outline: none;
+}
+
+.input-wrapper.has-icon {
+  position: relative;
+}
+
+.input-wrapper.has-icon .input-field {
+  padding-inline-end: 2.5rem; /* 아이콘과 겹치지 않도록 여유 공간 확보 */
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../../assets/images/Icon24px.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.input-field::placeholder {
+  color: var(--gray);
+}
+
+.password-hint-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-xs);
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.password-hint-list .valid {
+  color: var(--green);
+}
+
+.password-hint-list .invalid {
+  color: var(--gray);
+}
+
+.password-hint-list .icon {
+  margin-right: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: var(--text-xs);
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.checkbox-label input[type='checkbox'] {
+  margin-top: 0.125rem;
+}
+
+.checkbox-label .link {
+  text-decoration: underline;
+  color: var(--black);
+}
+
+/* 두 번째 화면 (약관 동의) 스타일 */
+.terms-screen {
+  display: none;
+}
+
+.terms-screen.show {
+  display: block;
+}
+
+.terms-title {
+  font-size: var(--text-xl);
+  color: var(--black);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.terms-subtitle {
+  font-size: var(--text-sm);
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.terms-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.terms-section-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.terms-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.5rem;
+  background-color: var(--white);
+}
+
+.checkbox-item input[type='checkbox'] {
+  margin-top: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.checkbox-content {
+  flex: 1;
+}
+
+.checkbox-content .title {
+  font-size: var(--text-sm);
+  color: var(--black);
+  margin-bottom: 0.25rem;
+}
+
+.checkbox-content .description {
+  font-size: var(--text-xs);
+  color: var(--gray);
+  line-height: 1.4;
+}
+
+.required-mark {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.terms-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  padding: 0.75rem 1.875rem;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  line-height: 1;
+  text-align: center;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button.fill {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.button.outline {
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:focus-visible {
+  outline: 0.1875rem solid var(--blue);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:disabled:hover {
+  opacity: 0.5;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 모바일 대응 */
+@media (max-width: 639px) {
+  .page-wrapper {
+    padding: 2.5rem 1rem;
+  }
+
+  .terms-actions {
+    flex-direction: column;
+  }
+
+  .checkbox-item {
+    padding: 0.75rem;
+  }
+}
+
+/* 태블릿 이상 */
+@media (min-width: 640px) {
+  .signup-title {
+    font-size: var(--text-xl);
+  }
+
+  .terms-title {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* 데스크탑 이상 */
+@media (min-width: 1024px) {
+  .page-wrapper {
+    padding: 4rem 2rem;
+  }
+
+  .signup-title {
+    font-size: var(--text-2xl);
+  }
+}

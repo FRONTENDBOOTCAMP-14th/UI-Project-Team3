@@ -13,11 +13,467 @@
     <link rel="stylesheet" href="../common/index.css" />
     <link rel="stylesheet" href="./style/itemlist.css" />
     <script type="module" src="../components/common/js/layout.js"></script>
+    <script type="module" src="./js/itemlist.js"></script>
+    <script type="module" src="../main.js"></script>
   </head>
   <body>
     <header id="header"></header>
     <nav id="navbar"></nav>
-    <h1>상품 리스트 페이지</h1>
+
+    <!-- 아이템리스트 헤더 -->
+    <section>
+      <div class="itemlist-header-wrapper">
+        <div class="itemlist-heading">
+          <h2>신제품<span class="desk-only">(749)</span></h2>
+        </div>
+        <div class="itemlist-menu-group">
+          <button class="filter-button desk-filter-button" type="button" aria-haspopup="true" aria-label="필터 메뉴 버튼">
+            <span class="filter-button-text">필터 열기</span>
+            <img src="../assets/images/filter.svg" alt="" role="presentation" />
+          </button>
+          <button class="filter-button range-button" type="button" aria-haspopup="true" aria-controls="sort-menu">
+            <span>정렬 기준</span>
+            <img class="range-button-icon" src="../assets/images/arrow-down.svg" alt="" role="presentation" />
+          </button>
+          <ul class="filter-sublists" id="sort-menu" role="menu">
+            <li>
+              <button type="button">
+                <span>추천순</span>
+              </button>
+            </li>
+            <li>
+              <button type="button">
+                <span>최신순</span>
+              </button>
+            </li>
+            <li>
+              <button type="button">
+                <span>높은 가격순</span>
+              </button>
+            </li>
+            <li>
+              <button type="button">
+                <span>낮은 가격순</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <ul class="itemlist-menu-items">
+          <li>
+            <a href="/">
+              <span>신발</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>탑 & 티셔츠</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>후디 & 크루</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>재킷 & 베스트</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>팬츠 & 타이츠</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>쇼츠</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>스포츠 브라</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>트랙수트</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>점프수트 & 롬퍼스</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>스커트 & 드레스</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>양말</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>용품</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="itemlist-border-wrapper">
+        <div class="text">
+          <span>749개의 결과</span>
+        </div>
+        <div>
+          <button class="button small filter-button mb-filter-btn" type="button">
+            <span>필터</span>
+            <img src="../assets/images/filter.svg" alt="" role="presentation" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 아이템 카드 -->
+    <main class="itemlist-main">
+      <!-- 필터 -->
+      <aside class="itemlist-filter-wrapper hidden" aria-modal="true" aria-labelledby="filter-title">
+        <div class="itemlist-filter-icon">
+          <button type="button" aria-label="필터 닫기" class="mb-filter-close-button">
+            <img src="../assets/images/exiticon.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
+        <h3 id="filter-title">필터</h3>
+
+        <!-- 아이템 목록 -->
+        <ul class="itemlist-filter-lists categories">
+          <li>
+            <a href="/">
+              <span>신발</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>탑 & 티셔츠</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>후디 & 크루</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>재킷 & 베스트</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>팬츠 & 타이츠</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>쇼츠</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>스포츠 브라</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>트랙수트</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>점프수트 & 롬퍼스</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>스커트 & 드레스</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>양말</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>용품</span>
+            </a>
+          </li>
+        </ul>
+        <!-- 정렬 기준 -->
+        <fieldset class="itemlist-filter-lists sort-fieldset">
+          <legend class="list-item">
+            <h4>정렬 기준</h4>
+          </legend>
+          <div class="list-item">
+            <input type="radio" name="sort" checked id="sort-recommend" />
+            <label for="sort-recommend" class="radio-label">추천순</label>
+          </div>
+          <div class="list-item">
+            <input type="radio" name="sort" id="sort-latest" />
+            <label for="sort-latest" class="radio-label">최신순</label>
+          </div>
+          <div class="list-item">
+            <input type="radio" name="sort" id="price-high" />
+            <label for="price-high" class="radio-label">높은 가격순</label>
+          </div>
+          <div class="list-item">
+            <input type="radio" name="sort" id="price-low" />
+            <label for="price-low" class="radio-label">낮은 가격순</label>
+          </div>
+        </fieldset>
+
+        <!-- 성별 -->
+        <fieldset class="itemlist-filter-lists">
+          <legend class="list-item">
+            <h4>성별</h4>
+          </legend>
+          <div class="list-item">
+            <input type="checkbox" name="gender" id="male" />
+            <label for="male" class="checkbox-label">남성</label>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" name="gender" id="female" />
+            <label for="female" class="checkbox-label">여성</label>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" name="gender" id="unisex" />
+            <label for="unisex" class="checkbox-label">유니섹스</label>
+          </div>
+        </fieldset>
+
+        <!-- 키즈 -->
+        <fieldset class="itemlist-filter-lists">
+          <legend class="list-item">
+            <h4>키즈</h4>
+          </legend>
+          <div class="list-item">
+            <input type="checkbox" name="kids-gender" id="kids-boy" />
+            <label for="kids-boy" class="checkbox-label">남아</label>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" name="kids-gender" id="kids-girl" />
+            <label for="kids-girl" class="checkbox-label">여아</label>
+          </div>
+        </fieldset>
+
+        <!-- 키즈 연령 -->
+        <fieldset class="itemlist-filter-lists">
+          <legend class="list-item">
+            <h4>키즈 연령</h4>
+          </legend>
+          <div class="list-item">
+            <input type="checkbox" name="kids-age" id="kids-age-03" />
+            <label for="kids-age-03" class="checkbox-label">베이비(0~3세)</label>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" name="kids-age" id="kids-age-37" />
+            <label for="kids-age-37" class="checkbox-label">리틀키즈(3~7세)</label>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" name="kids-age" id="kids-age-715" />
+            <label for="kids-age-715" class="checkbox-label">주니어(7~15세)</label>
+          </div>
+        </fieldset>
+
+        <!-- 가격 -->
+        <fieldset class="itemlist-filter-lists">
+          <legend class="list-item">
+            <h4>가격</h4>
+          </legend>
+          <div class="list-item">
+            <input type="checkbox" name="price" id="price-0-50" />
+            <label for="price-0-50" class="checkbox-label">0 ~ 50,000 원</label>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" name="price" id="price-50-100" />
+            <label for="price-50-100" class="checkbox-label">50,000 ~ 100,000 원</label>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" name="price" id="price-100-150" />
+            <label for="price-100-150" class="checkbox-label">100,1000 ~ 150,000 원</label>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" name="price" id="price-150-200" />
+            <label for="price-150-200" class="checkbox-label">150,000 ~ 200,000 원</label>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" name="price" id="price-200-plus" />
+            <label for="price-200-plus" class="checkbox-label">200,000 원 +</label>
+          </div>
+        </fieldset>
+
+        <!-- 필터 버튼 -->
+        <div class="itemlist-button-group">
+          <button class="button fill small" type="button" aria-label="선택한 필터 지우기">지우기</button>
+          <button class="button small" type="button" aria-label="선택한 필터 적용">적용</button>
+        </div>
+      </aside>
+
+      <div class="item-list-container">
+        <div class="itemlist-card-wrapper">
+          <a href="/" aria-label="나이키 줌 보메로 5 상세페이지로 이동">
+            <figure class="itemlist-card">
+              <picture>
+                <source srcset="../assets/images/item-image/shoes01.avif" type="image/avif" />
+                <img src="../assets/images/item-image/shoes01.png" alt="나이키 줌 보메로 5 여성 신발" />
+              </picture>
+              <figcaption class="card-description">
+                <p class="badge">신제품</p>
+                <h3 class="product-name">나이키 줌 보메로 5</h3>
+                <p class="product-subtitle">여성 신발</p>
+                <p class="product-color">1개 색상</p>
+                <p class="product-price">209,000 원</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="itemlist-card-wrapper">
+          <a href="/" aria-label="나이키 줌 보메로 5 상세페이지로 이동">
+            <figure class="itemlist-card">
+              <picture>
+                <source srcset="../assets/images/item-image/shoes02.avif" type="image/avif" />
+                <img src="../assets/images/item-image/shoes02.png" alt="나이키 줌 보메로 5 여성 신발" />
+              </picture>
+              <figcaption class="card-description">
+                <p class="badge">신제품</p>
+                <h3 class="product-name">나이키 줌 보메로 5</h3>
+                <p class="product-subtitle">여성 신발</p>
+                <p class="product-color">1개 색상</p>
+                <p class="product-price">209,000 원</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="itemlist-card-wrapper">
+          <a href="/" aria-label="나이키 에어맥스 SC 트렌드 상세페이지로 이동">
+            <figure class="itemlist-card">
+              <picture>
+                <source srcset="../assets/images/item-image/shoes03.avif" type="image/avif" />
+                <img src="../assets/images/item-image/shoes03.png" alt="나이키 에어맥스 SC 트렌드 여성 신발" />
+              </picture>
+              <figcaption class="card-description">
+                <p class="badge">신제품</p>
+                <h3 class="product-name">나이키 에어맥스 SC 트렌드</h3>
+                <p class="product-subtitle">여성 신발</p>
+                <p class="product-color">1개 색상</p>
+                <p class="product-price">119,000 원</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="itemlist-card-wrapper">
+          <a href="/" aria-label="나이키 스우시 1 상세페이지로 이동">
+            <figure class="itemlist-card">
+              <picture>
+                <source srcset="../assets/images/item-image/shoes04.avif" type="image/avif" />
+                <img src="../assets/images/item-image/shoes04.png" alt="나이키 스우시 1 여성 신발" />
+              </picture>
+              <figcaption class="card-description">
+                <p class="badge">신제품</p>
+                <h3 class="product-name">나이키 스우시 1</h3>
+                <p class="product-subtitle">베이비 신발</p>
+                <p class="product-color">1개 색상</p>
+                <p class="product-price">69,000 원</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="itemlist-card-wrapper">
+          <a href="/" aria-label="나이키 머큐리얼 베이퍼 16 프로 상세페이지로 이동">
+            <figure class="itemlist-card">
+              <picture>
+                <source srcset="../assets/images/item-image/shoes05.avif" type="image/avif" />
+                <img src="../assets/images/item-image/shoes05.png" alt="나이키 머큐리얼 베이퍼 16 프로 여성 신발" />
+              </picture>
+              <figcaption class="card-description">
+                <p class="badge">신제품</p>
+                <h3 class="product-name">나이키 머큐리얼 베이퍼 16 프로</h3>
+                <p class="product-subtitle">TF 로우 탑 축구화</p>
+                <p class="product-color">1개 색상</p>
+                <p class="product-price">149,000 원</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="itemlist-card-wrapper">
+          <a href="/" aria-label="나이키 티엠포 레전드 10 프로 상세페이지로 이동">
+            <figure class="itemlist-card">
+              <picture>
+                <source srcset="../assets/images/item-image/shoes06.avif" type="image/avif" />
+                <img src="../assets/images/item-image/shoes06.png" alt="나이키 티엠포 레전드 10 프로 여성 신발" />
+              </picture>
+              <figcaption class="card-description">
+                <p class="badge">신제품</p>
+                <h3 class="product-name">나이키 티엠포 레전드 10 프로</h3>
+                <p class="product-subtitle">인조 잔디 로우 탑 축구화</p>
+                <p class="product-color">1개 색상</p>
+                <p class="product-price">159,000 원</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="itemlist-card-wrapper">
+          <a href="/" aria-label="나이키 팬텀 GX 2 프로 상세페이지로 이동">
+            <figure class="itemlist-card">
+              <picture>
+                <source srcset="../assets/images/item-image/shoes07.avif" type="image/avif" />
+                <img src="../assets/images/item-image/shoes07.png" alt="나이키 팬텀 GX 2 프로 여성 신발" />
+              </picture>
+              <figcaption class="card-description">
+                <p class="badge">신제품</p>
+                <h3 class="product-name">나이키 팬텀 GX 2 프로</h3>
+                <p class="product-subtitle">TF 로우탑 축구화</p>
+                <p class="product-color">1개 색상</p>
+                <p class="product-price">159,000 원</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="itemlist-card-wrapper">
+          <a href="/" aria-label="나이키 에이펙스 상세페이지로 이동">
+            <figure class="itemlist-card">
+              <picture>
+                <source srcset="../assets/images/item-image/hat.avif" type="image/avif" />
+                <img src="../assets/images/item-image/hat.png" alt="나이키 에이펙스 여성 신발" />
+              </picture>
+              <figcaption class="card-description">
+                <p class="badge">신제품</p>
+                <h3 class="product-name">나이키 에이펙스</h3>
+                <p class="product-subtitle">데님 버킷 햇</p>
+                <p class="product-color">1개 색상</p>
+                <p class="product-price">45,000 원</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="itemlist-card-wrapper">
+          <a href="/" aria-label="나이키 클럽 상세페이지로 이동">
+            <figure class="itemlist-card">
+              <picture>
+                <source srcset="../assets/images/item-image/cap.avif" type="image/avif" />
+                <img src="../assets/images/item-image/cap.png" alt="나이키 클럽 여성 신발" />
+              </picture>
+              <figcaption class="card-description">
+                <p class="badge">신제품</p>
+                <h3 class="product-name">나이키 클럽</h3>
+                <p class="product-subtitle">언스트럭처 데님 캡</p>
+                <p class="product-color">1개 색상</p>
+                <p class="product-price">39,000 원</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+      </div>
+    </main>
     <footer id="footer"></footer>
   </body>
 </html>
