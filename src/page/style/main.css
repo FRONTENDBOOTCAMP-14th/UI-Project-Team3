@@ -1,3 +1,170 @@
 /* body {
   margin: 50px;
 } */
+
+/* 섹션 공통 */
+.section {
+  padding-block: 1.75rem;
+}
+.section-title {
+  margin: 0 0 1rem 0;
+  padding-inline: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* 가로 스크롤 래퍼 – 모바일 퍼스트 */
+.scroll-wrap {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-inline: 1rem;
+}
+.scroll-wrap > * {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+.trending-now .btn {
+  display: inline-block;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* 기본 블록 간격 */
+  overflow: hidden;
+  background: var(--white);
+}
+
+.carousel {
+  position: relative;
+}
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-inline: 1rem;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-slide {
+  flex: 0 0 200px; /* 기본 폭 */
+  scroll-snap-align: center;
+}
+
+/* 이미지 스타일 */
+.carousel-slide img {
+  inline-size: 100%;
+  block-size: auto;
+}
+
+/* ===== Carousel 공통 ===== */
+
+.carousel {
+  position: relative;
+}
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-inline: 1rem;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-slide {
+  flex: 0 0 200px; /* 기본 폭 */
+  scroll-snap-align: center;
+}
+
+/* 이미지 스타일 */
+.carousel-slide img {
+  inline-size: 100%;
+  block-size: auto;
+}
+
+/* 네비 버튼 */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inline-size: 40px;
+  block-size: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+.carousel-btn svg {
+  inline-size: 24px;
+  block-size: 24px;
+}
+.carousel-btn.prev {
+  left: 0.5rem;
+}
+.carousel-btn.next {
+  right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .scroll-wrap {
+    overflow-x: hidden; /* 가로 스크롤 제거 */
+    scroll-snap-type: none;
+  }
+  .scroll-wrap > * {
+    flex: 1 1 33.333%; /* 3장을 가로 3‑등분 */
+  }
+  /* 카드 크기 – 가로 100%, 높이 = 가로와 동일(정사각) */
+  .category-card,
+  .category-card .media {
+    inline-size: 100%;
+    position: relative;
+  }
+  .category-card .media img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .trending-now .btn {
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+  }
+
+  .feature {
+    flex: 1 1 auto;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .feature-card,
+  .feature-card .media {
+    inline-size: 100%;
+    position: relative;
+  }
+  .feature-card .media img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-btn {
+    display: flex;
+  }
+  .carousel-slide {
+    flex-basis: 60%;
+  }
+}

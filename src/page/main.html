@@ -11,32 +11,319 @@
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../common/index.css" />
-    <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="../components/style/main-page.css" />
+    <link rel="stylesheet" href="./style/main.css" />
     <script type="module" src="../components/common/js/layout.js"></script>
   </head>
   <body>
     <header id="header"></header>
     <nav id="navbar"></nav>
-    <div style="display: flex; flex-direction: column; gap: 10px; margin: 0 20px">
-      <a href="../components/main-page.html">메인 페이지 이동</a>
-      <a href="./itemlist.html">아이템리스트 페이지 이동</a>
-      <a href="./wishList.html">위시리스트 페이지 이동</a>
-      <a href="./product-detail.html">상품 상세 페이지 이동</a>
-      <a href="./signin.html">로그인 페이지 이동</a>
-      <a href="./signup.html">회원가입 페이지 이동</a>
-      <h2>각 페이지별 컴포넌트</h2>
-      <a href="../components/main-page.html">메인 컴포넌트 페이지 이동</a>
-      <a href="../components/">상품 리스트 컴포넌트 페이지 이동</a>
-      <a href="../components/product-detail-component/product-detail-component.html">상품 상세 컴포넌트 페이지 이동</a>
-      <a href="../components/">위시리스트 컴포넌트 페이지 이동</a>
-      <a href="../components/login/login-input.html">로그인/회원가입 컴포넌트 페이지 이동</a>
-      <h2>공통 컴포넌트</h2>
-      <a href="../components/common/product-item.html">product-item 컴포넌트 페이지 이동</a>
-      <a href="../components/common/accrodion.html">아코디언 컴포넌트 페이지 이동</a>
-      <a href="../components/common/buttons.html">버튼 컴포넌트 페이지 이동</a>
-      <a href="../components/common/input.html">input/checkbox 컴포넌트 페이지 이동</a>
+    <div>
+      <a href="../components/main-page.html">메인컴포넌트 이동</a>
     </div>
+    <main>
+      <!-- ****** WINNER PROMO ****** -->
+      <section class="winner section">
+        <article class="promo-card">
+          <figure class="media">
+            <img src="../../src/assets/images/main-page/img-promo-winner.svg" alt="승자의 눈빛을 가진 선수 클로즈업" />
+          </figure>
+          <header class="content">
+            <h1 class="title">아무나 오를 수 없는 승자의 자리.</h1>
+            <p class="subtitle">전부를 내건 이들만이 차지하는 것.</p>
+            <a href="#" class="btn fill">자세히 보기</a>
+          </header>
+        </article>
+      </section>
+
+      <!-- ****** WIN ON AIR – 가로 스크롤 피처 ****** -->
+      <section class="section" aria-labelledby="win-on-air-title">
+        <h2 id="win-on-air-title" class="section-title">Win&nbsp;on&nbsp;Air</h2>
+        <div class="scroll-wrap">
+          <!-- 의류 카테고리 카드 -->
+          <article class="category-card">
+            <figure class="media">
+              <a href="#"><img src="../../src/assets/images/main-page/img-winOnAir-clothes.svg" alt="의류" /></a>
+            </figure>
+            <header class="category-card__info">
+              <a href="#"><h2 class="category-card__name">의류</h2></a>
+              <a href="#" class="btn fill white">구매하기</a>
+            </header>
+          </article>
+          <!-- 신발 카테고리 카드 -->
+          <article class="category-card">
+            <figure class="media">
+              <a href="#"><img src="../../src/assets/images/main-page/img-winOnAir-shoes.svg" alt="신발" /></a>
+            </figure>
+            <header class="category-card__info">
+              <a href="#"><h2 class="category-card__name">신발</h2></a>
+              <a href="#" class="btn fill white">구매하기</a>
+            </header>
+          </article>
+          <!-- 액세서리 카테고리 카드 -->
+          <article class="category-card">
+            <figure class="media">
+              <a href="#"><img src="../../src/assets/images/main-page/img-winOnAir-accessories.svg" alt="액세서리" /></a>
+            </figure>
+            <header class="category-card__info">
+              <a href="#"><h2 class="category-card__name">액세서리</h2></a>
+              <a href="#" class="btn fill white">구매하기</a>
+            </header>
+          </article>
+        </div>
+      </section>
+
+      <!-- ****** PROMO - NIKEJEM ****** -->
+      <section class="jem section">
+        <article class="promo-card">
+          <figure class="media">
+            <img src="../../src/assets/images/main-page/img-promo-nikejem.svg" alt="스케이드보더 2명이 스케이트를 타는 장면" />
+          </figure>
+          <header class="content">
+            <p class="add-explanation">신제품</p>
+            <h1 class="title">나이키 잼</h1>
+            <p class="subtitle">브레이킹을 위해 탄생한 나이키 잼 컬렉션을 만나 보세요.</p>
+            <a href="#" class="btn fill">구매하기</a>
+          </header>
+        </article>
+      </section>
+
+      <!-- ****** PROMO – 나이키 × 자크뮈스 ****** -->
+      <section class="collabo section">
+        <article class="promo-card">
+          <figure class="media">
+            <img src="../../src/assets/images/main-page/img-promo-collaboJac.svg" alt="Serena Williams wearing the Nike × Jacquemus collection" />
+          </figure>
+          <header class="content">
+            <p class="add-explanation">새로운 컬렉션</p>
+            <h1 class="title">나이키 × 자크뮈스</h1>
+            <p class="subtitle">세련된 실루엣과 감각적인 컬러가 조화를 이루는 나이키 × 자크뮈스 컬렉션을 만나보세요.</p>
+            <a href="#" class="btn fill">컬렉션 구매하기</a>
+          </header>
+        </article>
+      </section>
+
+      <!-- ****** TRENDING NOW – 가로 스크롤 피처 ****** -->
+      <section class="trending-now section" aria-labelledby="trending-now-title">
+        <h2 id="trending-now-title" class="section-title">Trending&nbsp;Now</h2>
+        <div class="scroll-wrap">
+          <!-- 의류 카테고리 카드 -->
+          <article class="category-card">
+            <figure class="media">
+              <a href="#"><img src="../../src/assets/images/main-page/img-trandingNow-mad.png" alt="축구화" /></a>
+            </figure>
+            <header class="category-card__info">
+              <a href="#"><h2 class="category-card__name">미드 앰비션 팩</h2></a>
+              <a href="#" class="btn fill">구매하기</a>
+            </header>
+          </article>
+          <!-- 신발 카테고리 카드 -->
+          <article class="category-card">
+            <figure class="media">
+              <a href="#"><img src="../../src/assets/images/main-page/img-trandingNow-suit.png" alt="수트" /></a>
+            </figure>
+            <header class="category-card__info">
+              <a href="#"><h2 class="category-card__name">가장 나다움을 담은 수트</h2></a>
+              <a href="#" class="btn fill">구매하기</a>
+            </header>
+          </article>
+          <!-- 액세서리 카테고리 카드 -->
+          <article class="category-card">
+            <figure class="media">
+              <a href="#"><img src="../../src/assets/images/main-page/img-trandingNow-sandals.jpg" alt="샌들 & 슬라이드" /></a>
+            </figure>
+            <header class="category-card__info">
+              <a href="#"><h2 class="category-card__name">샌들 & 슬라이드</h2></a>
+              <a href="#" class="btn fill">구매하기</a>
+            </header>
+          </article>
+        </div>
+      </section>
+
+      <!-- ****** FEATURE – 나이키 메트콘 9 ****** -->
+      <section class="feature section">
+        <article class="feature-card">
+          <figure class="media">
+            <a href="#">
+              <picture>
+                <!-- 와이드(데스크톱 ≥ 768px) 전용 -->
+                <source srcset="../../src/assets/images/main-page/img-featured-workout-wide.png" media="(min-width: 768px)" />
+
+                <!-- 모바일(기본) -->
+                <img src="../../src/assets/images/main-page/img-featured-workout-mobile.png" alt="워크아웃 에센셜" />
+              </picture>
+            </a>
+          </figure>
+          <header class="feature-card__info">
+            <a href="#"><h2 class="feature-card__name">워크아웃 에센셜</h2></a>
+            <a href="#" class="btn fill">구매하기</a>
+          </header>
+        </article>
+        <article class="feature-card">
+          <figure class="media">
+            <a href="#">
+              <picture>
+                <!-- 와이드(데스크톱 ≥ 768px) 전용 -->
+                <source srcset="../../src/assets/images/main-page/img-featured-metcon9-wide.png" media="(min-width: 768px)" />
+
+                <!-- 모바일(기본) -->
+                <img src="../../src/assets/images/main-page/img-featured-metcon9-mobile.png" alt="나이키 메트콘 9" />
+              </picture>
+            </a>
+          </figure>
+          <header class="feature-card__info">
+            <a href="#"><h2 class="feature-card__name">나이키 메트콘 9</h2></a>
+            <a href="#" class="btn fill">구매하기</a>
+          </header>
+        </article>
+      </section>
+
+      <!-- ****** ALWAYS ICONIC ****** -->
+      <section class="carousel section" aria-labelledby="carousel-shoes-images">
+        <div class="carousel" data-carousel>
+          <button class="carousel-btn prev" aria-label="이전">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
+          </button>
+          <div class="carousel-track" data-track>
+            <!-- 원본 슬라이드 -->
+            <a href="#" class="carousel-slide"><img src="../../src/assets/images/main-page/img-alwaysIconic-air.png" alt="에어맥스" /></a>
+            <a href="#" class="carousel-slide"><img src="../../src/assets/images/main-page/img-alwaysIconic-cor.png" alt="코르테즈" /></a>
+            <a href="#" class="carousel-slide"><img src="../../src/assets/images/main-page/img-alwaysIconic-dunk.png" alt="덩크" /></a>
+            <a href="#" class="carousel-slide"><img src="../../src/assets/images/main-page/img-alwaysIconic-pega.png" alt="페가수스" /></a>
+            <a href="#" class="carousel-slide"><img src="../../src/assets/images/main-page/img-alwaysIconic-v2k.png" alt="V2K 런" /></a>
+          </div>
+          <button class="carousel-btn next" aria-label="다음">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" /></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ****** SHOP BY SPORT – 리스트형 shop‑card ****** -->
+      <section class="section" aria-labelledby="shop-by-sport-title">
+        <h2 id="shop-by-sport-title" class="section-title">Shop by Sport</h2>
+
+        <article class="shop-card">
+          <a href="#" class="shop-card__link">
+            <picture class="shop-card__media">
+              <img src="../../src/assets/images/main-page/img-shop-run.png" alt="러닝을 즐기는 여성들" class="shop-card__image" />
+            </picture>
+            <header class="shop-card__body">
+              <p class="shop-card__category">런닝</p>
+              <h2 class="shop-card__title">러닝으로 시작하는 에너지 충전</h2>
+              <button type="button" class="btn fill">살펴보기</button>
+            </header>
+          </a>
+        </article>
+
+        <article class="shop-card">
+          <a href="#" class="shop-card__link">
+            <picture class="shop-card__media">
+              <img src="../../src/assets/images/main-page/img-shop-training.png" alt="트레이닝 중인 남성" class="shop-card__image" />
+            </picture>
+            <header class="shop-card__body">
+              <p class="shop-card__category">트레이닝 &amp; 짐</p>
+              <h2 class="shop-card__title">강렬한 퍼포먼스를 위한 트레이닝 기어</h2>
+              <button type="button" class="btn fill">살펴보기</button>
+            </header>
+          </a>
+        </article>
+
+        <article class="shop-card">
+          <a href="#" class="shop-card__link">
+            <picture class="shop-card__media">
+              <img src="../../src/assets/images/main-page/img-shop-basketball.png" alt="농구를 즐기는 청소년" class="shop-card__image" />
+            </picture>
+            <header class="shop-card__body">
+              <p class="shop-card__category">농구</p>
+              <h2 class="shop-card__title">코트를 지배하는 순간</h2>
+              <button type="button" class="btn fill">살펴보기</button>
+            </header>
+          </a>
+        </article>
+      </section>
+
+      <!-- ****** MEMBERSHIP PROMO ****** -->
+      <section class="section">
+        <article class="shop-card">
+          <a href="#" class="shop-card__link">
+            <picture class="shop-card__media">
+              <img src="../../src/assets/images/main-page/img-member-benefit.png" alt="가방을 든 여성 멤버" class="shop-card__image" />
+            </picture>
+            <header class="shop-card__body">
+              <p class="shop-card__category">나이키 멤버</p>
+              <h2 class="shop-card__title">멤버 한정 특별 혜택을 지금 만나보세요</h2>
+              <button type="button" class="btn fill">자세히 보기</button>
+            </header>
+          </a>
+        </article>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+
+    <script>
+      /* ───────── 기본 셋업 ───────── */
+      const track = document.querySelector('.carousel-track');
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+
+      /* 카드 1칸 폭(패딩+gap 포함) 계산 */
+      let CARD_W = 0;
+      function calcCardW() {
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        const first = track.querySelector('a');
+        CARD_W = first.offsetWidth + gap;
+      }
+      window.addEventListener('load', calcCardW);
+      window.addEventListener('resize', calcCardW);
+
+      /* ───────── 무한 루프용 앞·뒤 클론 삽입 ───────── */
+      const realSlides = Array.from(track.children); // 실제 카드들
+      const firstClone = realSlides[0].cloneNode(true);
+      const lastClone = realSlides.at(-1).cloneNode(true);
+
+      track.appendChild(firstClone); // … [실 N] [clone 1]
+      track.insertBefore(lastClone, realSlides[0]); // [clone N] [실 1] …
+
+      let i = 1; // 0 = 앞쪽 클론, 1 = 첫 실카드
+      function jumpTo(n) {
+        track.scrollLeft = n * CARD_W;
+      } // 순간 이동
+      function goTo(n) {
+        track.scrollTo({ left: n * CARD_W, behavior: 'smooth' });
+      } // 애니메이션
+
+      window.addEventListener('load', () => jumpTo(i)); // 첫 실카드로 정렬
+
+      /* ───────── 화살표 이벤트 ───────── */
+      prevBtn.addEventListener('click', () => {
+        i--;
+        goTo(i);
+      });
+      nextBtn.addEventListener('click', () => {
+        i++;
+        goTo(i);
+      });
+
+      /* ───────── 스크롤 종료 후 위치 보정 ───────── */
+      let t;
+      track.addEventListener('scroll', () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+          const max = realSlides.length; // 실카드 개수
+          i = Math.round(track.scrollLeft / CARD_W);
+
+          if (i === 0) {
+            // 앞쪽 클론 → 맨 뒤 실카드로
+            i = max;
+            jumpTo(i);
+          } else if (i === max + 1) {
+            // 뒤쪽 클론 → 맨 앞 실카드로
+            i = 1;
+            jumpTo(i);
+          }
+        }, 80); // 디바운스
+      });
+    </script>
     <footer id="footer"></footer>
   </body>
 </html>
