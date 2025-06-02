@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FindStore Page Components</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../../common/index.css" />
+    <link rel="stylesheet" href="./findstore-form.css" />
+    <link rel="stylesheet" href="../style/input.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>FindStore Page Components</h1>
+    <br />
+
+    <h3 style="margin: 30px 0">매장 찾기 폼</h3>
+    <form action="#">
+      <div class="input-group input-position">
+        <label for="store-search" class="search-label">위치 검색</label>
+        <div class="input-wrapper has-icon">
+          <input type="text" id="store-search" name="store-search" class="input-field findstore-input" aria-label="위치 검색" />
+          <span class="input-icon findstore-icon" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="store-number">
+        <p>근처 매장: 15 개</p>
+      </div>
+    </form>
+
+    <hr />
+
+    <h3 style="margin: 30px 0">매장 정보</h3>
+    <div class="store-description">
+      <a href="/" aria-label="매장 정보">
+        <section>
+          <h3>Nike House of Innovation NYC</h3>
+          <p>650 5th Avenue</p>
+          <p>New Your, NY, 10019-6108, US</p>
+          <p><strong>영업 종료</strong> • 익일 오전 10:00에 영업 시작</p>
+        </section>
+      </a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="나이키 프로젝트 실습용 아코디언 컴포넌트 페이지입니다." />
+    <meta name="author" content="UI Project Team3" />
+    <title>나이키 아코디언 컴포넌트</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../../common/index.css" />
+    <link rel="stylesheet" href="../common/css/accrodion.css" />
+    <script type="module">
+      import { accrodionFunction } from './js/accrodion.js';
+
+      accrodionFunction();
+    </script>
+  </head>
+  <body>
+    <a href="/index.html" class="button circle home"><span class="sr-only">메인 페이지 이동</span></a>
+    <br />
+    <h1 class="component-h1-title">공통 컴포넌트_아코디언</h1>
+    <div class="component-wrapper">
+      <div class="component-box accrodion-component">
+        <h2 class="component-title">아코디언 컴포넌트</h2>
+        <div class="component-item">
+          <!-- 아코디언 컴포넌트 -->
+          <ul class="accrodion-list">
+            <li>
+              <button type="button" class="btn-accrodion btn-arrow" aria-controls="sect1" id="accordion1" aria-expanded="false">아코디언 제목</button>
+              <div id="sect1" role="region" aria-labelledby="accordion1" class="detail-accrodion">아코디언 내용</div>
+            </li>
+            <li>
+              <button type="button" class="btn-accrodion btn-arrow" aria-controls="sect2" id="accordion2" aria-expanded="false">아코디언 제목</button>
+              <div id="sect2" role="region" aria-labelledby="accordion2" class="detail-accrodion">아코디언 내용</div>
+            </li>
+            <li>
+              <button type="button" class="btn-accrodion btn-arrow" aria-controls="sect3" id="accordion3" aria-expanded="false">아코디언 제목</button>
+              <div id="sect3" role="region" aria-labelledby="accordion3" class="detail-accrodion">아코디언 내용</div>
+            </li>
+          </ul>
+          <!-- // 아코디언 컴포넌트 -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

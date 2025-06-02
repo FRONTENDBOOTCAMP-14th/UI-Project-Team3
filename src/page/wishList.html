@@ -12,10 +12,97 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../common/index.css" />
     <link rel="stylesheet" href="./style/wishList.css" />
+    <script type="module" src="../components/common/js/layout.js"></script>
   </head>
   <body>
+    <header id="header"></header>
+    <nav id="navbar"></nav>
     <a href="../../index.html">메인 페이지 이동</a>
     <br />
-    <h1>나이키 상품 위시리스트</h1>
+
+    <!-- 위시리스트 타이틀 -->
+    <div class="title-box" role="banner">
+      <h2 class="wishList-text">위시리스트</h2>
+      <button class="button small" type="button" aria-label="수정">수정</button>
+    </div>
+
+    <!-- 1번 상품 2번 상품 묶는 래퍼 -->
+    <div class="product-wrapper">
+      <!-- 상품 컴포넌트 한 개만 묶는 클래스 item-card -->
+      <div class="item-card">
+        <picture>
+          <source srcset="../assets/images/product-picture.avif" type="image/avif" />
+          <img src="../assets/images/product-picture.avif" alt="나이키 줌 보메로 5" />
+        </picture>
+
+        <div class="product-info-box">
+          <div class="product-info">
+            <h3 class="product-name">나이키 줌 보메로 5</h3>
+            <p class="product-category">남성 신발</p>
+          </div>
+          <data class="product-price" value="189,000">189,000 원</data>
+        </div>
+
+        <button class="button midum" type="button" aria-label="장바구니">장바구니에 추가</button>
+        <button type="button" class="heart-button">
+          <picture>
+            <source srcset="../assets/images/wish-heart.avif" type="image/avif" />
+            <img class="heart-icon" src="../assets/images/wish-heart.avif" alt="지정 해제" />
+          </picture>
+        </button>
+      </div>
+
+      <!-- 상품2 컴포넌트 -->
+      <div class="item-card">
+        <picture>
+          <source srcset="../assets/images/product-picture2.avif" type="image/avif" />
+          <img src="../assets/images/product-picture2.avif" alt="나이키 줌 보메로 5" />
+        </picture>
+
+        <div class="product-info-box">
+          <div class="product-info">
+            <h3 class="product-name">나이키 줌 보메로 5</h3>
+            <p class="product-category">여성 신발</p>
+          </div>
+          <div class="price-box">
+            <del class="origin-price">189,000 원</del>
+            <data class="discounted-price" value="151,200">151,200 원</data>
+          </div>
+        </div>
+
+        <button class="button midum" type="button" aria-label="장바구니">장바구니에 추가</button>
+        <button type="button" class="heart-button">
+          <picture>
+            <source srcset="../assets/images/wish-heart.avif" type="image/avif" />
+            <img class="heart-icon" src="../assets/images/wish-heart.avif" alt="지정 해제" />
+          </picture>
+        </button>
+      </div>
+
+      <!-- 나이키 에어포스 1 -->
+      <div class="item-card">
+        <picture>
+          <source srcset="./../assets/images/air-force-1.avif" type="image/avif" />
+          <img src="./../assets/images/air-force-1.avif" alt="나이키 에어 포스 1 '07" />
+        </picture>
+
+        <div class="product-info-box">
+          <div class="product-info">
+            <h3 class="product-name">나이키 에어 포스 1 '07</h3>
+            <p class="product-category">남성 신발</p>
+          </div>
+          <data class="product-price" value="139,000">139,000 원</data>
+        </div>
+
+        <button class="button midum" type="button" aria-label="장바구니">장바구니에 추가</button>
+        <button type="button" class="heart-button">
+          <picture>
+            <source srcset="./../assets/images/wish-heart.avif" type="image/avif" />
+            <img class="heart-icon" src="./../assets/images/wish-heart.avif" alt="지정 해제" />
+          </picture>
+        </button>
+      </div>
+    </div>
+    <footer id="footer"></footer>
   </body>
 </html>

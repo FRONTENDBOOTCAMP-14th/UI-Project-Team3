@@ -1,0 +1,28 @@
+/* 위시리스트 상단(header 아랫 부분) 컴포넌트 */
+
+.title-box {
+  background: #fff;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline-end: 1.5rem;
+  padding: 2.25rem 1.6875rem 0.7987rem 0;
+}
+
+.wishList-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.button,
+small {
+  &:hover {
+    cursor: pointer;
+    border: 0.0938rem solid var(--light-gray);
+    background: whitesmoke;
+  }
+}

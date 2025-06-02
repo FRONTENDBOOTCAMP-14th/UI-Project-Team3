@@ -2,3 +2,13 @@
 @import './a11y.css';
 @import './reset.css';
 @import './base.css';
+@import '../components/common/css/footer.css';
+@import '../components/common/css/buttons.css';
+@import '../components/common/css/header.css';
+@import '../components/common/css/accrodion.css';
+@import '../components/common/css/navbar.css';
+@import '../components/common/css/item-card.css';
+@import '../components/product-detail-component/product-detail-component.css';
+@import '../components/findstore/findstore-form.css';
+@import '../components/findstore/findstore-map.css';
+@import '../components/CustomerService/cs-com.css';

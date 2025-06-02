@@ -1,0 +1,64 @@
+.qs-section,
+.common-head {
+  margin-block-end: 1.0625rem;
+}
+
+.common-head {
+  h2 {
+    font-size: var(--text-4xl);
+  }
+}
+
+.qs-button {
+  padding-block-start: 0;
+  padding-block-end: 2rem;
+  font-weight: var(--font-semibold);
+
+  &::after {
+    top: 23%;
+  }
+  @media (width>=40rem) {
+    pointer-events: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.cs-qs-links {
+  & li {
+    font-size: var(--text-sm);
+    padding-block: 0.3125rem;
+    word-break: keep-all;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.cu-list {
+  display: flex;
+  gap: 1.5rem;
+  margin-block-end: 2.25rem;
+
+  .cu-icon {
+    inline-size: 3rem;
+    block-size: 3rem;
+    background: url('../../assets/images/message.svg') no-repeat center / cover;
+  }
+
+  &:nth-child(2) .cu-icon,
+  &:nth-child(3) .cu-icon {
+    background-image: url('../../assets/images/phone.svg');
+  }
+
+  &:nth-child(4) .cu-icon {
+    background-image: url('../../assets/images/gps.svg');
+  }
+
+  & .cu-info > *:not(h3) {
+    font-size: var(--text-sm);
+  }
+}

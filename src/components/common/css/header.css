@@ -1,0 +1,89 @@
+.main-header {
+  display: none;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding-inline-end: 3.125rem;
+  padding-block: 0.4688rem;
+  background-color: var(--extra-light-gray);
+
+  .main-menu {
+    display: contents;
+  }
+
+  .main-menu-item {
+    position: relative;
+    font-size: var(--text-2xs);
+    font-weight: var(--font-semibold);
+
+    .main-menu-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:hover .main-menu-link {
+      opacity: 0.8;
+    }
+  }
+
+  .main-menu-item:nth-child(-n + 3)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -0.75rem;
+    transform: translateY(-50%);
+    background-color: var(--black);
+    inline-size: 0.0625rem;
+    block-size: 0.75rem;
+  }
+
+  @media (width >= 64rem) {
+    display: flex;
+  }
+
+  /* 고객센터 서브메뉴 */
+  .main-menu-item.customer-item {
+    position: relative;
+
+    .sub-menu {
+      position: absolute;
+      top: 100%;
+      left: -10px;
+      display: block;
+      min-width: 200px;
+      background-color: var(--white);
+      border-radius: 0.625rem;
+      padding-inline: 1.25rem;
+      padding-block: 1.25rem;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(0.7rem);
+      transition: all 0.2s ease;
+      pointer-events: none;
+
+      & li:first-child {
+        font-size: var(--text-base);
+        font-weight: var(--font-semibold);
+        margin-block-end: 0.625rem;
+      }
+
+      & li:not(:first-child) {
+        color: var(--dark-gray);
+        margin-block-end: 0.25rem;
+      }
+
+      & li:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &:hover .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+}

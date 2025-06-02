@@ -16,32 +16,39 @@
 
 ```
 .my-class {color:#ffffff;}
-
 ```
 
 2. 폰트의 선언, 배경 url, filter, content에 작은 따옴표(‘ ’)를 사용합니다. 그 외의 경우는 사용하지 않는다.
 
 ```
 .my-class {background-image:url(‘image.jpg’)}
-
 ```
 
 3. 마지막 선언된 속성에도 세미콜론(;)을 사용해도 된다.
 
 ```
 .my-class {color:red;font-size:16px;line-height:20px;}
-
 ```
 
 4. 공백 : 선택자간, 중괄호 간 한 칸의 공백을 사용한다.
 
 ```
 .my-class {color:red;font-size:18px;}
-
 ```
 
-5. 중첩 태그 사용시 최대 3단계 이상은 사용하지 않는다.
+5. 중첩 태그 사용시 3단계 권장한다.
 6. 사용단위는 rem을 권장한다.
+7. 논리속성 사용한다.
+
+```
+header {
+  inline-size:100%; (O)
+  width:100% (X)
+
+  padding-inline-start: 1rem; (O)
+  padding-left: 1rem; (X)
+}
+```
 
 ### CSS 네이밍 규칙
 
@@ -50,7 +57,6 @@
 ```
 잘못된 예 : Btn, 2btn, _btn, btn_, sectionList, product-3list
 올바른 예 : btn, btn2, btn, btn, section-list, procude-list3
-
 ```
 
 ### id, class 규칙
@@ -85,7 +91,6 @@ CSS는 들여쓰기를 허용하지 않는다.
 ```
 잘못된 예 : <SPAN Class="desc">간단한 설명</SPAN>
 올바른 예 : <span class="desc">간단한 설명</span>
-
 ```
 
 2. DTD 선언 앞에 주석, 공백, 줄바꿈, 문자 등의 내용이 없어야 한다.
@@ -97,7 +102,6 @@ CSS는 들여쓰기를 허용하지 않는다.
 올바른 예 :
 <!DOCTYPE html>
 <!-- Made by 3 -->
-
 ```
 
 3. `<p>` 태그 안에는 p, div, ul 등 다른 블록 요소가 들어갈 수 없다. (display : inline 속성을 적용해도 소용없음)
@@ -117,22 +121,16 @@ CSS는 들여쓰기를 허용하지 않는다.
 ```
 잘못된 예 : <em><strong>내용</em></strong>
 올바른 예 : <em><strong>내용</strong></em>
-
 ```
 
 10. `<input>`, `<select>`, `<textarea>`에 `<label>`을 작성할 수 없을 경우 `title`을 작성해야 한다. (웹 접근성 관련 지침)
 11. 종료 태그가 필요한 요소는 반드시 종료 태그를 선언한다.
 12. 태그 사용 등 관련 오류의 체크를 위해 반드시 페이지 완료 전에 체크해야 한다.
-13. 대체 텍스트
 
 ### 들여쓰기
 
 앞은 탭(1탭=2스페이스)으로 들여쓰고 그 이외 부분은 1 스페이스로 한다.
 
-12. 미디어 쿼리
-
-미디어 쿼리는 공통 CSS파일(morpheus-common.css)의 가장 아래 부분에 선언합니다. 이때 1탭의 들여쓰기는 허용합니다.
-
-## 반응형 작업 순서
+## 반응형 규칙
 
 1. 반응형 작업은 ‘모바일(first) → 태블릿 → 웹’ 순서로 작업한다.

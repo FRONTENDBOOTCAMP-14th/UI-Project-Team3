@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Components</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../../common/index.css" />
+    <link rel="stylesheet" href="../common/css/buttons.css" />
+  </head>
+  <body>
+    <a href="/index.html" class="button circle home"><span class="sr-only">메인 페이지 이동</span></a>
+    <br />
+    <h1 class="component-h1-title">공통 컴포넌트_버튼</h1>
+    <!-- 버튼 유형이나 형태가 다른 버튼만 추가해주세요 사용하실 경우에는 형태에 맞게 버튼 클래스 넣고, 글자 변경해주세요 -->
+    <div class="component-wrapper">
+      <div class="component-box buttons-component">
+        <h2 class="component-title">버튼 컴포넌트_사이즈 타입</h1>
+
+        <!-- Default Button size type -->
+        <h2 class="component-sub-title">Default Button size type(height 기준) : 부모 크기 만큼 사용하고 싶을때 full(64px) 클래스 추가</h2>
+        <div>
+          <button class="button full" type="button">full button</button>
+        </div>
+        <br />
+        <h2 class="component-sub-title">Default Button size type(height 기준) : midum(48px)</h2>
+        <div>
+          <button class="button midum" type="button">midum button</button>
+        </div>
+        <br />
+        <h2 class="component-sub-title">Default Button size type(height 기준) : 글자 크기 만큼 사용하고 싶을때 small(40px) 클래스 추가</h2>
+        <div>
+          <button class="button small" type="button">small button</button>
+        </div>
+      </div>
+    </div>
+    <div class="component-wrapper">
+      <div class="component-box buttons-component">
+        <h2 class="component-title">버튼 컴포넌트_배경색 타입</h1>
+
+        <!-- Default Button background type -->
+        <h2 class="component-sub-title">Default Button background type : 기본형(white) 클래스 추가 안해도 됨, 검정 배경 사용하고 싶을 경우 - fill 클래스 추가(색상코드 : #111)</h2>
+        <div>
+          <button class="button full fill" type="button">fill button</button>
+        </div>
+      </div>
+    </div>
+    <div class="component-wrapper">
+      <div class="component-box buttons-component">
+        <h2 class="component-title">버튼 컴포넌트_모양 타입</h1>
+
+        <!-- Default Button shape type -->
+        <h2 class="component-sub-title">Default Button shape type : 기본형(모서리가 큰 둥근 타입) 클래스 추가 안해도 됨, 사각형 타입일 경우 - square 클래스 추가</h2>
+        <div>
+          <button class="button full square" type="button">square button</button>
+        </div>
+        <br />
+        <h2 class="component-sub-title">Default Button shape type : 모서리가 작은 둥근 타입일 경우(사이즈 4px) - rouneded-size-4 클래스 추가</h2>
+        <div>
+          <button class="button full square rouneded-size-4" type="button">rouneded-size-4 button</button>
+        </div>
+      </div>
+    </div>
+    <div class="component-wrapper">
+      <div class="component-box buttons-component">
+        <h2 class="component-title">버튼 컴포넌트_글자 굵기 타입</h1>
+
+        <!-- Default Button font weight type -->
+        <h2 class="component-sub-title">Default Button font weight type : 기본형(글자 굵기 600) 클래스 추가 안해도 됨, 글자 굵기 얇은 타입일 경우 weight-normal 클래스 추가</h2>
+        <div>
+          <button class="button full weight-normal" type="button">weight-normal button</button>
+        </div>
+      </div>
+    </div>
+    <div class="component-wrapper">
+      <div class="component-box buttons-component">
+        <h2 class="component-title">버튼 컴포넌트_아이콘 + 텍스트 타입</h1>
+
+        <!-- Icon Button + text align right type -->
+        <h2 class="component-sub-title">Icon Button + text align right type : 아이콘이 오른쪽에 있을 경우 button요소에 icon-right 클래스 추가, 자식요소 span 태그에 희망하는 클래스 만들어 background로 이미지 추가</h2>
+        <button type="button" class="button icon-right full">icon-right button<span class="icon-heart"></span></button>
+        <br />
+        <!-- Icon Button + text align left type -->
+        <h2 class="component-sub-title">Icon Button + text align left type : 아이콘이 오른쪽에 있을 경우 button요소에 icon-left 클래스 추가, 자식요소 span 태그에 희망하는 클래스 만들어 background로 이미지 추가</h2>
+        <button type="button" class="button icon-left full"><span class="icon-star"></span>icon-left button</button>
+      </div>
+    </div>
+    <div class="component-wrapper">
+      <div class="component-box buttons-component">
+        <h2 class="component-title">버튼 컴포넌트_텍스트 링크 타입</h1>
+
+        <!-- text link -->
+        <a href="/" class="text-link-button" target="_self">text-link-button</a>
+      </div>
+    </div>
+    <div class="component-wrapper">
+      <div class="component-box buttons-component">
+        <h2 class="component-title">버튼 컴포넌트_둥근 아이콘 타입</h1>
+
+        <!-- 둥근 버튼, Class명에 circle, 기본값 배경색 흰색(gray 색상 ), 이미지에 맞춰서 클래스 추가(arrow-right 클래스는 샘플로 넣으거라 삭제요청), 대체텍스트도 이미지 용도에 맞춰서 적어주세요 -->
+        <button type="button" class="button circle arrow-left"><span class="sr-only">이전 이미지</span></button>
+        <button type="button" class="button circle arrow-right"><span class="sr-only">다음 이미지</span></button>
+        <button type="button" class="button circle gray arrow-left"><span class="sr-only">이전 이미지</span></button>
+        <button type="button" class="button circle gray arrow-right"><span class="sr-only">다음 이미지</span></button>
+      </div>
+    </div>
+  </body>
+</html>

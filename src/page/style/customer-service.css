@@ -1,0 +1,79 @@
+.cs-main {
+  padding-inline: 1.5rem;
+
+  @media (width >= 64rem) {
+    padding-inline: 3rem;
+  }
+}
+
+.cs-header {
+  text-align: center;
+  font-size: var(--text-4xl);
+}
+
+.cs-form {
+  margin-block: 3rem 3.75rem;
+
+  @media (width >= 64rem) {
+    max-inline-size: 38.4375rem;
+    margin-inline: auto;
+  }
+}
+
+.accrodion-list.cs-qs-lists {
+  @media (width >= 40rem) {
+    display: flex;
+    inline-size: 100%;
+    flex-flow: row wrap;
+    gap: 1.25rem;
+    border-top: 1px solid var(--light-gray);
+
+    & .cs-qs-list {
+      inline-size: calc(100% / 2 - 1.25rem);
+      border: 0;
+
+      & .qs-button {
+        padding: 0;
+      }
+    }
+  }
+  @media (width >= 64rem) {
+    & .cs-qs-list {
+      inline-size: calc(100% / 3 - 1.25rem);
+    }
+  }
+}
+
+.detail-accrodion.cs-qs-links {
+  @media (width >= 40rem) {
+    display: block !important;
+
+    & li {
+      inline-size: 100%;
+    }
+  }
+}
+
+.cu-head {
+  @media (width >= 40rem) {
+    border-bottom: 1px solid var(--light-gray);
+  }
+}
+
+.cu-lists {
+  @media (width >= 40rem) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-inline-size: 50rem;
+    margin-inline: auto;
+
+    & .cu-list {
+      max-inline-size: calc(100% / 2);
+      inline-size: 100%;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

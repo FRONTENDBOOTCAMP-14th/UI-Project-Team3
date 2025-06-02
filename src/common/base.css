@@ -1,4 +1,70 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   font-family: 'Pretendard', sans-serif;
   background-color: var(--white);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--black);
+}
+/* 사이드,필터 메뉴 스크롤시 body스크롤 잠금 */
+body.scrollhidden {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--black);
+}
+
+img {
+  display: block;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+main {
+  padding-block: 5rem;
+
+  @media (width >= 60rem) {
+    padding-inline: 3rem;
+    padding-block: 5.1875rem 0.8125rem;
+  }
+}
+
+/* mobile일 경우만 보이는 속성 */
+.mo-block {
+  display: block;
+
+  @media (width >= 40rem) {
+    display: none;
+  }
+}
+
+/* pc일 경우만 보이는 속성 */
+.pc-block {
+  display: none;
+
+  @media (width >= 40rem) {
+    display: block;
+  }
 }

@@ -1,0 +1,148 @@
+.itemlist-header-wrapper {
+  display: flex;
+  inline-size: 100%;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  padding-inline: 1.5rem;
+  padding-block: 5.8125rem 0.8125rem;
+  row-gap: 2.25rem;
+  background-color: var(--white);
+  border-bottom: 0.0625rem solid var(--light-gray);
+
+  @media (width >= 64rem) {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3rem;
+    border: 0;
+  }
+}
+
+.itemlist-menu-group {
+  display: none;
+  column-gap: 1.9375rem;
+  position: relative;
+
+  .filter-button {
+    display: flex;
+    align-items: center;
+    column-gap: 0.48rem;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .filter-sublists {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 400;
+    background-color: var(--white);
+    padding-block: 1rem;
+    padding-inline: 1.625rem;
+    border-radius: 1.25rem;
+    text-align: right;
+    line-height: 1.75rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.7rem);
+    transition: all 0.2s ease;
+    pointer-events: none;
+
+    li button:hover {
+      opacity: 0.8;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+  @media (width >= 64rem) {
+    display: flex;
+  }
+}
+
+.itemlist-heading {
+  font-size: var(--text-2xl);
+
+  h2 {
+    font-weight: var(--font-semibold);
+
+    .desk-only {
+      display: none;
+    }
+  }
+
+  @media (width >= 64rem) {
+    h2 {
+      font-size: var(--text-xl);
+
+      .desk-only {
+        display: inline;
+      }
+    }
+  }
+}
+
+.itemlist-menu-items {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  column-gap: 2.25rem;
+  overflow: scroll hidden;
+  white-space: nowrap;
+  max-inline-size: 100%;
+  box-sizing: border-box;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & li {
+    flex: 0 0 auto;
+  }
+
+  & li:hover {
+    opacity: 0.8;
+  }
+
+  @media (width >= 64rem) {
+    display: none;
+  }
+}
+
+.itemlist-border-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1.5rem;
+  padding-block: 0.8125rem;
+
+  .text {
+    color: var(--gray);
+  }
+
+  .filter-button {
+    display: flex;
+    gap: 0.25rem;
+    border: 1px solid var(--gray);
+    padding-inline: 1.25rem;
+    padding-block: 0.1875rem;
+    border-radius: 1.875rem;
+
+    &:hover {
+      background-color: var(--white);
+      border: 1px solid var(--black);
+    }
+  }
+
+  @media (width >= 64rem) {
+    display: none;
+  }
+}

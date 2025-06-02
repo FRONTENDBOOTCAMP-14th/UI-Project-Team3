@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main-page components</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../common/index.css" />
+    <link rel="stylesheet" href="./style/buttons.css" />
+    <link rel="stylesheet" href="./style/main-page.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>main-page-component</h1>
+    <h2>홍보카드 컴포넌트</h2>
+    <article class="promo-card">
+      <figure class="media">
+        <img src="../../src/assets/images/main-page/img-promo-collaboJac.svg" alt="Serena Williams wearing the Nike × Jacquemus collection" />
+      </figure>
+      <header class="content">
+        <p class="add-explanation">새로운 컬렉션</p>
+        <h1 class="title">나이키 X 자크뮈스</h1>
+        <p class="subtitle">세련된 실루엣과 감각적인 컬러가 조화를 이루는 나이키 X 자크뮈스 컬렉션은 스포츠웨어에 새로운 변화를 불러일으킵니다.</p>
+        <a href="#" class="btn fill">컬렉션 구매하기</a>
+      </header>
+    </article>
+    <br />
+    <h2>특징카드 컴포넌트</h2>
+
+    <article class="feature-card">
+      <figure class="media">
+        <a href="#">
+          <img src="../../src/assets/images/main-page/img-featured-metcon9-mobile.png" alt="나이키 메트콘 9 트레이닝화" />
+        </a>
+      </figure>
+      <header class="feature-card__info">
+        <a href="#"><h2 class="feature-card__name">나이키 메트콘 9</h2></a>
+        <a href="#" class="btn fill">구매하기</a>
+      </header>
+    </article>
+
+    <br />
+    <h2>특징카드 컴포넌트</h2>
+
+    <article class="category-card">
+      <figure class="media">
+        <a href="#">
+          <img src="../../src/assets/images/main-page/img-trandingNow-mad.png" alt="나이키 메트콘 9 트레이닝화" />
+        </a>
+      </figure>
+      <header class="category-card__info">
+        <a href="#"><h2 class="category-card__name">매드 앰비션 팩</h2></a>
+        <a href="#" class="btn fill white">구매하기</a>
+      </header>
+    </article>
+
+    <h2>특징카드 컴포넌트</h2>
+    <article class="shop-card">
+      <a href="#" class="shop-card__link">
+        <picture class="shop-card__media">
+          <!-- 데스크톱 / 태블릿용 와이드 이미지 -->
+          <source srcset="../../src/assets/images/main-page/img-trandingNow-mad.png" media="(min-width: 768px)" />
+          <!-- 기본(모바일)용 정사각 이미지 -->
+          <img src="../../src/assets/images/main-page/img-trandingNow-mad.png" alt="운동과 쇼핑을 위한 특별한 혜택" width="352" height="162" class="shop-card__image" />
+        </picture>
+
+        <header class="shop-card__body">
+          <p class="shop-card__category">멤버 리워드</p>
+          <h2 class="shop-card__title">운동과 쇼핑을 위한 특별한 혜택</h2>
+          <button type="button" class="btn fill">자세히 보기</button>
+        </header>
+      </a>
+    </article>
+  </body>
+</html>
