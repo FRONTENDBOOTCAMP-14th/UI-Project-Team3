@@ -199,63 +199,99 @@
       </section>
 
       <!-- ****** SHOP BY SPORT – 리스트형 shop‑card ****** -->
-      <section class="section" aria-labelledby="shop-by-sport-title">
-        <h2 id="shop-by-sport-title" class="section-title">Shop by Sport</h2>
+      <section class="shop section" aria-labelledby="shop-by-sport-title">
+        <div class="section-header">
+          <h2 id="shop-by-sport-title" class="section-title">Shop by Sport</h2>
+        </div>
+        <div class="shop-cards">
+          <article class="shop-card">
+            <a href="#" class="shop-card__link">
+              <picture class="shop-card__media">
+                <!-- 데스크톱 / 태블릿용 와이드 이미지 -->
+                <source srcset="../../src/assets/images/main-page/img-shopBySport-traning-wide.png" media="(min-width: 768px)" />
+                <!-- 기본(모바일)용 정사각 이미지 -->
+                <img src="../../src/assets/images/main-page/img-shopBySport-traning-mobile.png" alt="나이키 트레이닝" class="shop-card__image" />
+              </picture>
 
-        <article class="shop-card">
-          <a href="#" class="shop-card__link">
-            <picture class="shop-card__media">
-              <img src="../../src/assets/images/main-page/img-shop-run.png" alt="러닝을 즐기는 여성들" class="shop-card__image" />
-            </picture>
-            <header class="shop-card__body">
-              <p class="shop-card__category">런닝</p>
-              <h2 class="shop-card__title">러닝으로 시작하는 에너지 충전</h2>
-              <button type="button" class="btn fill">살펴보기</button>
-            </header>
-          </a>
-        </article>
+              <header class="shop-card__body">
+                <p class="shop-card__category">나이키 트레이닝</p>
+                <h2 class="shop-card__title">한계에 도전하는 여정과 함께할 아이템</h2>
+                <button type="button" class="btn fill">구매하기</button>
+              </header>
+            </a>
+          </article>
 
-        <article class="shop-card">
-          <a href="#" class="shop-card__link">
-            <picture class="shop-card__media">
-              <img src="../../src/assets/images/main-page/img-shop-training.png" alt="트레이닝 중인 남성" class="shop-card__image" />
-            </picture>
-            <header class="shop-card__body">
-              <p class="shop-card__category">트레이닝 &amp; 짐</p>
-              <h2 class="shop-card__title">강렬한 퍼포먼스를 위한 트레이닝 기어</h2>
-              <button type="button" class="btn fill">살펴보기</button>
-            </header>
-          </a>
-        </article>
+          <article class="shop-card">
+            <a href="#" class="shop-card__link">
+              <picture class="shop-card__media">
+                <!-- 데스크톱 / 태블릿용 와이드 이미지 -->
+                <source srcset="../../src/assets/images/main-page/img-shopBySport-running-wide.png" media="(min-width: 768px)" />
+                <!-- 기본(모바일)용 정사각 이미지 -->
+                <img src="../../src/assets/images/main-page/img-shopBySport-running-wide.png" alt="나이키 러닝" class="shop-card__image" />
+              </picture>
 
-        <article class="shop-card">
-          <a href="#" class="shop-card__link">
-            <picture class="shop-card__media">
-              <img src="../../src/assets/images/main-page/img-shop-basketball.png" alt="농구를 즐기는 청소년" class="shop-card__image" />
-            </picture>
-            <header class="shop-card__body">
-              <p class="shop-card__category">농구</p>
-              <h2 class="shop-card__title">코트를 지배하는 순간</h2>
-              <button type="button" class="btn fill">살펴보기</button>
-            </header>
-          </a>
-        </article>
+              <header class="shop-card__body">
+                <p class="shop-card__category">나이키 트레일 러닝</p>
+                <h2 class="shop-card__title">새로운 모험으로 이끌어 주는 아이템</h2>
+                <button type="button" class="btn fill">구매하기</button>
+              </header>
+            </a>
+          </article>
+
+          <article class="shop-card">
+            <a href="#" class="shop-card__link">
+              <picture class="shop-card__media">
+                <!-- 데스크톱 / 태블릿용 와이드 이미지 -->
+                <source srcset="../../src/assets/images/main-page/img-shopBySport-soccer-wide.png" media="(min-width: 768px)" />
+                <!-- 기본(모바일)용 정사각 이미지 -->
+                <img src="../../src/assets/images/main-page/img-shopBySport-soccer-mobile.png" alt="나이키 축구" class="shop-card__image" />
+              </picture>
+
+              <header class="shop-card__body">
+                <p class="shop-card__category">나이키 축구</p>
+                <h2 class="shop-card__title">경기 중 독보적인 존재감을 드러낼 아이템</h2>
+                <button type="button" class="btn fill">구매하기</button>
+              </header>
+            </a>
+          </article>
+        </div>
       </section>
 
       <!-- ****** MEMBERSHIP PROMO ****** -->
-      <section class="section">
-        <article class="shop-card">
-          <a href="#" class="shop-card__link">
-            <picture class="shop-card__media">
-              <img src="../../src/assets/images/main-page/img-member-benefit.png" alt="가방을 든 여성 멤버" class="shop-card__image" />
-            </picture>
-            <header class="shop-card__body">
-              <p class="shop-card__category">나이키 멤버</p>
-              <h2 class="shop-card__title">멤버 한정 특별 혜택을 지금 만나보세요</h2>
-              <button type="button" class="btn fill">자세히 보기</button>
+      <section class="membership section">
+        <h2 id="membership-title" class="section-title">나이키&nbsp;멤버십</h2>
+        <div class="scroll-wrap">
+          <article class="membership-card">
+            <figure class="media">
+              <img src="../../src/assets/images/main-page/img-membership-wellness.png" alt="사람들이 요가를 하고 있는 장면" />
+            </figure>
+            <header class="content">
+              <h1 class="title">스포츠 & 웰니스 앱</h1>
+              <p class="subtitle">언제 어디서든 운동하기</p>
+              <a href="#" class="btn fill">함께 운동하기</a>
             </header>
-          </a>
-        </article>
+          </article>
+          <article class="membership-card">
+            <figure class="media">
+              <img src="../../src/assets/images/main-page/img-membership-memberOnly.png" alt="여성이 계단에 앉아 카메라를 응시하고 있는 장면" />
+            </figure>
+            <header class="content">
+              <h1 class="title">멤버 전용 제품</h1>
+              <p class="subtitle">멤버만을 위한 제품 혜택</p>
+              <a href="#" class="btn fill">구매하기</a>
+            </header>
+          </article>
+          <article class="membership-card">
+            <figure class="media">
+              <img src="../../src/assets/images/main-page/img-membership-reward.png" alt="여성이 웃고 있는 장면" />
+            </figure>
+            <header class="content">
+              <h1 class="title">멤버 리워드</h1>
+              <p class="subtitle">운동과 쇼핑을 위한 특별한 혜택</p>
+              <a href="#" class="btn fill">자세히 보기</a>
+            </header>
+          </article>
+        </div>
       </section>
     </main>
     <footer id="footer"></footer>

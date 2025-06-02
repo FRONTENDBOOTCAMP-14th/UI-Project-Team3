@@ -118,7 +118,31 @@
   right: 0.5rem;
 }
 
+.shop-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* 모바일에서 카드 사이 간격 */
+  padding-inline: 1rem;
+}
+
 @media (min-width: 768px) {
+  .shop-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .shop-card__body {
+    button {
+      margin-top: 0.3125rem;
+    }
+  }
+
+  .shop-card {
+    flex: 1 1 0%;
+    max-inline-size: 100%;
+  }
+
   .scroll-wrap {
     overflow-x: hidden; /* 가로 스크롤 제거 */
     scroll-snap-type: none;
