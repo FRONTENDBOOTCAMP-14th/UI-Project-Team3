@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나이키 상품 위시리스트</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
+    <meta name="description" content="나이키 위시리스트 페이지 (상업용X)" />
+    <meta name="author" content="UI Project Team3" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="../common/index.css" />
+    <link rel="stylesheet" href="./style/itemcard.css" />
+    <script type="module" src="../components/common/js/layout.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <a href="../../index.html">메인 페이지 이동</a>
+    <br />
+    <h1>나이키 상품 컴포넌트</h1>
+
+    <!-- 상품 컴포넌트 -->
+    <div class="item-card">
+      <picture>
+        <source srcset="./../assets/images/product-picture.avif" type="image/avif" />
+        <img src="./../assets/images/product-picture.avif" alt="나이키 줌 보메로 5" />
+      </picture>
+
+      <div class="product-info-box">
+        <div class="product-info">
+          <h3 class="product-name">나이키 줌 보메로 5</h3>
+          <p class="product-category">남성 신발</p>
+        </div>
+        <data class="product-price" value="189,000">189,000 원</data>
+      </div>
+
+      <button class="button midum" type="button" aria-label="장바구니">장바구니에 추가</button>
+    </div>
+    <!-- 상품2 컴포넌트 -->
+    <div class="item-card">
+      <picture>
+        <source srcset="./../assets/images/product-picture2.avif" type="image/avif" />
+        <img src="./../assets/images/product-picture2.avif" alt="나이키 줌 보메로 5" />
+      </picture>
+
+      <div class="product-info-box">
+        <div class="product-info">
+          <h3 class="product-name">나이키 줌 보메로 5</h3>
+          <p class="product-category">여성 신발</p>
+        </div>
+        <div class="price-box">
+          <del class="origin-price">189,000 원</del>
+          <data class="discounted-price" value="151,200">151,200 원</data>
+        </div>
+      </div>
+
+      <button class="button midum" type="button" aria-label="장바구니">장바구니에 추가</button>
+    </div>
+    <hr />
+
+    <!-- 위시리스트에 x버튼이 들어간 상품 컴포넌트 -->
+    <h2>위시리스트 / 수정</h2>
+    <div class="item-card">
+      <picture>
+        <source srcset="./../assets/images/product-picture.avif" type="image/avif" />
+        <img src="./../assets/images/product-picture.avif" alt="나이키 줌 보메로 5" />
+      </picture>
+
+      <div class="product-info-box">
+        <div class="product-info">
+          <h3 class="product-name">나이키 줌 보메로 5</h3>
+          <p class="product-category">남성 신발</p>
+        </div>
+        <data class="product-price" value="189,000">189,000 원</data>
+      </div>
+
+      <button class="button midum" type="button" aria-label="장바구니">장바구니에 추가</button>
+      <button type="button" class="exit-button">
+        <picture>
+          <source srcset="./../assets/images/IconExit-512h.avif" type="image/avif" />
+          <img class="iconexit" src="./../assets/images/IconExit-512h.avif" alt="지정 해제" />
+        </picture>
+      </button>
+    </div>
+    <footer id="footer"></footer>
+  </body>
+</html>
