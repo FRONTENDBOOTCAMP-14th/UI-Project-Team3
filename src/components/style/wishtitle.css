@@ -1,12 +1,14 @@
 /* 위시리스트 상단(header 아랫 부분) 컴포넌트 */
 
 .title-box {
-  /* background: lightgray; */
+  background: #fff;
+  position: sticky;
+  z-index: 1;
+  top: 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin-inline-start: 0.875rem;
   margin-inline-end: 1.5rem;
   padding: 2.25rem 1.6875rem 0.7987rem 0;
 }
@@ -18,15 +20,9 @@
 
 .button,
 small {
-  background: var(--white);
-  padding: 0.375rem 1rem;
-  border: 0.0625rem solid var(--light-gray);
-  border-radius: 1.75rem;
-  font-weight: 400;
-
   &:hover {
     cursor: pointer;
     border: 0.0938rem solid var(--light-gray);
-    background: white;
+    background: whitesmoke;
   }
 }
