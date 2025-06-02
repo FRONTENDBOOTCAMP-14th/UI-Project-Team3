@@ -161,7 +161,7 @@
     }
 
     @media (width >= 60rem) {
-      grid-column-end: span 2;
+      grid-column: 1 / span 2;
     }
   }
 }
