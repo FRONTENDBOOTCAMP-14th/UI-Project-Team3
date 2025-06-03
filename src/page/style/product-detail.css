@@ -163,6 +163,12 @@
     @media (width >= 60rem) {
       grid-column: 1 / span 2;
     }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 }
 
