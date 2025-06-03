@@ -1,0 +1,46 @@
+/* 나이키 위시리스트 */
+.item-card {
+  inline-size: 25.1151515rem;
+  height: auto;
+}
+
+/* 상품 사진 하단에 버튼을 제외한 정보를 정렬할 div */
+/* 구분선은 주석처리 했음 */
+.product-info-box {
+  /* border: 1px solid green;  */
+  margin-top: 0.4375rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+/* 상품 이름 + 상품 종류를 합친 div */
+.product-info {
+  /* border: 1px solid blue; */
+  inline-size: max-content;
+  block-size: 3rem;
+  display: flex;
+  flex-flow: column nowrap;
+  flex-shrink: 0;
+  line-height: 1.5;
+  margin-bottom: 0.875rem;
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.product-kinds {
+  font-size: 1rem;
+  color: var(--dark-gray);
+}
+
+.shopping-cart {
+  background: var(--white);
+  min-inline-size: 8.6875rem;
+  block-size: 2.5rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 1.875rem;
+  font-weight: 400;
+}

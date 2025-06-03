@@ -18,7 +18,7 @@
 
     .product-subtitle,
     .product-color {
-      color: var(--gray);
+      color: var(--dark-gray);
     }
 
     .product-price {

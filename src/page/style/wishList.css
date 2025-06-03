@@ -87,8 +87,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  margin-inline-end: 1.5rem;
-  padding: 2rem 2rem 0.75rem 0;
+  padding: 4.1875rem 3rem 0.75rem 3rem;
 }
 
 /* 여기까지 위시리스트 타이틀 */

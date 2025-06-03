@@ -3,47 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UI 프로젝트 - CSS</title>
+    <title>삼위일체/Team3 UI Project</title>
     <link rel="icon" href="/vite.svg" />
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
-    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
-    <script type="module" src="/src/main.js"></script>
+    <link rel="preload" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="./src/common/index.css" />
+    <!-- <script type="module" src="/src/main.js"></script> -->
   </head>
   <body>
-    <h1>Vite + CSS</h1>
-    <ul>
-      <li>컴포넌트를 분리해서 구현해주세요.</li>
-      <li>컴포넌트의 코드 리뷰를 AI를 통해 받은 후 개선해보세요.</li>
-      <li>개선점을 문서화하여 정리해 보세요</li>
-      <li>구현한 컴포넌트를 기반으로 페이지를 만들어주세요.</li>
-      <li>접근성과 성능을 신경써주세요</li>
-      <li>소통하고 화합하며 프로젝트 즐겨주세요.</li>
-      <li>결과보다 과정이 중요합니다.‼️</li>
-    </ul>
-    <h2>컴포넌트</h2>
-    <ul>
-      <li><a href="./src/components/common/accrodion.html">아코디언 버튼</a></li>
-      <li><a href="./src/components/common/buttons.html">공통 버튼</a></li>
-      <li><a href="./src/components/common/input.html">인풋</a></li>
-      <li><a href="./src/components/common/item-card.html">아이템 카드</a></li>
-      <li><a href="./src/components/CustomerService/cs-com.html">고객지원</a></li>
-      <li><a href="./src/components/findstore/findstore-form.html">매장찾기 매장리스트</a></li>
-      <li><a href="./src/components/itemlist/itemlist-filter.html">아이템 리스트 필터</a></li>
-      <li><a href="./src/components/itemlist/itemlist-header.html">아이템 리스트 헤더</a></li>
-      <li><a href="./src/components/login/login-input.html">로그인 페이지 인풋</a></li>
-      <li><a href="./src/components/product-detail/product-detail-component.html">제품상세 페이지 컴포넌트</a></li>
-    </ul>
+    <!-- 네브바 -->
+    <nav class="index-navbar">
+      <ul class="navbar-lists">
+        <li>
+          <button class="exit-button" type="button" aria-label="메뉴 닫기">✕</button>
+        </li>
+        <li class="index-links" data-contents="index-main-section">
+          <button>Home</button>
+        </li>
+        <li class="index-links" data-contents="index-contents1">
+          <button>팀 소개</button>
+        </li>
+        <li class="index-links" data-contents="index-contents2">
+          <button>팀원 소개</button>
+        </li>
+        <li class="index-links" data-contents="index-contents3">
+          <button>프로젝트 규칙</button>
+        </li>
+        <li class="index-links" data-contents="index-contents4">
+          <button>페이지 소개</button>
+        </li>
+        <li class="index-links" data-contents="index-contents5">
+          <button>개선 사항</button>
+        </li>
+        <li class="index-links" data-contents="index-contents6">
+          <button>회고록</button>
+        </li>
+        <li>
+          <a class="nike-link" href="./src/page/main.html" aria-label="나이키 홈페이지 이동">
+            <img src="./src/assets/images/nikelogo.svg" alt="" />
+          </a>
+        </li>
+      </ul>
 
-    <h2>페이지</h2>
-    <ul>
-      <li><a href="./src/page/main.html">메인 페이지</a></li>
-      <li><a href="./src/page/findstore.html">매장 찾기 페이지</a></li>
-      <li><a href="./src/page/itemlist.html">아이템 리스트 페이지</a></li>
-      <li><a href="./src/page/product-detail.html">제품 상세 페이지</a></li>
-      <li><a href="./src/page/signin.html">로그인 페이지</a></li>
-      <li><a href="./src/page/signup.html">회원 가입 페이지</a></li>
-      <li><a href="./src/page/wishList.html">위시리스트 페이지</a></li>
-    </ul>
+      <!-- <h2>페이지</h2>
+      <ul>
+        <li><a href="./src/page/main.html">메인 페이지</a></li>
+        <li><a href="./src/page/findstore.html">매장 찾기 페이지</a></li>
+        <li><a href="./src/page/itemlist.html">아이템 리스트 페이지</a></li>
+        <li><a href="./src/page/product-detail.html">제품 상세 페이지</a></li>
+        <li><a href="./src/page/signin.html">로그인 페이지</a></li>
+        <li><a href="./src/page/signup.html">회원 가입 페이지</a></li>
+        <li><a href="./src/page/wishList.html">위시리스트 페이지</a></li>
+      </ul>
+      <div class="button-group">
+        <a href="./src/page/main.html" aria-label="나이키 홈페이지 이동">
+          <img src="./src/assets/images/nikelogo.svg" alt="" />
+        </a>
+        <button class="open-button" type="button" aria-label="메뉴 열기">
+          <img src="./src/assets/images/menu.svg" alt="" />
+        </button>
+      </div>
+    </nav> -->
+
+    <main class="index-main">
+      <section id="index-main-section" class="index-main index-content-section">
+        <h2 class="team-name">삼위일체</h2>
+        <span class="box box1">一體</span>
+        <span class="box box2">三位</span>
+      </section>
+
+      <section id="index-contents1" class="index-contents1 index-content-section">
+        <h3>콘텐츠1</h3>
+        <div>내용1</div>
+      </section>
+
+      <section id="index-contents2" class="index-contents2 index-content-section">
+        <h3>콘텐츠2222</h3>
+        <div>내용2</div>
+      </section>
+    </main>
+    <div class="index-overlay" aria-hidden="true"></div>
     <footer class="index-footer">
       <small
         >Copyright © 2025 삼위일체. <br class="mo-block" />
