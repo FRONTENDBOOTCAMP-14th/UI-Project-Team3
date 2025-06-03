@@ -1,11 +1,24 @@
-html,
+.html,
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   position: relative;
-  overflow-y: hidden;
+}
+
+a {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+
+.mo-block {
+  display: block;
+
+  @media (width > 64rem) {
+    display: none;
+  }
 }
 
 .index-navbar {
@@ -139,7 +152,7 @@ body {
 
 .index-main {
   padding: 90px 50px 50px 50px;
-  height: 100%;
+  height: 100vh;
   background: transparent;
   display: flex;
   justify-content: center;
@@ -304,5 +317,40 @@ body {
   }
   to {
     right: 50%;
+  }
+}
+
+/* footer */
+.index-footer {
+  --text-base: 0.9375rem;
+  --white: #fff;
+
+  padding: 1.25rem;
+  background: var(--white);
+  text-align: center;
+  font-size: var(--text-base);
+
+  @media (width >= 64rem) {
+    padding-inline: 3.75rem;
+    padding-block: 1.875rem;
+    font-size: 0.8125rem;
+  }
+
+  small {
+    font-size: inherit;
+  }
+
+  p {
+    margin: 0.9375rem 0;
+
+    @media (width >= 64rem) {
+      margin: 0.3125rem 0;
+    }
+  }
+
+  .link-text {
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
