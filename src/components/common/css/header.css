@@ -79,7 +79,8 @@
       }
     }
 
-    &:hover .sub-menu {
+    &:hover .sub-menu,
+    &:focus-within .sub-menu {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
