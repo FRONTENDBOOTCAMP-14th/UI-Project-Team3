@@ -25,5 +25,14 @@ backBtn.addEventListener('click', () => {
 
 passwordForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  alert('로그인 처리 예정입니다.');
+
+  // TODO: 로그인 검증 로직이 실제로 들어가야 할 자리
+  const isLoginSuccessful = true; // 지금은 임시로 항상 성공 처리
+
+  if (isLoginSuccessful) {
+    // 메인 페이지로 이동
+    window.location.href =  './main.html';
+  } else {
+    alert('로그인에 실패했습니다.');
+  }
 });

@@ -60,7 +60,10 @@
       }
 
       img {
+        width: 100%;
+        height: auto;
         margin-inline: auto;
+        object-fit: cover;
       }
     }
   }
@@ -80,9 +83,11 @@
 .big-thumbnail-box {
   position: relative;
   background: var(--extra-light-gray);
+  inline-size: 100%;
   block-size: 25rem;
 
   @media (width >= 40rem) {
+    inline-size: 33.4375rem;
     block-size: auto;
   }
 
@@ -132,6 +137,8 @@
     justify-content: center;
 
     img {
+      width: 100%;
+      height: auto;
       margin: 0 auto;
       object-fit: cover;
       object-position: center;
@@ -203,6 +210,12 @@
         block-size: 100%;
         background: rgb(211 211 211 / 0.5);
         border-radius: 0.5rem;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
       }
 
       button {

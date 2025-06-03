@@ -9,7 +9,8 @@
     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
-    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="preload" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../common/index.css" />
     <link rel="stylesheet" href="./style/itemlist.css" />
     <script type="module" src="../components/common/js/layout.js"></script>
@@ -29,11 +30,11 @@
         <div class="itemlist-menu-group">
           <button class="filter-button desk-filter-button" type="button" aria-haspopup="true" aria-label="필터 메뉴 버튼">
             <span class="filter-button-text">필터 열기</span>
-            <img src="../assets/images/filter.svg" alt="" role="presentation" />
+            <img src="../assets/images/filter.svg" alt="" />
           </button>
           <button class="filter-button range-button" type="button" aria-haspopup="true" aria-controls="sort-menu">
             <span>정렬 기준</span>
-            <img class="range-button-icon" src="../assets/images/arrow-down.svg" alt="" role="presentation" />
+            <img class="range-button-icon" src="../assets/images/arrow-down.svg" alt="" />
           </button>
           <ul class="filter-sublists" id="sort-menu" role="menu">
             <li>
@@ -128,7 +129,7 @@
         <div>
           <button class="button small filter-button mb-filter-btn" type="button">
             <span>필터</span>
-            <img src="../assets/images/filter.svg" alt="" role="presentation" />
+            <img src="../assets/images/filter.svg" alt="" />
           </button>
         </div>
       </div>
@@ -137,7 +138,7 @@
     <!-- 아이템 카드 -->
     <main class="itemlist-main">
       <!-- 필터 -->
-      <aside class="itemlist-filter-wrapper hidden" aria-modal="true" aria-labelledby="filter-title">
+      <aside class="itemlist-filter-wrapper hidden" aria-labelledby="filter-title">
         <div class="itemlist-filter-icon">
           <button type="button" aria-label="필터 닫기" class="mb-filter-close-button">
             <img src="../assets/images/exiticon.svg" alt="" aria-hidden="true" />
@@ -320,7 +321,7 @@
 
       <div class="item-list-container">
         <div class="itemlist-card-wrapper">
-          <a href="/" aria-label="나이키 줌 보메로 5 상세페이지로 이동">
+          <a href="../page/product-detail.html" aria-label="나이키 줌 보메로 5 상세페이지로 이동">
             <figure class="itemlist-card">
               <picture>
                 <source srcset="../assets/images/item-image/shoes01.avif" type="image/avif" />
@@ -337,7 +338,7 @@
           </a>
         </div>
         <div class="itemlist-card-wrapper">
-          <a href="/" aria-label="나이키 줌 보메로 5 상세페이지로 이동">
+          <a href="../page/product-detail.html" aria-label="나이키 줌 보메로 5 상세페이지로 이동">
             <figure class="itemlist-card">
               <picture>
                 <source srcset="../assets/images/item-image/shoes02.avif" type="image/avif" />
@@ -354,7 +355,7 @@
           </a>
         </div>
         <div class="itemlist-card-wrapper">
-          <a href="/" aria-label="나이키 에어맥스 SC 트렌드 상세페이지로 이동">
+          <a href="../page/product-detail.html" aria-label="나이키 에어맥스 SC 트렌드 상세페이지로 이동">
             <figure class="itemlist-card">
               <picture>
                 <source srcset="../assets/images/item-image/shoes03.avif" type="image/avif" />
@@ -371,11 +372,11 @@
           </a>
         </div>
         <div class="itemlist-card-wrapper">
-          <a href="/" aria-label="나이키 스우시 1 상세페이지로 이동">
+          <a href="../page/product-detail.html" aria-label="나이키 스우시 1 상세페이지로 이동">
             <figure class="itemlist-card">
               <picture>
                 <source srcset="../assets/images/item-image/shoes04.avif" type="image/avif" />
-                <img src="../assets/images/item-image/shoes04.png" alt="나이키 스우시 1 여성 신발" />
+                <img src="../assets/images/item-image/shoes04.png" alt="나이키 스우시 1 여성 신발" loading="lazy" />
               </picture>
               <figcaption class="card-description">
                 <p class="badge">신제품</p>
@@ -388,11 +389,11 @@
           </a>
         </div>
         <div class="itemlist-card-wrapper">
-          <a href="/" aria-label="나이키 머큐리얼 베이퍼 16 프로 상세페이지로 이동">
+          <a href="../page/product-detail.html" aria-label="나이키 머큐리얼 베이퍼 16 프로 상세페이지로 이동">
             <figure class="itemlist-card">
               <picture>
                 <source srcset="../assets/images/item-image/shoes05.avif" type="image/avif" />
-                <img src="../assets/images/item-image/shoes05.png" alt="나이키 머큐리얼 베이퍼 16 프로 여성 신발" />
+                <img src="../assets/images/item-image/shoes05.png" alt="나이키 머큐리얼 베이퍼 16 프로 여성 신발" loading="lazy" />
               </picture>
               <figcaption class="card-description">
                 <p class="badge">신제품</p>
@@ -405,11 +406,11 @@
           </a>
         </div>
         <div class="itemlist-card-wrapper">
-          <a href="/" aria-label="나이키 티엠포 레전드 10 프로 상세페이지로 이동">
+          <a href="../page/product-detail.html" aria-label="나이키 티엠포 레전드 10 프로 상세페이지로 이동">
             <figure class="itemlist-card">
               <picture>
                 <source srcset="../assets/images/item-image/shoes06.avif" type="image/avif" />
-                <img src="../assets/images/item-image/shoes06.png" alt="나이키 티엠포 레전드 10 프로 여성 신발" />
+                <img src="../assets/images/item-image/shoes06.png" alt="나이키 티엠포 레전드 10 프로 여성 신발" loading="lazy" />
               </picture>
               <figcaption class="card-description">
                 <p class="badge">신제품</p>
@@ -422,11 +423,11 @@
           </a>
         </div>
         <div class="itemlist-card-wrapper">
-          <a href="/" aria-label="나이키 팬텀 GX 2 프로 상세페이지로 이동">
+          <a href="../page/product-detail.html" aria-label="나이키 팬텀 GX 2 프로 상세페이지로 이동">
             <figure class="itemlist-card">
               <picture>
                 <source srcset="../assets/images/item-image/shoes07.avif" type="image/avif" />
-                <img src="../assets/images/item-image/shoes07.png" alt="나이키 팬텀 GX 2 프로 여성 신발" />
+                <img src="../assets/images/item-image/shoes07.png" alt="나이키 팬텀 GX 2 프로 여성 신발" loading="lazy" />
               </picture>
               <figcaption class="card-description">
                 <p class="badge">신제품</p>
@@ -439,11 +440,11 @@
           </a>
         </div>
         <div class="itemlist-card-wrapper">
-          <a href="/" aria-label="나이키 에이펙스 상세페이지로 이동">
+          <a href="../page/product-detail.html" aria-label="나이키 에이펙스 상세페이지로 이동">
             <figure class="itemlist-card">
               <picture>
                 <source srcset="../assets/images/item-image/hat.avif" type="image/avif" />
-                <img src="../assets/images/item-image/hat.png" alt="나이키 에이펙스 여성 신발" />
+                <img src="../assets/images/item-image/hat.png" alt="나이키 에이펙스 여성 신발" loading="lazy" />
               </picture>
               <figcaption class="card-description">
                 <p class="badge">신제품</p>
@@ -456,11 +457,11 @@
           </a>
         </div>
         <div class="itemlist-card-wrapper">
-          <a href="/" aria-label="나이키 클럽 상세페이지로 이동">
+          <a href="../page/product-detail.html" aria-label="나이키 클럽 상세페이지로 이동">
             <figure class="itemlist-card">
               <picture>
                 <source srcset="../assets/images/item-image/cap.avif" type="image/avif" />
-                <img src="../assets/images/item-image/cap.png" alt="나이키 클럽 여성 신발" />
+                <img src="../assets/images/item-image/cap.png" alt="나이키 클럽 여성 신발" loading="lazy" />
               </picture>
               <figcaption class="card-description">
                 <p class="badge">신제품</p>

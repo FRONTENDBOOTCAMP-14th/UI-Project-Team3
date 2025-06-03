@@ -44,7 +44,7 @@
   }
 }
 
-.detail-accrodion {
+.detail-accrodion.cs-qs-links {
   @media (width >= 40rem) {
     display: block !important;
 
