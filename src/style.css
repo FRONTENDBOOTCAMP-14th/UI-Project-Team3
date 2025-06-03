@@ -1,10 +1,23 @@
-.html,
-body {
+.index-html,
+.index-body {
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
   position: relative;
+}
+
+.index-body {
+  overflow-x: hidden;
+}
+
+.index-body::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../src/assets/images/index-page/bgimg.png') no-repeat center / cover;
+  opacity: 0;
+  animation: fadeInBg 4s forwards;
+  z-index: -10;
 }
 
 a {
@@ -23,7 +36,7 @@ a {
 
 .index-navbar {
   inline-size: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -81,11 +94,11 @@ a {
 }
 
 .navbar-lists {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   min-inline-size: 19.375rem;
-  min-block-size: 100vh;
+  min-block-size: 100%;
   overflow-y: auto;
   display: none;
   flex-flow: column nowrap;
@@ -151,8 +164,7 @@ a {
 }
 
 .index-main {
-  padding: 90px 50px 50px 50px;
-  height: 100vh;
+  min-height: 100vh;
   background: transparent;
   display: flex;
   justify-content: center;
@@ -161,10 +173,9 @@ a {
   .team-name {
     position: absolute;
     margin: 0;
-    top: 41%;
+    top: 38%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
     opacity: 0;
     font-size: 2.1875rem;
     transition: opacity 0.4s ease;
@@ -181,7 +192,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
     font-size: 2.1875rem;
   }
 
@@ -209,46 +219,222 @@ a {
   }
 }
 
-.index-main::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('../src/assets/images/index-page/bgimg.png') no-repeat center / cover;
-  opacity: 0;
-  animation: fadeInBg 4s forwards;
-}
-
 .index-content-section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100vh;
-  opacity: 0;
+  inline-size: 100%;
   pointer-events: none;
-  transition: opacity 1.5s ease;
   z-index: 1;
   text-align: center;
-  padding-block-start: 90px;
+  padding-block: 3.125rem;
+  padding-inline: 1.5rem;
+  display: none;
+  pointer-events: auto;
 
   h3 {
-    font-size: 80px;
-    z-index: 10;
+    font-size: 1.875rem;
+    margin-block-start: 0.9375rem;
+  }
+
+  h4 {
+    font-size: var(--text-xl);
+    letter-spacing: 0.05em;
+    color: var(--green);
+    margin-block: 0.5rem;
+  }
+
+  @media (width >= 64rem) {
+    h3 {
+      font-size: 3.125rem;
+    }
+
+    h4 {
+      font-size: var(--text-3xl);
+    }
   }
 }
 
+.index-main-contents1.active,
+.index-contents1.active,
+.index-contents2.active {
+  display: block;
+}
+
 .index-contents1 {
-  background-color: skyblue;
+  background-color: transparent;
+
+  & div {
+    padding-block: 0.625rem;
+    word-break: keep-all;
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+
+  & .right-contents,
+  & .left-contents {
+    justify-items: center;
+  }
+
+  & .left-contents p {
+    max-inline-size: 31.25rem;
+    padding-block: 0.625rem;
+    margin-block-end: 0.9375rem;
+  }
+
+  & .left-contents a {
+    padding-block: 0.3125rem;
+    padding-inline: 0.625rem;
+    border: 2px solid var(--white);
+    border-radius: 1.875rem;
+
+    &:hover {
+      background-color: var(--white);
+    }
+  }
+
+  & .right-contents {
+    & .grid-card {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      & .grid-item {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        & picture {
+          inline-size: 8.125rem;
+          block-size: 8.125rem;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-block-end: 12px;
+
+          & img {
+            inline-size: 100%;
+            block-size: 100%;
+          }
+        }
+
+        & a:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  @media (width >= 64rem) {
+    & .contents-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      gap: 0.625rem;
+
+      & .left-contents,
+      & .right-contents {
+        flex: 1;
+      }
+    }
+  }
 }
 
 .index-contents2 {
-  background-color: lightgreen;
-}
+  background-color: transparent;
 
-.index-content-section.active {
-  opacity: 1;
-  pointer-events: auto;
-  z-index: 2;
+  .accordion-content {
+    background-color: var(--white);
+    padding: 0.9375rem;
+    /* border-radius: 1.875rem; */
+
+    &:first-of-type {
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+    }
+
+    &:last-of-type {
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+
+    & .accordion-button {
+      inline-size: 100%;
+      display: flex;
+      align-items: center;
+      color: var(--black);
+      text-align: center;
+      font-size: 1.125rem;
+      font-weight: var(--font-semibold);
+      padding-block: 0.625rem;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      & span {
+        display: block;
+        margin-left: auto;
+      }
+
+      & img {
+        inline-size: 100%;
+
+        &.rotate {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    & .table-wrapper {
+      background-color: var(--extra-light-gray);
+      block-size: 0;
+      opacity: 0;
+      padding: 0;
+      border-radius: 1.875rem;
+      pointer-events: none;
+
+      & p {
+        inline-size: 100%;
+        text-align: left;
+      }
+
+      & table {
+        margin-block-start: 0.625rem;
+        & thead {
+          background-color: var(--light-gray);
+
+          th {
+            padding: 0.625rem;
+            border: 1px solid var(--gray);
+          }
+        }
+
+        & tbody {
+          tr,
+          td {
+            padding: 0.625rem;
+            text-align: left;
+            border: 1px solid var(--gray);
+            border-top: 0;
+          }
+        }
+      }
+
+      &.dropdown {
+        opacity: 1;
+        block-size: auto;
+        padding: 1.25rem;
+        pointer-events: auto;
+      }
+    }
+  }
+  @media (width >= 64rem) {
+    .contents-wrapper {
+      justify-items: center;
+      & .accordion-content {
+        max-width: 50%;
+      }
+    }
+  }
 }
 
 /* side메뉴 열었을때 오버레이 */
@@ -325,10 +511,13 @@ a {
   --text-base: 0.9375rem;
   --white: #fff;
 
+  width: 100%;
   padding: 1.25rem;
-  background: var(--white);
+  background: transparent;
   text-align: center;
   font-size: var(--text-base);
+  opacity: 0;
+  transition: all 1s ease;
 
   @media (width >= 64rem) {
     padding-inline: 3.75rem;
@@ -352,5 +541,10 @@ a {
     a:hover {
       text-decoration: underline;
     }
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
   }
 }

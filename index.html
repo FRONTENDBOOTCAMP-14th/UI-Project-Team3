@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko-KR" class="index-html">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,35 +9,32 @@
     <link rel="preload" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="./src/common/index.css" />
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </head>
-  <body>
-    <!-- 네브바 -->
+  <body class="index-body">
+    <!-- NavBar -->
     <nav class="index-navbar">
       <ul class="navbar-lists">
         <li>
           <button class="exit-button" type="button" aria-label="메뉴 닫기">✕</button>
         </li>
         <li class="index-links" data-contents="index-main-section">
-          <button>Home</button>
+          <button>&lt; Home /&gt;</button>
         </li>
         <li class="index-links" data-contents="index-contents1">
-          <button>팀 소개</button>
+          <button>&lt; 팀 소개 /&gt;</button>
         </li>
         <li class="index-links" data-contents="index-contents2">
-          <button>팀원 소개</button>
+          <button>&lt; 프로젝트 규칙 /&gt;</button>
         </li>
         <li class="index-links" data-contents="index-contents3">
-          <button>프로젝트 규칙</button>
+          <button>&lt; 페이지 소개 /&gt;</button>
         </li>
         <li class="index-links" data-contents="index-contents4">
-          <button>페이지 소개</button>
+          <button>&lt; 개선 사항 /&gt;</button>
         </li>
         <li class="index-links" data-contents="index-contents5">
-          <button>개선 사항</button>
-        </li>
-        <li class="index-links" data-contents="index-contents6">
-          <button>회고록</button>
+          <button>&lt; 회고록 /&gt;</button>
         </li>
         <li>
           <a class="nike-link" href="./src/page/main.html" aria-label="나이키 홈페이지 이동">
@@ -56,21 +53,352 @@
       </div>
     </nav>
 
+    <!-- Main Contents -->
     <main class="index-main">
-      <section id="index-main-section" class="index-main index-content-section">
+      <section id="index-main-section" class="index-main-contents1 index-content-section">
         <h2 class="team-name">삼위일체</h2>
         <span class="box box1">一體</span>
         <span class="box box2">三位</span>
       </section>
 
       <section id="index-contents1" class="index-contents1 index-content-section">
-        <h3>콘텐츠1</h3>
-        <div>내용1</div>
+        <div class="contents-wrapper">
+          <div class="left-contents">
+            <h3>&lt; 삼위일체 /&gt;</h3>
+            <h4>열정 &lt;情&gt; • 실력 &lt;力&gt; • 팀워크 &lt;和&gt;</h4>
+            <p>안녕하세요. 멋쟁이사자처럼 14기 UI Project 3팀 삼위일체 입니다. 저희 팀은 나이키 웹사이트를 클론코딩하며, 지금껏 배워왔던 내용들을 120%이상 발휘 하려 노력 하였습니다. 작업 전반에 걸쳐 팀원 간의 소통과 협업을 가장 중요한 가치로 삼았고, 각자 주도적으로 의견을 제시하고 조율해가며 함께 성장하는 소중한 시간을 보냈습니다. 짧은 시간이었지만 모든 팀원이 최선을 다해 만든 결과물인 만큼, 저희의 노력을 예쁘게 봐주시면 감사하겠습니다!</p>
+            <a href="./src/page/main.html">나이키 페이지 방문하기</a>
+          </div>
+          <div class="right-contents">
+            <h3>&lt; 팀원 소개 /&gt;</h3>
+            <h4>오人오色, 그러나 하나의 목표</h4>
+            <div class="grid-card">
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/index-page/youngju.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/youngju.jpg" alt="장영주 이미지" />
+                </picture>
+                <span>장영주</span>
+                <span>Team Leader</span>
+                <span>담당 페이지 : ItemList, CS-Service, FindStore, Header</span>
+                <a href="https://github.com/JYJ7435" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/nikelogo.svg" type="image/avif" />
+                  <img src="./src/assets/images/nikelogo.svg" alt="신남일 이미지" />
+                </picture>
+                <span>신남일</span>
+                <span>Team Member</span>
+                <span>담당 페이지 : WishList</span>
+                <a href="https://github.com/namil66" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/nikelogo.svg" type="image/avif" />
+                  <img src="./src/assets/images/nikelogo.svg" alt=" 이미지" />
+                </picture>
+                <span>이범원</span>
+                <span>Team Member</span>
+                <span>담당 페이지 : Main</span>
+                <a href="https://github.com/beomwon" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/nikelogo.svg" type="image/avif" />
+                  <img src="./src/assets/images/nikelogo.svg" alt=" 이미지" />
+                </picture>
+                <span>성정은</span>
+                <span>Team Member</span>
+                <span>담당 페이지 : ProductDetail, Footer</span>
+                <a href="https://github.com/jeongeunsung" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/index-page/Sunhyeon_Jo.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/Sunhyeon_Jo.jpg" alt=" 이미지" />
+                </picture>
+                <span>조선현</span>
+                <span>담당 페이지 : SignIn, SignUp</span>
+                <a href="https://github.com/hana12051" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="index-contents2" class="index-contents2 index-content-section">
-        <h3>콘텐츠2222</h3>
-        <div>내용2</div>
+        <div class="contents-wrapper">
+          <h3>&lt; 프로젝트 규칙 /&gt;</h3>
+          <h4>오人오色, 하나의 약속</h4>
+          <div class="accordion-content">
+            <button type="button" class="accordion-button" aria-expanded="false">
+              <span>코딩 컨벤션</span>
+              <span><img class="arrow-icon" src="../../../src/assets/images/arrow-right.svg" alt="" /></span>
+            </button>
+            <div class="table-wrapper dropdown" hidden>
+              <p class="">
+                '[타입] 페이지 or 컴포넌트 / 내용'으로 작성한다. <br />
+                -로 각 항목을 구분 한다.
+              </p>
+              <table class="">
+                <caption class="sr-only">
+                  커밋 컨벤션 타입과 설명
+                </caption>
+                <colgroup>
+                  <col class="" />
+                  <col class="" />
+                </colgroup>
+                <thead class="">
+                  <tr class="">
+                    <th>type</th>
+                    <th>description</th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="">
+                    <td>[Feat]</td>
+                    <td>새로운 기능 추가</td>
+                  </tr>
+                  <tr class="">
+                    <td>[BugFix]</td>
+                    <td>버그 수정</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Docs]</td>
+                    <td>문서의 수정</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Modify]</td>
+                    <td>코드 변경</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Refactor]</td>
+                    <td>리팩토링</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Design]</td>
+                    <td>CSS 등 사용자 UI 디자인 변경</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Comment]</td>
+                    <td>필요한 주석 추가 및 변경</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Style]</td>
+                    <td>코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Test]</td>
+                    <td>테스트(테스트 코드 추가, 수정, 삭제, 비즈니스 로직에 변경이 없는 경우)</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Chore]</td>
+                    <td>빌드 수정, 패키지 매니저 설정, 운영 코드 변경이 없는 경우(assets image, 패키지 매니저 등)</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Init]</td>
+                    <td>프로젝트 초기 생성</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Rename]</td>
+                    <td>파일 혹은 폴더명 수정하거나 옮기는 경우</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Remove]</td>
+                    <td>파일을 삭제하는 작업만 수행하는 경우</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Merge]</td>
+                    <td>Pull 과정 중 현재 commit과 자동 병합이 일어날 때</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Build]</td>
+                    <td>새로운 라이브러리 혹은 패키지</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <button type="button" class="accordion-button" aria-expanded="false">
+              <span>코딩 컨벤션</span>
+              <span><img class="arrow-icon" src="../../../src/assets/images/arrow-right.svg" alt="" /></span>
+            </button>
+            <div class="table-wrapper dropdown" hidden>
+              <p class="">
+                '[타입] 페이지 or 컴포넌트 / 내용'으로 작성한다. <br />
+                -로 각 항목을 구분 한다.
+              </p>
+              <table class="">
+                <caption class="sr-only">
+                  커밋 컨벤션 타입과 설명
+                </caption>
+                <colgroup>
+                  <col class="" />
+                  <col class="" />
+                </colgroup>
+                <thead class="">
+                  <tr class="">
+                    <th>type</th>
+                    <th>description</th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="">
+                    <td>[Feat]</td>
+                    <td>새로운 기능 추가</td>
+                  </tr>
+                  <tr class="">
+                    <td>[BugFix]</td>
+                    <td>버그 수정</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Docs]</td>
+                    <td>문서의 수정</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Modify]</td>
+                    <td>코드 변경</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Refactor]</td>
+                    <td>리팩토링</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Design]</td>
+                    <td>CSS 등 사용자 UI 디자인 변경</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Comment]</td>
+                    <td>필요한 주석 추가 및 변경</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Style]</td>
+                    <td>코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Test]</td>
+                    <td>테스트(테스트 코드 추가, 수정, 삭제, 비즈니스 로직에 변경이 없는 경우)</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Chore]</td>
+                    <td>빌드 수정, 패키지 매니저 설정, 운영 코드 변경이 없는 경우(assets image, 패키지 매니저 등)</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Init]</td>
+                    <td>프로젝트 초기 생성</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Rename]</td>
+                    <td>파일 혹은 폴더명 수정하거나 옮기는 경우</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Remove]</td>
+                    <td>파일을 삭제하는 작업만 수행하는 경우</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Merge]</td>
+                    <td>Pull 과정 중 현재 commit과 자동 병합이 일어날 때</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Build]</td>
+                    <td>새로운 라이브러리 혹은 패키지</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <button type="button" class="accordion-button" aria-expanded="false">
+              <span>코딩 컨벤션</span>
+              <span><img class="arrow-icon" src="../../../src/assets/images/arrow-right.svg" alt="" /></span>
+            </button>
+            <div class="table-wrapper dropdown" hidden>
+              <p class="">
+                '[타입] 페이지 or 컴포넌트 / 내용'으로 작성한다. <br />
+                -로 각 항목을 구분 한다.
+              </p>
+              <table class="">
+                <caption class="sr-only">
+                  커밋 컨벤션 타입과 설명
+                </caption>
+                <colgroup>
+                  <col class="" />
+                  <col class="" />
+                </colgroup>
+                <thead class="">
+                  <tr class="">
+                    <th>type</th>
+                    <th>description</th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="">
+                    <td>[Feat]</td>
+                    <td>새로운 기능 추가</td>
+                  </tr>
+                  <tr class="">
+                    <td>[BugFix]</td>
+                    <td>버그 수정</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Docs]</td>
+                    <td>문서의 수정</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Modify]</td>
+                    <td>코드 변경</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Refactor]</td>
+                    <td>리팩토링</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Design]</td>
+                    <td>CSS 등 사용자 UI 디자인 변경</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Comment]</td>
+                    <td>필요한 주석 추가 및 변경</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Style]</td>
+                    <td>코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Test]</td>
+                    <td>테스트(테스트 코드 추가, 수정, 삭제, 비즈니스 로직에 변경이 없는 경우)</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Chore]</td>
+                    <td>빌드 수정, 패키지 매니저 설정, 운영 코드 변경이 없는 경우(assets image, 패키지 매니저 등)</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Init]</td>
+                    <td>프로젝트 초기 생성</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Rename]</td>
+                    <td>파일 혹은 폴더명 수정하거나 옮기는 경우</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Remove]</td>
+                    <td>파일을 삭제하는 작업만 수행하는 경우</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Merge]</td>
+                    <td>Pull 과정 중 현재 commit과 자동 병합이 일어날 때</td>
+                  </tr>
+                  <tr class="">
+                    <td>[Build]</td>
+                    <td>새로운 라이브러리 혹은 패키지</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <div class="index-overlay" aria-hidden="true"></div>
