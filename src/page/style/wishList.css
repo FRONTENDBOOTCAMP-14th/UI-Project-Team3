@@ -1,22 +1,17 @@
 .product-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1rem;
-  padding: 1.5rem 1rem 0px;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.25rem;
+  inline-size: 100%;
+  padding-inline: 3rem;
+
+  @media (width <= 40rem) {
+    grid-template-columns: repeat(2, minmax(10.125rem, 2fr));
+  }
 }
 
 .item-card {
-  position: relative;
-  max-inline-size: 29.0625rem;
-  height: auto;
-  flex: 0 1 45%;
-  margin-bottom: 2rem;
-
-  @media (width <= 40rem) {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
+  inline-size: 100%;
 }
 
 /* 상품 사진 하단에 버튼을 제외한 정보를 정렬할 div */
