@@ -27,8 +27,8 @@
 
     @media (width >= 80rem) {
       justify-content: right;
-      /* position: sticky;
-      top: 56.95px; */
+      position: sticky;
+      top: 4.25rem;
     }
 
     .product-info-box {
@@ -150,19 +150,21 @@
       }
     }
   }
+}
 
-  .recommend-product-wrapper {
-    margin-inline: 1.5rem;
+.recommend-product-wrapper {
+  margin-inline: 1.5rem;
+  margin-block-start: 1.875rem;
+
+  @media (width >= 40rem) {
+    margin-inline: 0;
     margin-block-start: 1.875rem;
+  }
 
-    @media (width >= 40rem) {
-      margin-inline: 0;
-      margin-block-start: 1.875rem;
-    }
-
-    @media (width >= 60rem) {
-      grid-column-end: span 2;
-    }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
 

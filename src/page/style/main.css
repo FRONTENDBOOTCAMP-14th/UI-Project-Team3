@@ -1,6 +1,6 @@
-/* body {
-  margin: 50px;
-} */
+main {
+  padding-inline: 24px;
+}
 
 /* 섹션 공통 */
 .section {
@@ -80,7 +80,7 @@
   display: none;
 }
 .carousel-slide {
-  flex: 0 0 200px; /* 기본 폭 */
+  flex: 0 0 300px; /* 기본 폭 */
   scroll-snap-align: center;
 }
 
@@ -118,7 +118,35 @@
   right: 0.5rem;
 }
 
+.shop-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* 모바일에서 카드 사이 간격 */
+  padding-inline: 1rem;
+}
+
 @media (min-width: 768px) {
+  main {
+    padding-inline: 0;
+  }
+
+  .shop-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .shop-card__body {
+    button {
+      margin-top: 0.3125rem;
+    }
+  }
+
+  .shop-card {
+    flex: 1 1 0%;
+    max-inline-size: 100%;
+  }
+
   .scroll-wrap {
     overflow-x: hidden; /* 가로 스크롤 제거 */
     scroll-snap-type: none;
@@ -165,6 +193,6 @@
     display: flex;
   }
   .carousel-slide {
-    flex-basis: 60%;
+    flex-basis: 31.25rem;
   }
 }

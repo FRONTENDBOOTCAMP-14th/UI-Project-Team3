@@ -1,48 +1,604 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko-KR" class="index-html">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UI 프로젝트 - CSS</title>
+    <title>삼위일체/Team3 UI Project</title>
     <link rel="icon" href="/vite.svg" />
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
-    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
-    <script type="module" src="/src/main.js"></script>
+    <link rel="preload" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="./src/common/index.css" />
+    <script type="module" src="./src/main.js"></script>
   </head>
-  <body>
-    <h1>Vite + CSS</h1>
-    <ul>
-      <li>컴포넌트를 분리해서 구현해주세요.</li>
-      <li>컴포넌트의 코드 리뷰를 AI를 통해 받은 후 개선해보세요.</li>
-      <li>개선점을 문서화하여 정리해 보세요</li>
-      <li>구현한 컴포넌트를 기반으로 페이지를 만들어주세요.</li>
-      <li>접근성과 성능을 신경써주세요</li>
-      <li>소통하고 화합하며 프로젝트 즐겨주세요.</li>
-      <li>결과보다 과정이 중요합니다.‼️</li>
-    </ul>
-    <h2>컴포넌트</h2>
-    <ul>
-      <li><a href="./src/components/common/accrodion.html">아코디언 버튼</a></li>
-      <li><a href="./src/components/common/buttons.html">공통 버튼</a></li>
-      <li><a href="./src/components/common/input.html">인풋</a></li>
-      <li><a href="./src/components/common/item-card.html">아이템 카드</a></li>
-      <li><a href="./src/components/CustomerService/cs-com.html">고객지원</a></li>
-      <li><a href="./src/components/findstore/findstore-form.html">매장찾기 매장리스트</a></li>
-      <li><a href="./src/components/itemlist/itemlist-filter.html">아이템 리스트 필터</a></li>
-      <li><a href="./src/components/itemlist/itemlist-header.html">아이템 리스트 헤더</a></li>
-      <li><a href="./src/components/login/login-input.html">로그인 페이지 인풋</a></li>
-      <li><a href="./src/components/product-detail-component/product-detail-component.html">제품상세 페이지 컴포넌트</a></li>
-    </ul>
+  <body class="index-body">
+    <!-- NavBar -->
+    <nav class="index-navbar">
+      <ul class="navbar-lists">
+        <li>
+          <button class="exit-button" type="button" aria-label="메뉴 닫기">✕</button>
+        </li>
+        <li class="index-links" data-contents="index-main-section">
+          <button>&lt; Home /&gt;</button>
+        </li>
+        <li class="index-links" data-contents="index-contents1">
+          <button>&lt; 팀 소개 /&gt;</button>
+        </li>
+        <li class="index-links" data-contents="index-contents2">
+          <button>&lt; 프로젝트 규칙 /&gt;</button>
+        </li>
+        <li class="index-links" data-contents="index-contents3">
+          <button>&lt; 페이지 소개 /&gt;</button>
+        </li>
+        <li class="index-links" data-contents="index-contents4">
+          <button>&lt; 개선 사항 /&gt;</button>
+        </li>
+        <li class="index-links" data-contents="index-contents5">
+          <button>&lt; 회고록 /&gt;</button>
+        </li>
+        <li>
+          <a class="nike-link" href="./src/page/main.html" aria-label="나이키 홈페이지 이동">
+            <img src="./src/assets/images/nikelogo.svg" alt="" />
+          </a>
+        </li>
+      </ul>
 
-    <h2>페이지</h2>
-    <ul>
-      <li><a href="./src/page/main.html">메인 페이지</a></li>
-      <li><a href="./src/page/findstore.html">매장 찾기 페이지</a></li>
-      <li><a href="./src/page/itemlist.html">아이템 리스트 페이지</a></li>
-      <li><a href="./src/page/product-detail.html">제품 상세 페이지</a></li>
-      <li><a href="./src/page/signin.html">로그인 페이지</a></li>
-      <li><a href="./src/page/signup.html">회원 가입 페이지</a></li>
-      <li><a href="./src/page/wishList.html">위시리스트 페이지</a></li>
-    </ul>
+      <div class="button-group">
+        <a href="./src/page/main.html" aria-label="나이키 홈페이지 이동">
+          <img src="./src/assets/images/nikelogo.svg" alt="" />
+        </a>
+        <button class="open-button" type="button" aria-label="메뉴 열기">
+          <img src="./src/assets/images/menu.svg" alt="" />
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="index-main">
+      <section id="index-main-section" class="index-main-contents1 index-content-section">
+        <h2 class="team-name">삼위일체</h2>
+        <span class="box box1">一體</span>
+        <span class="box box2">三位</span>
+      </section>
+
+      <!-- 팀 소개  -->
+      <section id="index-contents1" class="index-contents1 index-content-section">
+        <div class="contents-wrapper">
+          <div class="left-contents">
+            <h3>&lt; 삼위일체 /&gt;</h3>
+            <h4>열정 &lt;情&gt; • 실력 &lt;力&gt; • 팀워크 &lt;和&gt;</h4>
+            <p>안녕하세요. 멋쟁이사자처럼 14기 UI Project 3팀 삼위일체 입니다. 저희 팀은 나이키 웹사이트를 클론코딩하며, 지금껏 배워왔던 내용들을 120%이상 발휘 하려 노력 하였습니다. 작업 전반에 걸쳐 팀원 간의 소통과 협업을 가장 중요한 가치로 삼았고, 각자 주도적으로 의견을 제시하고 조율해가며 함께 성장하는 소중한 시간을 보냈습니다. 짧은 시간이었지만 모든 팀원이 최선을 다해 만든 결과물인 만큼, 저희의 노력을 예쁘게 봐주시면 감사하겠습니다!</p>
+            <a href="./src/page/main.html">나이키 페이지 방문하기</a>
+          </div>
+          <div class="right-contents">
+            <h3>&lt; 팀원 소개 /&gt;</h3>
+            <h4>오人오色, 그러나 하나의 목표</h4>
+            <div class="grid-card">
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/index-page/youngju.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/youngju.jpg" alt="장영주 이미지" />
+                </picture>
+                <span>장영주</span>
+                <span>Team Leader</span>
+                <span>담당 페이지 : ItemList, CS-Service, FindStore, Header</span>
+                <a href="https://github.com/JYJ7435" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/index-page/Namil.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/Namil.jpg" alt="신남일 이미지" />
+                </picture>
+                <span>신남일</span>
+                <span>Team Member</span>
+                <span>담당 페이지 : WishList</span>
+                <a href="https://github.com/namil66" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/index-page/leebeomwon.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/leebeomwon.png" alt=" 이미지" />
+                </picture>
+                <span>이범원</span>
+                <span>Team Member</span>
+                <span>담당 페이지 : Main</span>
+                <a href="https://github.com/beomwon" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/index-page/sungjeongeun.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/sungjeongeun.jpg" alt=" 이미지" />
+                </picture>
+                <span>성정은</span>
+                <span>Team Member</span>
+                <span>담당 페이지 : ProductDetail, Footer</span>
+                <a href="https://github.com/jeongeunsung" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+              <div class="grid-item">
+                <picture>
+                  <source srcset="./src/assets/images/index-page/Sunhyeon_Jo.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/Sunhyeon_Jo.jpg" alt=" 이미지" />
+                </picture>
+                <span>조선현</span>
+                <span>담당 페이지 : SignIn, SignUp</span>
+                <a href="https://github.com/hana12051" target="_blank" rel="noopener noreferrer">GitHub 바로가기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 프로젝트 규칙 -->
+      <section id="index-contents2" class="index-contents2 index-content-section">
+        <div class="contents-wrapper">
+          <h3>&lt; 프로젝트 규칙 /&gt;</h3>
+          <h4>오人오色, 하나의 약속</h4>
+          <div class="accordion-content">
+            <button type="button" class="accordion-button" aria-expanded="false">
+              <span>커밋 컨벤션</span>
+              <span><img class="arrow-icon" src="./src/assets/images/arrow-right.svg" alt="" /></span>
+            </button>
+            <div class="content-wrapper dropdown" hidden>
+              <p>
+                '[타입] 페이지 or 컴포넌트 / 내용'으로 작성한다. <br />
+                -로 각 항목을 구분 한다.
+              </p>
+              <table>
+                <caption class="sr-only">
+                  커밋 컨벤션 타입과 설명
+                </caption>
+                <colgroup>
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>type</th>
+                    <th>description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>[Feat]</td>
+                    <td>새로운 기능 추가</td>
+                  </tr>
+                  <tr>
+                    <td>[BugFix]</td>
+                    <td>버그 수정</td>
+                  </tr>
+                  <tr>
+                    <td>[Docs]</td>
+                    <td>문서의 수정</td>
+                  </tr>
+                  <tr>
+                    <td>[Modify]</td>
+                    <td>코드 변경</td>
+                  </tr>
+                  <tr>
+                    <td>[Refactor]</td>
+                    <td>리팩토링</td>
+                  </tr>
+                  <tr>
+                    <td>[Design]</td>
+                    <td>CSS 등 사용자 UI 디자인 변경</td>
+                  </tr>
+                  <tr>
+                    <td>[Comment]</td>
+                    <td>필요한 주석 추가 및 변경</td>
+                  </tr>
+                  <tr>
+                    <td>[Style]</td>
+                    <td>코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우</td>
+                  </tr>
+                  <tr>
+                    <td>[Test]</td>
+                    <td>테스트(테스트 코드 추가, 수정, 삭제, 비즈니스 로직에 변경이 없는 경우)</td>
+                  </tr>
+                  <tr>
+                    <td>[Chore]</td>
+                    <td>빌드 수정, 패키지 매니저 설정, 운영 코드 변경이 없는 경우(assets image, 패키지 매니저 등)</td>
+                  </tr>
+                  <tr>
+                    <td>[Init]</td>
+                    <td>프로젝트 초기 생성</td>
+                  </tr>
+                  <tr>
+                    <td>[Rename]</td>
+                    <td>파일 혹은 폴더명 수정하거나 옮기는 경우</td>
+                  </tr>
+                  <tr>
+                    <td>[Remove]</td>
+                    <td>파일을 삭제하는 작업만 수행하는 경우</td>
+                  </tr>
+                  <tr>
+                    <td>[Merge]</td>
+                    <td>Pull 과정 중 현재 commit과 자동 병합이 일어날 때</td>
+                  </tr>
+                  <tr>
+                    <td>[Build]</td>
+                    <td>새로운 라이브러리 혹은 패키지</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <button type="button" class="accordion-button" aria-expanded="false">
+              <span>코딩 컨벤션</span>
+              <span><img class="arrow-icon" src="./src/assets/images/arrow-right.svg" alt="" /></span>
+            </button>
+            <div class="content-wrapper dropdown" hidden>
+              <h5>코딩 컨벤션을 사용해야하는 이유?</h5>
+              <p class="text-block">누구나 쉽게 코드를 이해할 수 있어서 협업하기 편해지며 여러 사람이 작업해도 한 사람이 짠 것처럼 일관성 있게 코드를 작성할 수 있다. 규칙을 지키면 실수나 혼동을 줄이고, 디버깅이 쉬워진다. 시간이 지나도 코드를 고치거나 개선하기가 쉬워지며, Prettier나 formatting 같은 툴이 잘 작동해서 생산성이 올라간다. 한 프로젝트의 코딩 컨벤션은 업무 효율을 높이는 데 결정적인 역할을 하며, 마크업 코드는 같은 코딩 컨벤션에 따라 작성해야 한다.</p>
+              <h6>css 기본정의</h6>
+              <p class="coding-convention-title">★ 기본규칙</p>
+              <ol>
+                <li>
+                  모든 속성은 영문 소문자로만 작성한다.
+                  <pre class="code-block"><code>.my-class {color:#ffffff;}</code></pre>
+                </li>
+                <li>
+                  폰트의 선언, 배경 url, filter, content에 작은 따옴표(‘ ’)를 사용합니다. 그 외의 경우는 사용하지 않는다.
+                  <pre class="code-block"><code>.my-class {background-image:url(‘image.jpg’)}</code></pre>
+                </li>
+                <li>
+                  마지막 선언된 속성에도 세미콜론(;)을 사용해도 된다.
+                  <pre class="code-block"><code>.my-class {color:red;font-size:16px;line-height:20px;}</code></pre>
+                </li>
+                <li>
+                  공백 : 선택자간, 중괄호 간 한 칸의 공백을 사용한다.
+                  <pre class="code-block"><code>.my-class {color:red;font-size:18px;}</code></pre>
+                </li>
+                <li>중첩 태그 사용시 3단계 권장한다.</li>
+                <li>사용단위는 rem을 권장한다.</li>
+                <li>
+                  논리속성 사용한다.
+                  <pre class="code-block"><code>header {<br />  inline-size:100%; (O) width:100%; (X)<br />  padding-inline-start: 1rem; (O) padding-left: 1rem; (X)<br />}</code></pre>
+                </li>
+              </ol>
+              <p class="coding-convention-title">★ CSS 네이밍 규칙</p>
+              <ol>
+                <li>
+                  이름은 kebab-case 규칙을 따르며, 영문 소문자, 숫자, 하이픈(-)로 작성하며, 영문 소문자로만 시작한다.
+                  <pre class="code-block"><code>잘못된 예 : Btn, 2btn, _btn, btn_, sectionList, product-3list<br />올바른 예 : btn, btn2, btn, btn, section-list, procude-list3</code></pre>
+                </li>
+              </ol>
+              <p class="coding-convention-title">★ id, class 규칙</p>
+              <ol>
+                <li>id는 문서 전체의 고유 식별자이므로 한 문서에서 동일한 id를 여러 번 사용하지 않는다.</li>
+                <li>레이아웃을 제외한 id는 스타일을 지정하지 않는다.</li>
+                <li>class는 문서에서 여러 번 사용할 수 있다.</li>
+              </ol>
+              <p class="coding-convention-title">★ 주석문 규칙</p>
+              <ol>
+                <li>css는 코드 위에 간단히 설명정도 적고, 슬래시-별표로 시작하고, 별표-슬래시로 끝내며, 줄 바꿈 가능 하다. (/* 내용 */) 단, 중첩 주석은 불가하다. (/* 주석 안에 /* 또 주석 */)</li>
+              </ol>
+              <p class="coding-convention-title">★ 들여쓰기&줄바꿈</p>
+              <ol>
+                <li>CSS는 들여쓰기를 허용하지 않는다.</li>
+              </ol>
+              <p class="coding-convention-title">★ 이미지 네이밍 규칙</p>
+              <ol>
+                <li>같은 분류의 이미지가 두 개 이상이면 파일 이름 마지막에 숫자를 추가하여 구분한다 (올바른 예 : bu-dot1.gif, bu-dot2.jpg, bu-dot3.png)</li>
+                <li>형태-의미-상태 순서로 조합한다. (올바른 예 : btn-search-on.jpg)</li>
+                <li>임의로 축약하지 않는다.</li>
+                <li>영문 소문자를 사용한다.</li>
+                <li>숫자로 시작하지 않는다.</li>
+              </ol>
+              <h6>html 기본정의</h6>
+              <p class="coding-convention-title">★ 기본규칙(표준문법 사용)</p>
+              <ol>
+                <li>
+                  DTD를 제외한 모든 요소와 애트리뷰트는 소문자로 작성한다.
+                  <pre class="code-block"><code>잘못된 예 : &lt;SPAN Class="desc"&gt;간단한 설명&lt;/SPAN&gt;<br />올바른 예 : &lt;span class="desc"&gt;간단한 설명&lt;/span&gt;</code></pre>
+                </li>
+                <li>
+                  DTD 선언 앞에 주석, 공백, 줄바꿈, 문자 등의 내용이 없어야 한다.
+                  <pre class="code-block"><code>잘못된 예 :<br />&lt;!-- Made by 3 --&gt;<br />&lt;!DOCTYPE html&gt;<br />올바른 예 :<br />&lt;!DOCTYPE html&gt;<br />&lt;!-- Made by 3 --&gt;</code></pre>
+                </li>
+                <li>&lt;p&gt; 태그 안에는 &lt;p&gt;, &lt;div&gt;, &lt;ul&gt; 등 다른 블록 요소가 들어갈 수 없다. (display : inline 속성을 적용해도 소용없음)</li>
+                <li>&lt;p&gt; 태그는 문단을 구분하는 용도로만 사용하고 영역을 구분하는 용도로 사용할 수 없다.</li>
+                <li>&lt;a&gt; 태그 안에는 &lt;a&gt; 태그가 들어갈 수 없다.</li>
+                <li>&lt;form&gt; 태그 안에는 &lt;form&gt; 태그가 들어갈 수 없다.</li>
+                <li>&lt;label&gt; 태그 안에는 &lt;label&gt; 태그가 들어갈 수 없다.</li>
+                <li>&lt;button&gt; 태그 안에는 &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;, &lt;label&gt;, &lt;button&gt;, &lt;form&gt;, &lt;fieldset&gt; 태그가 들어갈 수 없다.</li>
+                <li>
+                  태그의 중첩에 유의한다.
+                  <pre class="code-block"><code>잘못된 예 : &lt;em&gt;&lt;strong&gt;내용&lt;/em&gt;&lt;/strong&gt;<br />올바른 예 : &lt;em&gt;&lt;strong&gt;내용&lt;/strong&gt;&lt;/em&gt;</code></pre>
+                </li>
+                <li>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;에 &lt;label&gt; 을 작성할 수 없을 경우 title을 작성해야 한다. (웹 접근성 관련 지침)</li>
+                <li>종료 태그가 필요한 요소는 반드시 종료 태그를 선언한다.</li>
+                <li>태그 사용 등 관련 오류의 체크를 위해 반드시 페이지 완료 전에 체크해야 한다.</li>
+              </ol>
+              <p class="coding-convention-title">★ 들여쓰기</p>
+              <ol>
+                <li>앞은 탭(1탭=2스페이스)으로 들여쓰고 그 이외 부분은 1 스페이스로 한다.</li>
+              </ol>
+              <p class="coding-convention-title">★ 반응형 규칙</p>
+              <ol>
+                <li>반응형 작업은 ‘모바일(first) → 태블릿 → 웹’ 순서로 작업한다.</li>
+                <li>
+                  반응형 breakpoint
+                  <pre class="code-block"><code>/* BreakPoint 중단점 정의 */<br />모바일 : ~ 640px, 테블릿 : 641px ~ 1024px, 데스크탑 : 1025px ~ <br />/* BreakPoint 사용자 속성 정의*/<br />--breakpoint-sm: 40rem;<br />--breakpoint-lg: 64rem;<br />--breakpoint-xl: 80rem;</code></pre>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <button type="button" class="accordion-button" aria-expanded="false">
+              <span>폴더 구조</span>
+              <span><img class="arrow-icon" src="./src/assets/images/arrow-right.svg" alt="" /></span>
+            </button>
+            <div class="content-wrapper dropdown" hidden>
+              <h6>폴더 구조 정의</h6>
+              <ol>
+                <li>
+                  public 정적 파일
+                  <pre class="code-block">- fonts 폴더<br />- favicon 폴더</pre>
+                </li>
+                <li>
+                  src 동적 파일
+                  <pre class="code-block">- assets 폴더 -> 이미지 파일<br />- components 폴더 -> 컴포넌트<br />- pages 폴더 -> 페이지</pre>
+                </li>
+              </ol>
+              <h6>폴더 구조 규칙</h6>
+              <ol>
+                <li>컴포넌트 파일은 src/components 폴더 하위에 각 페이지의 컴포넌트 폴더 생성한다.</li>
+                <li>페이지 파일은 src/pages 폴더 하위에 생성하며 페이지명으로 네이밍한다.</li>
+              </ol>
+              <pre class="code-block project-folder">
+                <img src="./src/assets/images/index-page/folder.svg" alt="폴더" />UI-PROJECT-TEAM3<br />
+                ├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> public<br />
+                │&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> favicon<br />
+                │&nbsp;&nbsp;&nbsp;&nbsp;└─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> font<br />
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> woff2<br />
+                │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 📋 pretendardvariable.css<br />
+                └─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> src<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> assets<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> images<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> common<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 a11y.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 base.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 index.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 reset.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└─ 📋 theme.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> components<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> common<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> CustomerService<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> findstore<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> itemlist<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> login<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> product-detail<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> ...<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> page<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> js<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> style<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ ...<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 📋 main.html<br />
+              </pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 페이지 소개 -->
+      <section id="index-contents3" class="index-contents3 index-content-section">
+        <div class="contents-wrapper">
+          <h3>&lt; 페이지 소개 /&gt;</h3>
+          <h4>다섯 명이 머리 맞댄 결과</h4>
+          <div class="introduce-wrapper">
+            <h5>Common Components</h5>
+            <dl>
+              <div>
+                <dt>&dot; 버튼 컴포넌트</dt>
+                <dd><a href="./src/components/common/buttons.html" target="_blank" rel="noopenner noreferrer">버튼 컴포넌트 바로가기</a></dd>
+              </div>
+              <div>
+                <dt>&dot; 아코디언 컴포넌트</dt>
+                <dd><a href="./src/components/common/accrodion.html" target="_blank" rel="noopenner noreferrer">아코디언 컴포넌트 바로가기</a></dd>
+              </div>
+              <div>
+                <dt>&dot; input 컴포넌트</dt>
+                <dd><a href="./src/components/common/input.html" target="_blank" rel="noopenner noreferrer">input 컴포넌트 바로가기</a></dd>
+              </div>
+              <div>
+                <dt>&dot; 상품 컴포넌트</dt>
+                <dd><a href="./src/components/common/item-card.html" target="_blank" rel="noopenner noreferrer">상품 컴포넌트 바로가기</a></dd>
+              </div>
+            </dl>
+            <h5>Page Components</h5>
+            <dl>
+              <div>
+                <dt>&dot; 메인 컴포넌트</dt>
+                <dd><a href="./src/components/main-page.html" target="_blank" rel="noopenner noreferrer">메인 컴포넌트 바로가기</a></dd>
+              </div>
+              <div>
+                <dt>&dot; 상품 리스트 컴포넌트</dt>
+                <dd>
+                  <a href="./src/components/itemlist/itemlist-header.html" target="_blank" rel="noopenner noreferrer">- 상품 리스트 헤더 컴포넌트 바로가기</a>
+                  <a href="./src/components/itemlist/itemlist-filter.html" target="_blank" rel="noopenner noreferrer">- 상품 리스트 필터 컴포넌트 바로가기</a>
+                </dd>
+              </div>
+              <div>
+                <dt>&dot; 상품 상세 컴포넌트</dt>
+                <dd>
+                  <a href="./src/components/product-detail/product-detail-component.html" target="_blank" rel="noopenner noreferrer">상품 상세 컴포넌트 바로가기</a>
+                </dd>
+              </div>
+              <div>
+                <dt>&dot; 위시리스트 컴포넌트</dt>
+                <dd>
+                  <a href="./src/components/wishtitle.html" target="_blank" rel="noopenner noreferrer">위시리스트 컴포넌트 바로가기</a>
+                </dd>
+              </div>
+              <div>
+                <dt>&dot; 로그인 / 회원가입 컴포넌트</dt>
+                <dd>
+                  <a href="./src/components/login/login-input.html" target="_blank" rel="noopenner noreferrer">로그인 / 회원가입 컴포넌트 바로가기</a>
+                </dd>
+              </div>
+              <div>
+                <dt>&dot; 고객센터 컴포넌트</dt>
+                <dd>
+                  <a href="./src/components/CustomerService/cs-com.html" target="_blank" rel="noopenner noreferrer">고객센터 컴포넌트 바로가기</a>
+                </dd>
+              </div>
+              <div>
+                <dt>&dot; 매장찾기 컴포넌트</dt>
+                <dd>
+                  <a href="./src/components/findstore/findstore-map.html" target="_blank" rel="noopenner noreferrer">- 매장찾기 지도 컴포넌트 바로가기</a>
+                  <a href="./src/components/findstore/findstore-form.html" target="_blank" rel="noopenner noreferrer">- 매장찾기 입력서식 컴포넌트 바로가기</a>
+                </dd>
+              </div>
+            </dl>
+            <h5>Page</h5>
+            <dl>
+              <div>
+                <dt>&dot; 메인 페이지 (Main Page)</dt>
+                <dd><a href="./src/page/main.html" target="_blank" rel="noopenner noreferrer">메인 페이지 바로가기</a></dd>
+              </div>
+              <div>
+                <dt>&dot; 상품 리스트 페이지 (Product List Page)</dt>
+                <dd><a href="./src/page/itemlist.html" target="_blank" rel="noopenner noreferrer">상품 리스트 페이지 바로가기</a></dd>
+              </div>
+              <div>
+                <dt>&dot; 상품 상세 페이지 (Product Detail Page)</dt>
+                <dd><a href="./src/page/product-detail.html" target="_blank" rel="noopenner noreferrer">상품 상세 페이지 바로가기</a></dd>
+              </div>
+              <div>
+                <dt>&dot; 위시리스트 페이지 (Wishlist Page)</dt>
+                <dd><a href="./src/page/wishList.html" target="_blank" rel="noopenner noreferrer">위시리스트 페이지 바로가기</a></dd>
+              </div>
+              <div>
+                <dt>&dot; 로그인 / 회원가입 페이지 (Login / Sign-up Page)</dt>
+                <dd>
+                  <a href="./src/page/signin.html" target="_blank" rel="noopenner noreferrer">- 로그인 페이지 바로가기</a>
+                  <a href="./src/page/signup.html" target="_blank" rel="noopenner noreferrer">- 회원가입 페이지 바로가기</a>
+                </dd>
+              </div>
+              <div>
+                <dt>&dot; 고객센터 페이지 (Customer Center Page)</dt>
+                <dd><a href="./src/page/customer-service.html" target="_blank" rel="noopenner noreferrer">고객센터 페이지 바로가기</a></dd>
+              </div>
+              <div>
+                <dt>Find Store 페이지</dt>
+                <dd><a href="./src/page/findstore.html" target="_blank" rel="noopenner noreferrer">Find Store 페이지 바로가기</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- 개선 사항 -->
+      <section id="index-contents4" class="index-contents4 index-content-section">
+        <div class="contents-wrapper">
+          <h3>&lt; 개선 사항 /&gt;</h3>
+          <h4>다음엔 더 잘할게요… 아마도!</h4>
+
+          <!-- 개선 항목 -->
+          <details class="improvement-detail">
+            <summary>입력서식 input 구조 단순화</summary>
+            <div class="improvement-item">
+              <div class="before">
+                <h5>수정 전</h5>
+                <img src="./src/assets/images/Improvements/login-input-before.png" alt="수정 전 이미지" />
+                <p>입력서식 컴포넌트에서 div 요소를 불필요하게 사용</p>
+              </div>
+              <div class="after">
+                <h5>수정 후</h5>
+                <img src="./src/assets/images/Improvements/login-input-after.png" alt="수정 후 이미지" />
+                <p>입력서식 컴포넌트에서 불필요하세 사용되던 div요소를 제거하고 구조를 단순화시킴.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 회고록 -->
+      <section id="index-contents5" class="index-contents5 index-content-section">
+        <div class="contents-wrapper">
+          <h3>&lt; 회고록 /&gt;</h3>
+          <h4>기억하고 싶은 여정</h4>
+
+          <div class="retrospect-list">
+            <!-- 성정은 -->
+            <details class="retrospect-item">
+              <summary>성정은</summary>
+              <p class="retrospect-text">
+                이번 프로젝트를 통해 다시 한 번 느낀 건, 결과물의 완성도는 결국 내가 얼마나 집중하고, 어느 정도까지 밀어붙이느냐에 달려 있다는 점이었습니다. 지식과 경험이 쌓일수록 문제를 바라보는 시야도 확연히 달라지고, ‘아는 만큼 보인다’는 말은 언제나 유효했습니다.
+                <br /><br />
+                협업 과정은 어딜가나 나혼자 잘해서는 안된다라는 걸 느낍니다. 각자의 역량도 중요하지만, 그걸 하나의 방향으로 조율하고 납득시키는 과정, 즉, 슬비쌤께서 강조하셨던 ‘설득의 힘’이야말로 실무에서 가장 필요한 역량 중 하나라는 걸 다시 한번 느끼게 됩니다.
+                <br /><br />
+                이번 프로젝트에서는 리더십의 무게 또한 분명히 체감할 수 있었습니다. 작업자에게는 말뿐만 아니라 실행력이, 리더에게는 책임과 균형 감각이 요구됩니다. 누구나 말은 할 수 있지만, 실제로 노력하고 행동으로 옮기는 사람이 진정한 작업자의 자세를 가진 사람이라고 생각합니다. 리더는 단순한 역할이 아니라, 팀의 방향성, 정확한 업무분담, 일정 관리등 에너지를 결정짓는 중심축이라는 사실을 다시 확인하게 되었습니다.
+                <br /><br />
+                전체적으로 이번 경험은 단순한 결과물이 아니라, 협업의 본질과 리더십의 실제적인 무게를 체감한 프로젝트였습니다. 실무에서 필요한 사고 방식과 태도를 점검하고, 한 단계 더 성숙할 수 있었던 기회였습니다.
+              </p>
+            </details>
+
+            <!-- 신남일 -->
+            <details class="retrospect-item">
+              <summary>신남일</summary>
+              <p class="retrospect-text">
+                이번 프로젝트를 하면서 단기간에 많이 성장했다고 느꼈습니다. CSS 파트에서 복습을 많이 못 했기 때문에 아는 내용이 너무 적어서 "내가 맡은 페이지를 잘 만들 수 있을까?"라는 생각이 프로젝트 기간 내내 떠나지 않았습니다. 다행히 컴포넌트를 만드는 데까지는 별 문제 없었고 중간중간 pr을 올리면 다른 조원 분이 코드를 확인해서 "이런이런 부분은 변경해달라"고 피드백을 열심히 해 주신 덕에 몰랐거나 까먹었던 내용도 알게 돼서 너무 좋았습니다. 코드도 많이 망쳐보고, AI한테 물어봐서 속성에 대해 공부까지
+                하게되니 지금보면 그렇게 오래걸릴 작업이 아니었지만 생각보다 시간을 많이 쏟아서 페이지 완성이 늦어지는 바람에 회고록을 쓰는 지금까지도 조원들에게 미안한 마음이 듭니다. 앞에서 많이 성장했다고 이야기하긴 했으나 아직도 깃을 완벽하게 다루지도, 다른 컴포넌트를 잘 만들 지도 못하지만 이번 프로젝트가 저에겐 새로운 영감과 폭발적인 성장을 이뤄준 것 같아 만족스럽습니다. 끝까지 기다려준 조원분들에게 감사의 인사를 전하며 회고록을 마무리 짓습니다.
+              </p>
+            </details>
+
+            <!-- 이범원 -->
+            <details class="retrospect-item">
+              <summary>이범원</summary>
+              <p class="retrospect-text">이곳에 이범원님의 회고 내용이 들어갑니다.</p>
+            </details>
+
+            <!-- 장영주 -->
+            <details class="retrospect-item">
+              <summary>장영주</summary>
+              <p class="retrospect-text">이곳에 장영주님의 회고 내용이 들어갑니다.</p>
+            </details>
+
+            <!-- 조선현 -->
+            <details class="retrospect-item">
+              <summary>조선현</summary>
+              <p class="retrospect-text">
+                UI 프로젝트를 시작하면서, 사실 기대보다는 "내가 잘할 수 있을까?" 하는 걱정이 더 컸습니다. 저는 비전공자이고 이 부트캠프에서 처음으로 코딩을 배우기 시작했기 때문에, "적어도 팀의 발목을 잡지 말자. 실수하지 말자."라는 마음으로 시작했습니다. 팀원이 정해지고 첫 회의를 할 때, 무엇을 어떻게 해야 할지 몰라 굉장히 긴장됐고, 감도 잘 잡히지 않았습니다. 그런데 경험이 있는 팀원 분들께서 분위기를 잘 이끌어주셨고, 그 덕분에 저도 용기를 내어 **“로그인과 회원가입 페이지를 하고 싶습니다.”**라고
+                말할 수 있었습니다. 그때부터 나이키의 로그인 및 회원가입 페이지를 맡게 되었고, "누군가가 나를 믿고 페이지를 맡겨준다"는 감각은 더 이상 무섭지 않고, 오히려 두근거리고 설레는 일이라는 걸 알게 되었습니다. 작업을 진행하면서 가장 크게 느낀 점은, 기술적으로 잘 만드는 것만큼이나 협업이 정말 중요하다는 것이었습니다. UI나 기술적인 부분은 강사님이나 책, 혹은 AI(ChatGPT)에게도 배울 수 있지만, "협업"은 이런 팀 프로젝트 안에서만 제대로 겪어보고 배울 수 있는 소중한 실습이라는 걸 알게
+                되었습니다. 서로의 코드를 확인해주고, 브랜치 충돌이 날 때 알려주고 도와주는 과정 자체가 저에겐 아주 좋은 경험이었고, “혼자 하는 개발”이 아닌 “같이 만드는 결과물”이라는 걸 실감할 수 있었습니다
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 오버레이 -->
+    <div class="index-overlay" aria-hidden="true"></div>
+
+    <!-- 푸터 -->
+    <footer class="index-footer">
+      <small
+        >Copyright © 2025 삼위일체. <br class="mo-block" />
+        All rights reserved.</small
+      >
+      <p class="site-notice">해당 사이트는 가시안이며 비상업적 취업을 위한 포트폴리오용으로만 사용하기 위해 제작된 사이트입니다.</p>
+      <p class="link-text">
+        <a href="https://github.com/FRONTENDBOOTCAMP-14th/UI-Project-Team3" target="_blank" rel="noopener noreferrer">GitHub</a><span aria-hidden="true"> | </span>
+        <a href="https://www.notion.so/3-1ff73873401a80ffbd6ee6de7397fca7" target="_blank" rel="noopener noreferrer">Notion</a>
+      </p>
+    </footer>
+
+    <dialog class="idx-dialog" aria-label="비상업적 용도 알림창">
+      <section>
+        <h3>안내</h3>
+        <p>
+          해당 사이트는 가시안이며<br />
+          비상업적 취업을 위한 포트폴리오용으로만<br />
+          사용하기 위해 제작된 사이트입니다.
+        </p>
+        <div class="dialog-btn">
+          <button class="dontshowtoday-btn" type="button">오늘 하루 안보기</button>
+          <button class="modal-close-btn" type="button">닫기</button>
+        </div>
+      </section>
+    </dialog>
   </body>
 </html>

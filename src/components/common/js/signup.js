@@ -131,6 +131,7 @@ cancelBtn.addEventListener('click', () => {
 continueBtn.addEventListener('click', () => {
   alert('회원가입이 완료되었습니다!');
   // 실제로는 서버로 데이터 전송 후 다음 페이지로 이동
+  window.location.href = './signin.html'; // ✅ 메인으로 이동
 });
 
 // 생년월일 입력 제한 (숫자만)

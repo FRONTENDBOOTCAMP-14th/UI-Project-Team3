@@ -1,0 +1,86 @@
+.product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.25rem;
+  inline-size: 100%;
+  padding-inline: 3rem;
+
+  @media (width <= 40rem) {
+    grid-template-columns: repeat(2, minmax(10.125rem, 2fr));
+  }
+}
+
+.item-card {
+  inline-size: 100%;
+}
+
+/* 상품 사진 하단에 버튼을 제외한 정보를 정렬할 div */
+/* 구분선은 주석처리 했음 */
+.product-info-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 0.4375rem;
+}
+
+/* 상품 이름 + 상품 종류를 합친 div */
+.product-info {
+  inline-size: max-content;
+  block-size: 3rem;
+  display: flex;
+  flex-flow: column nowrap;
+  flex-shrink: 0;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* 상품 이름 */
+.product-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* 상품 종류( ex: 남성 신발, 여성 신발) */
+.product-category {
+  font-size: 1rem;
+  color: var(--dark-gray);
+}
+
+/* 원래 가격과 할인된 가격을 묶은 박스 */
+.price-box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3px;
+}
+
+.origin-price {
+  color: var(--dark-gray);
+}
+
+/* 버튼 */
+.button,
+.midum,
+.small {
+  position: relative;
+  font-weight: 400;
+  margin-bottom: 2rem;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.0938rem solid var(--light-gray);
+    background-color: whitesmoke;
+  }
+}
+
+.exit-button {
+  position: absolute;
+  inset-block-start: 1.5rem;
+  inset-inline-end: 1.5rem;
+  margin: 0;
+}
+
+.iconexit {
+  inline-size: 2rem;
+  block-size: 2rem;
+  border-radius: 50%;
+}
