@@ -80,7 +80,7 @@ main {
   display: none;
 }
 .carousel-slide {
-  flex: 0 0 200px; /* 기본 폭 */
+  flex: 0 0 300px; /* 기본 폭 */
   scroll-snap-align: center;
 }
 
@@ -193,6 +193,6 @@ main {
     display: flex;
   }
   .carousel-slide {
-    flex-basis: 60%;
+    flex-basis: 31.25rem;
   }
 }
