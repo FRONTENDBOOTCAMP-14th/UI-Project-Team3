@@ -1,37 +1,70 @@
 .product-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 1.25rem;
   inline-size: 100%;
-  padding-inline: 3rem;
+  padding-inline: 1.5rem;
 
-  @media (width <= 40rem) {
-    grid-template-columns: repeat(2, minmax(10.125rem, 2fr));
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(3, 1fr);
+    inline-size: 100%;
+    padding-inline: 3rem;
   }
 }
 
 .item-card {
+  position: relative;
   inline-size: 100%;
+  block-size: 10.125rem;
+  height: auto;
+  margin-bottom: 2rem;
 }
 
 /* 상품 사진 하단에 버튼을 제외한 정보를 정렬할 div */
 /* 구분선은 주석처리 했음 */
 .product-info-box {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   margin-top: 0.4375rem;
+
+  @media (width >= 40rem) {
+    flex-direction: row;
+    margin-top: 0.4375rem;
+  }
+
+  /* 원래 가격과 할인된 가격을 묶은 박스 */
+  .price-box {
+    display: flex;
+    justify-content: flex-start;
+
+    @media (width >= 40rem) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .origin-price {
+    color: var(--dark-gray);
+    left: 5rem;
+  }
 }
 
 /* 상품 이름 + 상품 종류를 합친 div */
 .product-info {
-  inline-size: max-content;
+  /* inline-size: max-content;
   block-size: 3rem;
   display: flex;
   flex-flow: column nowrap;
   flex-shrink: 0;
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; */
+
+  @media (width >= 40rem) {
+    flex-direction: column;
+    justify-content: space-between;
+    /* white-space: nowrap; */
+    /* 줄바꿈 방지 속성 */
+  }
 }
 
 /* 상품 이름 */
@@ -46,29 +79,34 @@
   color: var(--dark-gray);
 }
 
-/* 원래 가격과 할인된 가격을 묶은 박스 */
-.price-box {
-  display: flex;
-  justify-content: flex-end;
-  gap: 3px;
-}
-
-.origin-price {
-  color: var(--dark-gray);
-}
-
 /* 버튼 */
 .button,
 .midum,
 .small {
+  margin: 0;
   position: relative;
   font-weight: 400;
-  margin-bottom: 2rem;
+  margin-block-start: 0.75rem;
+  margin-block-end: 1.5rem;
+
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 
   &:hover {
     cursor: pointer;
     border: 0.0938rem solid var(--light-gray);
     background-color: whitesmoke;
+  }
+
+  &.fill {
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -79,36 +117,111 @@
   z-index: 1;
   top: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 4.1875rem 3rem 0.75rem 3rem;
+  inline-size: 100%;
+  gap: 1rem;
+  /* padding: 21px 18px 17.77px 16px; */
+  padding-inline: 24rem;
+  padding-block: 1.3125rem;
+  flex-shrink: 0;
+
+  @media (width >= 40rem) {
+    padding: 4.1875rem 3rem 0.75rem 3rem;
+  }
 }
 
 /* 여기까지 위시리스트 타이틀 */
 .wishList-text {
   display: block;
-  margin-inline-start: 3rem;
-  margin-block-start: 1.5rem;
-  margin-block-end: 1.5rem;
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 500;
 }
 
+.button-container {
+  position: relative;
+}
+
+.edit-button {
+  display: block;
+  margin: 0;
+  cursor: pointer;
+}
+
+.complete-button {
+  display: none;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+#edit-mode-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#edit-mode-checkbox:checked ~ .title-box .edit-button {
+  display: none;
+}
+
+#edit-mode-checkbox:checked ~ .title-box .complete-button {
+  display: block;
+}
+
+#edit-mode-checkbox:checked ~ .product-wrapper .heart-button {
+  display: none;
+}
+
+#edit-mode-checkbox:checked ~ .product-wrapper .exit-button {
+  display: block;
+}
+
+#edit-mode-checkbox:checked ~ .product-wrapper .exit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 버튼 및 아이콘 */
 .exit-button {
   position: absolute;
-  inset-block-start: 1.5rem;
-  inset-inline-end: 1.5rem;
+  inset-block-start: 0.6rem;
+  inset-inline-end: 0.6rem;
   margin: 0;
+
+  cursor: pointer;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (width >= 40rem) {
+    inset-block-start: 1.25rem;
+    inset-inline-end: 1.45rem;
+  }
 }
 
 .heart-button {
   background: #fff;
   border-radius: 50%;
   position: absolute;
-  inset-block-start: 1.15rem;
-  inset-inline-end: 1.35rem;
+  inset-block-start: 0.55rem;
+  inset-inline-end: 0.65rem;
   margin: 0;
   block-size: 2.5rem;
   inline-size: 2.5rem;
@@ -117,6 +230,17 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 0 0.5px var(--light-gray);
+
+  &:hover {
+    background-color: whitesmoke;
+  }
+
+  @media (width >= 40rem) {
+    inset-block-start: 1.15rem;
+    inset-inline-end: 1.35rem;
+  }
 }
 
 .iconexit {
