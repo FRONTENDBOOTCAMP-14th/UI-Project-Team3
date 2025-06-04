@@ -12,7 +12,7 @@
     <link rel="preload" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../common/index.css" />
-    <link rel="stylesheet" href="./style/wishList.css" />
+    <link rel="stylesheet" href="./style/wish-mobilefirst.css" />
     <script type="module" src="../components/common/js/layout.js"></script>
   </head>
   <body>
@@ -20,10 +20,14 @@
     <nav id="navbar"></nav>
     <br />
 
+    <input type="checkbox" id="edit-mode-checkbox" />
     <!-- 위시리스트 타이틀 -->
     <div class="title-box" role="banner">
       <h2 class="wishList-text">위시리스트</h2>
-      <button class="button small" type="button" aria-label="수정">수정</button>
+      <div class="button-container">
+        <label for="edit-mode-checkbox" class="button small edit-button" aria-label="수정">수정</label>
+        <label for="edit-mode-checkbox" class="button fill small complete-button" aria-label="완료">완료</label>
+      </div>
     </div>
 
     <!-- 모든 상품 묶는 래퍼 -->
@@ -49,7 +53,13 @@
         <button type="button" class="heart-button">
           <picture>
             <source srcset="../assets/images/wish-heart.avif" type="image/avif" />
-            <img class="heart-icon" src="../assets/images/wish-heart.avif" alt="지정 해제" />
+            <img class="heart-icon" src="../assets/images/wish-heart.avif" alt="찜 하기" />
+          </picture>
+        </button>
+        <button type="button" class="exit-button">
+          <picture>
+            <source srcset="./../assets/images/IconExit-512h.avif" type="image/avif" />
+            <img class="iconexit" src="./../assets/images/IconExit-512h.avif" alt="지정 해제" />
           </picture>
         </button>
       </figure>
@@ -67,8 +77,8 @@
             <p class="product-category">여성 신발</p>
           </div>
           <div class="price-box">
-            <del class="origin-price">189,000 원</del>
             <data class="discounted-price" value="151,200">151,200 원</data>
+            <del class="origin-price" value="189,000">189,000 원</del>
           </div>
         </figcaption>
 
@@ -77,7 +87,14 @@
         <button type="button" class="heart-button">
           <picture>
             <source srcset="../assets/images/wish-heart.avif" type="image/avif" />
-            <img class="heart-icon" src="../assets/images/wish-heart.avif" alt="지정 해제" />
+            <img class="heart-icon" src="../assets/images/wish-heart.avif" alt="찜 하기" />
+          </picture>
+        </button>
+
+        <button type="button" class="exit-button">
+          <picture>
+            <source srcset="./../assets/images/IconExit-512h.avif" type="image/avif" />
+            <img class="iconexit" src="./../assets/images/IconExit-512h.avif" alt="지정 해제" />
           </picture>
         </button>
       </figure>
@@ -102,7 +119,14 @@
         <button type="button" class="heart-button">
           <picture>
             <source srcset="./../assets/images/wish-heart.avif" type="image/avif" />
-            <img class="heart-icon" src="./../assets/images/wish-heart.avif" alt="지정 해제" />
+            <img class="heart-icon" src="./../assets/images/wish-heart.avif" alt="찜 하기" />
+          </picture>
+        </button>
+
+        <button type="button" class="exit-button">
+          <picture>
+            <source class="iconexit-avif" srcset="./../assets/images/IconExit-512h.avif" type="image/avif" />
+            <img class="iconexit" src="./../assets/images/IconExit-512h.avif" alt="지정 해제" />
           </picture>
         </button>
       </figure>
