@@ -1,6 +1,6 @@
-/* body {
-  margin: 50px;
-} */
+main {
+  padding-inline: 24px;
+}
 
 /* 섹션 공통 */
 .section {
@@ -126,6 +126,10 @@
 }
 
 @media (min-width: 768px) {
+  main {
+    padding-inline: 0;
+  }
+
   .shop-cards {
     flex-direction: row;
     justify-content: space-between;
