@@ -613,7 +613,6 @@ a {
   }
 }
 
-
 /* 회고록CSS */
 .retrospect-list {
   display: flex;
@@ -659,53 +658,54 @@ a {
   border-radius: 0.5rem;
   overflow: hidden; /* 그림자 깔끔하게 */
 
-.idx-dialog {
-  min-width: 18.75rem;
-  background-color: var(--white);
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -40%);
-  z-index: 5000;
-  padding: 1.5625rem;
-  border: 3px solid var(--dark-gray);
-  border-radius: 1.25rem;
+  .idx-dialog {
+    min-width: 18.75rem;
+    background-color: var(--white);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    z-index: 5000;
+    padding: 1.5625rem;
+    border: 3px solid var(--dark-gray);
+    border-radius: 1.25rem;
 
-  &.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  & section {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-
-    & h3 {
-      font-size: var(--text-3xl);
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
     }
 
-    & p {
-      margin-block: 0.75rem;
-    }
-
-    & .dialog-btn {
+    & section {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       align-items: center;
       justify-content: center;
-      gap: 0.9375rem;
 
-      & button {
-        background-color: var(--white);
-        border: 1px solid var(--black);
-        padding: 0.75rem;
-        border-radius: 0.625rem;
+      & h3 {
+        font-size: var(--text-3xl);
+      }
 
-        &:hover {
-          background-color: var(--black);
-          color: var(--white);
+      & p {
+        margin-block: 0.75rem;
+      }
+
+      & .dialog-btn {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.9375rem;
+
+        & button {
+          background-color: var(--white);
+          border: 1px solid var(--black);
+          padding: 0.75rem;
+          border-radius: 0.625rem;
+
+          &:hover {
+            background-color: var(--black);
+            color: var(--white);
+          }
         }
       }
     }
