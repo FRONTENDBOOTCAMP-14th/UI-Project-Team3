@@ -561,7 +561,6 @@ a {
   }
 }
 
-
 /* 회고록CSS */
 .retrospect-list {
   display: flex;
@@ -606,6 +605,7 @@ a {
   box-shadow: 0 2px 8px rgb(58, 58, 58); /* 💡 전체 그림자 */
   border-radius: 0.5rem;
   overflow: hidden; /* 그림자 깔끔하게 */
+}
 
 .idx-dialog {
   min-width: 18.75rem;
