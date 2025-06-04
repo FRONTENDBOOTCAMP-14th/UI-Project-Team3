@@ -443,9 +443,6 @@ a {
         background-color: var(--white);
         border-radius: 0.625rem;
         text-align: left;
-        /* white-space: pre-wrap;
-        word-break: break-word;
-        overflow-wrap: break-word; */
         max-width: 100%;
         white-space: normal;
 
@@ -464,15 +461,12 @@ a {
       }
 
       code,
-      kbd,
-      samp,
       pre {
         --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-        --default-mono-font-family: var(--font-mono);
 
-        font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+        font-family: var(--font-mono);
         font-family: monospace;
-        font-size: 1em;
+        font-size: 1rem;
       }
 
       & .text-block {
@@ -659,56 +653,97 @@ a {
   overflow: hidden; /* 그림자 깔끔하게 */
 }
 
-  .idx-dialog {
-    min-width: 18.75rem;
-    background-color: var(--white);
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    z-index: 5000;
-    padding: 1.5625rem;
-    border: 3px solid var(--dark-gray);
-    border-radius: 1.25rem;
+.idx-dialog {
+  min-width: 18.75rem;
+  background-color: var(--white);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  z-index: 5000;
+  padding: 1.5625rem;
+  border: 3px solid var(--dark-gray);
+  border-radius: 1.25rem;
 
-    &.active {
-      opacity: 1;
-      pointer-events: auto;
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  & section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    & h3 {
+      font-size: var(--text-3xl);
     }
 
-    & section {
+    & p {
+      margin-block: 0.75rem;
+    }
+
+    & .dialog-btn {
       display: flex;
-      flex-flow: column nowrap;
+      flex-flow: row nowrap;
       align-items: center;
       justify-content: center;
+      gap: 0.9375rem;
 
-      & h3 {
-        font-size: var(--text-3xl);
-      }
+      & button {
+        background-color: var(--white);
+        border: 1px solid var(--black);
+        padding: 0.75rem;
+        border-radius: 0.625rem;
 
-      & p {
-        margin-block: 0.75rem;
-      }
-
-      & .dialog-btn {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: center;
-        gap: 0.9375rem;
-
-        & button {
-          background-color: var(--white);
-          border: 1px solid var(--black);
-          padding: 0.75rem;
-          border-radius: 0.625rem;
-
-          &:hover {
-            background-color: var(--black);
-            color: var(--white);
-          }
+        &:hover {
+          background-color: var(--black);
+          color: var(--white);
         }
       }
     }
+  }
+}
+
+/* 페이지 소개 */
+.introduce-wrapper {
+  padding: 3.125rem;
+  background: #fff;
+
+  h5 {
+    font-size: 1.25rem;
+    margin-block: 0.625rem;
+  }
+
+  dl {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 20px;
+    border-block: 1px solid #cdcdcd;
+    padding: 10px;
+
+    > div {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  dt {
+    font-size: 1.125rem;
+    text-align: left;
+    font-weight: 600;
+
+    dt:first-child {
+      border-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  dd {
+    text-align: left;
   }
 }
