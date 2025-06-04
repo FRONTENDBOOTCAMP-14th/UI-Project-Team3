@@ -132,3 +132,27 @@ setTimeout(() => {
   teamName.classList.add('active');
   idxFooter.classList.add('active');
 }, 2000);
+
+// 모달
+window.addEventListener('DOMContentLoaded', () => {
+  const idxModal = document.querySelector('.idx-dialog');
+  const dontShowTodayButton = document.querySelector('.dontshowtoday-btn');
+  const closdModal = document.querySelector('.modal-close-btn');
+  const today = new Date().toISOString().split('T')[0];
+  const saveToday = localStorage.getItem('saveToday');
+
+  setTimeout(() => {
+    if (saveToday !== today) {
+      idxModal.showModal();
+    }
+
+    dontShowTodayButton.addEventListener('click', () => {
+      localStorage.setItem('saveToday', today);
+      idxModal.close();
+    });
+  }, 2500);
+
+  closdModal.addEventListener('click', () => {
+    idxModal.close();
+  });
+});
