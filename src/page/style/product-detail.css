@@ -157,7 +157,6 @@
   margin-block-start: 1.875rem;
 
   @media (width >= 40rem) {
-    margin-inline: 0;
     margin-block-start: 1.875rem;
   }
 
