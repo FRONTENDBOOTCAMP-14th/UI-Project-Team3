@@ -747,3 +747,66 @@ a {
     text-align: left;
   }
 }
+
+.improvement-detail {
+  margin-top: 1.5rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative; /* 삼각형 오른쪽 정렬을 위해 필요 */
+}
+
+.improvement-detail summary {
+  cursor: pointer;
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+  outline: none;
+  list-style: none;
+  position: relative; /* 삼각형 위치 지정 위해 필요 */
+  padding-inline-end: 2rem; /* 오른쪽 공간 확보 */
+}
+
+/* 🔽 삼각형 */
+.improvement-detail summary::after {
+  content: '▼';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  color: var(--black); /* 필요 시 색상 조절 */
+}
+
+/* 🔼 열렸을 때 위로 */
+.improvement-detail[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.improvement-detail summary::marker {
+  display: none;
+}
+
+.improvement-item {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.improvement-item img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.improvement-item h5 {
+  margin-bottom: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+}
+
+.improvement-item p {
+  font-size: var(--text-sm);
+  color: var(--black);
+}
