@@ -53,7 +53,7 @@
       </div>
     </nav>
 
-    <!-- Main Contents -->
+    <!-- Main -->
     <main class="index-main">
       <section id="index-main-section" class="index-main-contents1 index-content-section">
         <h2 class="team-name">삼위일체</h2>
@@ -61,6 +61,7 @@
         <span class="box box2">三位</span>
       </section>
 
+      <!-- 팀 소개  -->
       <section id="index-contents1" class="index-contents1 index-content-section">
         <div class="contents-wrapper">
           <div class="left-contents">
@@ -85,8 +86,8 @@
               </div>
               <div class="grid-item">
                 <picture>
-                  <source srcset="./src/assets/images/nikelogo.svg" type="image/avif" />
-                  <img src="./src/assets/images/nikelogo.svg" alt="신남일 이미지" />
+                  <source srcset="./src/assets/images/index-page/Namil.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/Namil.jpg" alt="신남일 이미지" />
                 </picture>
                 <span>신남일</span>
                 <span>Team Member</span>
@@ -95,8 +96,8 @@
               </div>
               <div class="grid-item">
                 <picture>
-                  <source srcset="./src/assets/images/nikelogo.svg" type="image/avif" />
-                  <img src="./src/assets/images/nikelogo.svg" alt=" 이미지" />
+                  <source srcset="./src/assets/images/index-page/leebeomwon.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/leebeomwon.png" alt=" 이미지" />
                 </picture>
                 <span>이범원</span>
                 <span>Team Member</span>
@@ -105,9 +106,8 @@
               </div>
               <div class="grid-item">
                 <picture>
-                  <source srcset="./src/assets/images/nikelogo.svg" type="image/avif" />
-                  <source srcset="./src/assets/images/nikelogo.svg" type="image/avif" />
-                  <img src="./src/assets/images/nikelogo.svg" alt=" 이미지" />
+                  <source srcset="./src/assets/images/index-page/sungjeongeun.avif" type="image/avif" />
+                  <img src="./src/assets/images/index-page/sungjeongeun.jpg" alt=" 이미지" />
                 </picture>
                 <span>성정은</span>
                 <span>Team Member</span>
@@ -128,6 +128,7 @@
         </div>
       </section>
 
+      <!-- 프로젝트 규칙 -->
       <section id="index-contents2" class="index-contents2 index-content-section">
         <div class="contents-wrapper">
           <h3>&lt; 프로젝트 규칙 /&gt;</h3>
@@ -135,85 +136,85 @@
           <div class="accordion-content">
             <button type="button" class="accordion-button" aria-expanded="false">
               <span>커밋 컨벤션</span>
-              <span><img class="arrow-icon" src="../../../src/assets/images/arrow-right.svg" alt="" /></span>
+              <span><img class="arrow-icon" src="./src/assets/images/arrow-right.svg" alt="" /></span>
             </button>
-            <div class="table-wrapper dropdown" hidden>
-              <p class="">
+            <div class="content-wrapper dropdown" hidden>
+              <p>
                 '[타입] 페이지 or 컴포넌트 / 내용'으로 작성한다. <br />
                 -로 각 항목을 구분 한다.
               </p>
-              <table class="">
+              <table>
                 <caption class="sr-only">
                   커밋 컨벤션 타입과 설명
                 </caption>
                 <colgroup>
-                  <col class="" />
-                  <col class="" />
+                  <col />
+                  <col />
                 </colgroup>
-                <thead class="">
-                  <tr class="">
+                <thead>
+                  <tr>
                     <th>type</th>
                     <th>description</th>
                   </tr>
                 </thead>
-                <tbody class="">
-                  <tr class="">
+                <tbody>
+                  <tr>
                     <td>[Feat]</td>
                     <td>새로운 기능 추가</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[BugFix]</td>
                     <td>버그 수정</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Docs]</td>
                     <td>문서의 수정</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Modify]</td>
                     <td>코드 변경</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Refactor]</td>
                     <td>리팩토링</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Design]</td>
                     <td>CSS 등 사용자 UI 디자인 변경</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Comment]</td>
                     <td>필요한 주석 추가 및 변경</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Style]</td>
                     <td>코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Test]</td>
                     <td>테스트(테스트 코드 추가, 수정, 삭제, 비즈니스 로직에 변경이 없는 경우)</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Chore]</td>
                     <td>빌드 수정, 패키지 매니저 설정, 운영 코드 변경이 없는 경우(assets image, 패키지 매니저 등)</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Init]</td>
                     <td>프로젝트 초기 생성</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Rename]</td>
                     <td>파일 혹은 폴더명 수정하거나 옮기는 경우</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Remove]</td>
                     <td>파일을 삭제하는 작업만 수행하는 경우</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Merge]</td>
                     <td>Pull 과정 중 현재 commit과 자동 병합이 일어날 때</td>
                   </tr>
-                  <tr class="">
+                  <tr>
                     <td>[Build]</td>
                     <td>새로운 라이브러리 혹은 패키지</td>
                   </tr>
@@ -224,7 +225,7 @@
           <div class="accordion-content">
             <button type="button" class="accordion-button" aria-expanded="false">
               <span>코딩 컨벤션</span>
-              <span><img class="arrow-icon" src="../../../src/assets/images/arrow-right.svg" alt="" /></span>
+              <span><img class="arrow-icon" src="./src/assets/images/arrow-right.svg" alt="" /></span>
             </button>
             <div class="table-wrapper dropdown" hidden>
               <h5>코딩 컨벤션을 사용해야하는 이유?</h5>
@@ -266,180 +267,74 @@
               <p class="">
                 '[타입] 페이지 or 컴포넌트 / 내용'으로 작성한다. <br />
                 -로 각 항목을 구분 한다.
-              </p>
-              <table class="">
-                <caption class="sr-only">
-                  커밋 컨벤션 타입과 설명
-                </caption>
-                <colgroup>
-                  <col class="" />
-                  <col class="" />
-                </colgroup>
-                <thead class="">
-                  <tr class="">
-                    <th>type</th>
-                    <th>description</th>
-                  </tr>
-                </thead>
-                <tbody class="">
-                  <tr class="">
-                    <td>[Feat]</td>
-                    <td>새로운 기능 추가</td>
-                  </tr>
-                  <tr class="">
-                    <td>[BugFix]</td>
-                    <td>버그 수정</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Docs]</td>
-                    <td>문서의 수정</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Modify]</td>
-                    <td>코드 변경</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Refactor]</td>
-                    <td>리팩토링</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Design]</td>
-                    <td>CSS 등 사용자 UI 디자인 변경</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Comment]</td>
-                    <td>필요한 주석 추가 및 변경</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Style]</td>
-                    <td>코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Test]</td>
-                    <td>테스트(테스트 코드 추가, 수정, 삭제, 비즈니스 로직에 변경이 없는 경우)</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Chore]</td>
-                    <td>빌드 수정, 패키지 매니저 설정, 운영 코드 변경이 없는 경우(assets image, 패키지 매니저 등)</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Init]</td>
-                    <td>프로젝트 초기 생성</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Rename]</td>
-                    <td>파일 혹은 폴더명 수정하거나 옮기는 경우</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Remove]</td>
-                    <td>파일을 삭제하는 작업만 수행하는 경우</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Merge]</td>
-                    <td>Pull 과정 중 현재 commit과 자동 병합이 일어날 때</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Build]</td>
-                    <td>새로운 라이브러리 혹은 패키지</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            </p>
+          </div>
+          <div class="content-wrapper dropdown" hidden>
+            <p class="text-block">중첩 태그 사용시 3단계 권장한다.</p>
+            <p class="text-block">사용단위는 rem을 권장한다.</p>
+            <p class="text-block">논리속성 사용한다.</p>
+            <p class="code-block">
+              header {<br />
+              inline-size:100%; (O)<br />
+              width:100% (X)<br />
+              padding-inline-start: 1rem; (O)<br />
+              padding-left: 1rem; (X)<br />
+              }
+            </p>
+            <p class="text-block">논리속성 사용한다.</p>
+
+            <p class="text-block">컴포넌트 파일은 src/components 폴더 하위에 생성하며 `component-메뉴명(컴포넌트명).html`으로 네이밍한다.<br /></p>
+            <p class="text-block">페이지 파일은 src/pages 폴더 하위에 생성하며 페이지명으로 네이밍한다.</p>
+            <p class="text-block">
+              모바일 퍼스트로 작업한다.<br />
+              반응형 breakpoint
+            </p>
+            <p class="code-block">
+              /* BreakPoint */<br />
+              --breakpoint-sm: 40rem;<br />
+              --breakpoint-lg: 64rem;<br />
+              --breakpoint-xl: 80rem;<br />
+            </p>
           </div>
           <div class="accordion-content">
             <button type="button" class="accordion-button" aria-expanded="false">
-              <span>코딩 컨벤션</span>
-              <span><img class="arrow-icon" src="../../../src/assets/images/arrow-right.svg" alt="" /></span>
+              <span>폴더 구조</span>
+              <span><img class="arrow-icon" src="./src/assets/images/arrow-right.svg" alt="" /></span>
             </button>
-            <div class="table-wrapper dropdown" hidden>
-              <p class="">
-                '[타입] 페이지 or 컴포넌트 / 내용'으로 작성한다. <br />
-                -로 각 항목을 구분 한다.
-              </p>
-              <table class="">
-                <caption class="sr-only">
-                  커밋 컨벤션 타입과 설명
-                </caption>
-                <colgroup>
-                  <col class="" />
-                  <col class="" />
-                </colgroup>
-                <thead class="">
-                  <tr class="">
-                    <th>type</th>
-                    <th>description</th>
-                  </tr>
-                </thead>
-                <tbody class="">
-                  <tr class="">
-                    <td>[Feat]</td>
-                    <td>새로운 기능 추가</td>
-                  </tr>
-                  <tr class="">
-                    <td>[BugFix]</td>
-                    <td>버그 수정</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Docs]</td>
-                    <td>문서의 수정</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Modify]</td>
-                    <td>코드 변경</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Refactor]</td>
-                    <td>리팩토링</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Design]</td>
-                    <td>CSS 등 사용자 UI 디자인 변경</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Comment]</td>
-                    <td>필요한 주석 추가 및 변경</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Style]</td>
-                    <td>코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Test]</td>
-                    <td>테스트(테스트 코드 추가, 수정, 삭제, 비즈니스 로직에 변경이 없는 경우)</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Chore]</td>
-                    <td>빌드 수정, 패키지 매니저 설정, 운영 코드 변경이 없는 경우(assets image, 패키지 매니저 등)</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Init]</td>
-                    <td>프로젝트 초기 생성</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Rename]</td>
-                    <td>파일 혹은 폴더명 수정하거나 옮기는 경우</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Remove]</td>
-                    <td>파일을 삭제하는 작업만 수행하는 경우</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Merge]</td>
-                    <td>Pull 과정 중 현재 commit과 자동 병합이 일어날 때</td>
-                  </tr>
-                  <tr class="">
-                    <td>[Build]</td>
-                    <td>새로운 라이브러리 혹은 패키지</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <div class="content-wrapper dropdown" hidden></div>
           </div>
         </div>
       </section>
+
+      <!-- 페이지 소개 -->
+      <section id="index-contents3" class="index-contents3 index-content-section">
+        <div class="contents-wrapper">
+          <h3>&lt; 페이지 소개 /&gt;</h3>
+          <h4>다섯 명이 머리 맞댄 결과</h4>
+        </div>
+      </section>
+
+      <!-- 개선 사항 -->
+      <section id="index-contents4" class="index-contents4 index-content-section">
+        <div class="contents-wrapper">
+          <h3>&lt; 개선 사항 /&gt;</h3>
+          <h4>다음엔 더 잘할게요… 아마도!</h4>
+        </div>
+      </section>
+
+      <!-- 회고록 -->
+      <section id="index-contents5" class="index-contents5 index-content-section">
+        <div class="contents-wrapper">
+          <h3>&lt; 회고록 /&gt;</h3>
+          <h4>기억하고 싶은 여정</h4>
+        </div>
+      </section>
     </main>
+
+    <!-- 오버레이 -->
     <div class="index-overlay" aria-hidden="true"></div>
 
+    <!-- 푸터 -->
     <footer class="index-footer">
       <small
         >Copyright © 2025 삼위일체. <br class="mo-block" />

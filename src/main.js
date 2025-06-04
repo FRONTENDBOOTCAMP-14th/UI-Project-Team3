@@ -82,7 +82,7 @@ document.addEventListener('keydown', (e) => {
 
 // 프로젝트 규칙 아코디언 버튼
 const toggleDropdown = (btn) => {
-  const contents = btn.parentElement.querySelector('.table-wrapper');
+  const contents = btn.parentElement.querySelector('.content-wrapper');
   const arrow = btn.querySelector('.arrow-icon');
 
   if (!contents) return;
@@ -93,9 +93,7 @@ const toggleDropdown = (btn) => {
   if (isOpen) {
     contents.classList.remove('dropdown');
     arrow?.classList.remove('rotate');
-    setTimeout(() => {
-      contents.hidden = true;
-    }, 300);
+    contents.hidden = true;
   } else {
     contents.hidden = false;
     requestAnimationFrame(() => {
@@ -115,7 +113,7 @@ const closeAllSubmenus = () => {
   idxContToggle.forEach((btn) => {
     btn.setAttribute('aria-expanded', 'false');
 
-    const submenu = btn.parentElement.querySelector('.table-wrapper');
+    const submenu = btn.parentElement.querySelector('.content-wrapper');
     const arrow = btn.querySelector('.arrow-icon');
 
     if (submenu) {
