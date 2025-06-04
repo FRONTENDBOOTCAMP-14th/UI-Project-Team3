@@ -9,12 +9,12 @@
     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg" />
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
-    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="preload" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../components/style/input.css" />
     <link rel="stylesheet" href="../common/index.css" />
     <link rel="stylesheet" href="./style/customer-service.css" />
     <script type="module" src="../components/common/js/layout.js"></script>
-    <script type="module" src="../main.js"></script>
   </head>
   <body>
     <header id="header"></header>
@@ -32,7 +32,7 @@
             <label for="cs-search" class="search-label">무엇을 도와드릴까요?</label>
             <div class="input-wrapper has-icon">
               <input type="text" id="cs-search" name="cs-search" class="input-field findstore-input" aria-label="문의 검색" />
-              <buttonpan class="input-icon findstore-icon" aria-hidden="true"></buttonpan>
+              <button class="input-icon findstore-icon" aria-hidden="true"></button>
             </div>
           </div>
         </form>
@@ -116,7 +116,7 @@
               <a class="cu-info" href="/" aria-label="제품 및 주문 관련 채팅 하기">
                 <h3>제품 및 주문</h3>
                 <p>나이키와 채팅하기</p>
-                <time datetime="09:00-20:00">9:00 - 20:00</time>
+                <time datetime="09:00">9:00</time> - <time datetime="20:00">20:00</time>
                 <p>월요일 - 일요일(설/추석 연휴 제외)</p>
               </a>
             </li>
@@ -126,7 +126,7 @@
               <a class="cu-info" href="tel:0800220182" aria-label="제품 및 주문 관련 전화 걸기">
                 <h3>제품 및 주문</h3>
                 <p>080-022-0182</p>
-                <time datetime="09:00-20:00">9:00 - 20:00</time>
+                <time datetime="09:00">9:00</time> - <time datetime="20:00">20:00</time>
                 <p>월요일 - 일요일(설/추석 연휴 제외)</p>
               </a>
             </li>

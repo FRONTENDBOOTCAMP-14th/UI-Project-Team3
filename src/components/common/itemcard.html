@@ -9,22 +9,16 @@
     <meta name="description" content="나이키 위시리스트 페이지 (상업용X)" />
     <meta name="author" content="UI Project Team3" />
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
-    <link rel="preload" as="style" href="/font/pretendardvariable.css" />
-    <link rel="stylesheet" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="../common/index.css" />
-    <link rel="stylesheet" href="./style/wishList.css" />
-    <script type="module" src="../components/common/js/layout.js"></script>
+    <link rel="stylesheet" href="./style/itemcard.css" />
+    <script type="module" src="../../../src/components/common/js/layout.js"></script>
   </head>
   <body>
     <header id="header"></header>
-    <nav id="navbar"></nav>
+    <a href="../../index.html">메인 페이지 이동</a>
     <br />
-
-    <!-- 위시리스트 타이틀 -->
-    <div class="title-box" role="banner">
-      <h2 class="wishList-text">위시리스트</h2>
-      <button class="button small" type="button" aria-label="수정">수정</button>
-    </div>
+    <h1>나이키 상품 컴포넌트</h1>
 
     <!-- 모든 상품 묶는 래퍼 -->
     <div class="product-wrapper">
@@ -103,6 +97,31 @@
           <picture>
             <source srcset="./../assets/images/wish-heart.avif" type="image/avif" />
             <img class="heart-icon" src="./../assets/images/wish-heart.avif" alt="지정 해제" />
+          </picture>
+        </button>
+      </figure>
+
+      <!-- 위시리스트에 x버튼이 들어간 상품 컴포넌트 -->
+      <h2>위시리스트 / 수정</h2>
+      <figure class="item-card">
+        <picture>
+          <source srcset="./../assets/images/product-picture.avif" type="image/avif" />
+          <img src="./../assets/images/product-picture.avif" alt="나이키 줌 보메로 5" />
+        </picture>
+
+        <figcaption class="product-info-box">
+          <div class="product-info">
+            <h3 class="product-name">나이키 줌 보메로 5</h3>
+            <p class="product-category">남성 신발</p>
+          </div>
+          <data class="product-price" value="189,000">189,000 원</data>
+        </figcaption>
+
+        <button class="button midum" type="button" aria-label="장바구니">장바구니에 추가</button>
+        <button type="button" class="exit-button">
+          <picture>
+            <source srcset="./../assets/images/IconExit-512h.avif" type="image/avif" />
+            <img class="iconexit" src="./../assets/images/IconExit-512h.avif" alt="지정 해제" />
           </picture>
         </button>
       </figure>
