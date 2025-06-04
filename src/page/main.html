@@ -327,7 +327,6 @@
       /* 초기 정렬 */
       window.addEventListener('load', () => {
         jumpTo(i);
-        status.textContent = `${i} / ${real.length}`;
       });
 
       /* 중복 클릭 방지용 플래그 */
@@ -369,7 +368,6 @@
             i = 1;
             jumpTo(i);
           }
-          status.textContent = `${i} / ${max}`;
         }, 60); // 디바운스
       });
     </script>
