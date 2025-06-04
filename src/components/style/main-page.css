@@ -86,6 +86,7 @@
 .category-card {
   display: flex;
   flex-direction: column;
+  flex-basis: 300px;
   gap: var(--gap-block);
   overflow: hidden;
   background: var(--white);
