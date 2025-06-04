@@ -389,6 +389,18 @@ a {
       border-radius: 1.875rem;
       pointer-events: none;
 
+      h6,
+      h5 {
+        font-size: 1.125rem;
+        text-align: left;
+      }
+
+      .coding-convention-title {
+        font-size: 16px;
+        margin-block: 0.625rem;
+        font-weight: 600;
+      }
+
       & p {
         inline-size: 100%;
         text-align: left;
@@ -416,11 +428,51 @@ a {
         }
       }
 
+      ol {
+        list-style: decimal;
+        margin-left: 1.5rem;
+        li {
+          text-align: left;
+        }
+      }
+
       & .code-block {
+        margin-block: 0.625rem;
         padding: 0.9375rem;
         font-size: var(--text-xs);
         background-color: var(--white);
         border-radius: 0.625rem;
+        text-align: left;
+        /* white-space: pre-wrap;
+        word-break: break-word;
+        overflow-wrap: break-word; */
+        max-width: 100%;
+        white-space: normal;
+
+        code {
+          white-space: pre-wrap;
+          word-break: break-word;
+        }
+
+        &.project-folder {
+          img {
+            inline-size: 1.5rem;
+            display: inline;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      code,
+      kbd,
+      samp,
+      pre {
+        --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        --default-mono-font-family: var(--font-mono);
+
+        font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+        font-family: monospace;
+        font-size: 1em;
       }
 
       & .text-block {
@@ -558,18 +610,5 @@ a {
   &.active {
     opacity: 1;
     pointer-events: auto;
-  }
-}
-
-/* 프로젝트 규칙 */
-pre {
-  background: #636363;
-  padding: 10px;
-  margin-block: 10px;
-  text-align: left;
-
-  code {
-    color: #fff;
-    font-size: 0.875rem;
   }
 }

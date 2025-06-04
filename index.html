@@ -227,81 +227,156 @@
               <span>코딩 컨벤션</span>
               <span><img class="arrow-icon" src="./src/assets/images/arrow-right.svg" alt="" /></span>
             </button>
-            <div class="table-wrapper dropdown" hidden>
+            <div class="content-wrapper dropdown" hidden>
               <h5>코딩 컨벤션을 사용해야하는 이유?</h5>
-              <p>누구나 쉽게 코드를 이해할 수 있어서 협업하기 편해지며 여러 사람이 작업해도 한 사람이 짠 것처럼 일관성 있게 코드를 작성할 수 있다. 규칙을 지키면 실수나 혼동을 줄이고, 디버깅이 쉬워진다. 시간이 지나도 코드를 고치거나 개선하기가 쉬워지며, Prettier나 formatting 같은 툴이 잘 작동해서 생산성이 올라간다. 한 프로젝트의 코딩 컨벤션은 업무 효율을 높이는 데 결정적인 역할을 하며, 마크업 코드는 같은 코딩 컨벤션에 따라 작성해야 한다.</p>
+              <p class="text-block">누구나 쉽게 코드를 이해할 수 있어서 협업하기 편해지며 여러 사람이 작업해도 한 사람이 짠 것처럼 일관성 있게 코드를 작성할 수 있다. 규칙을 지키면 실수나 혼동을 줄이고, 디버깅이 쉬워진다. 시간이 지나도 코드를 고치거나 개선하기가 쉬워지며, Prettier나 formatting 같은 툴이 잘 작동해서 생산성이 올라간다. 한 프로젝트의 코딩 컨벤션은 업무 효율을 높이는 데 결정적인 역할을 하며, 마크업 코드는 같은 코딩 컨벤션에 따라 작성해야 한다.</p>
               <h6>css 기본정의</h6>
-              <p class="coding-convention-title">기본규칙</p>
+              <p class="coding-convention-title">★ 기본규칙</p>
               <ol>
                 <li>
                   모든 속성은 영문 소문자로만 작성한다.
-                  <pre><code>.my-class {color:#ffffff;}</code></pre>
+                  <pre class="code-block"><code>.my-class {color:#ffffff;}</code></pre>
                 </li>
                 <li>
                   폰트의 선언, 배경 url, filter, content에 작은 따옴표(‘ ’)를 사용합니다. 그 외의 경우는 사용하지 않는다.
-                  <pre><code>.my-class {background-image:url(‘image.jpg’)}</code></pre>
+                  <pre class="code-block"><code>.my-class {background-image:url(‘image.jpg’)}</code></pre>
                 </li>
                 <li>
                   마지막 선언된 속성에도 세미콜론(;)을 사용해도 된다.
-                  <pre><code>.my-class {color:red;font-size:16px;line-height:20px;}</code></pre>
+                  <pre class="code-block"><code>.my-class {color:red;font-size:16px;line-height:20px;}</code></pre>
                 </li>
                 <li>
                   공백 : 선택자간, 중괄호 간 한 칸의 공백을 사용한다.
-                  <pre><code>.my-class {color:red;font-size:18px;}</code></pre>
+                  <pre class="code-block"><code>.my-class {color:red;font-size:18px;}</code></pre>
                 </li>
                 <li>중첩 태그 사용시 3단계 권장한다.</li>
                 <li>사용단위는 rem을 권장한다.</li>
                 <li>
                   논리속성 사용한다.
-                  <pre><code>header {<br />  inline-size:100%; (O) width:100%; (X)<br />  padding-inline-start: 1rem; (O) padding-left: 1rem; (X)<br />}</code></pre>
+                  <pre class="code-block"><code>header {<br />  inline-size:100%; (O) width:100%; (X)<br />  padding-inline-start: 1rem; (O) padding-left: 1rem; (X)<br />}</code></pre>
                 </li>
               </ol>
-              <p class="coding-convention-title">CSS 네이밍 규칙</p>
+              <p class="coding-convention-title">★ CSS 네이밍 규칙</p>
               <ol>
                 <li>
                   이름은 kebab-case 규칙을 따르며, 영문 소문자, 숫자, 하이픈(-)로 작성하며, 영문 소문자로만 시작한다.
-                  <pre><code>잘못된 예 : Btn, 2btn, _btn, btn_, sectionList, product-3list<br />올바른 예 : btn, btn2, btn, btn, section-list, procude-list3</code></pre>
+                  <pre class="code-block"><code>잘못된 예 : Btn, 2btn, _btn, btn_, sectionList, product-3list<br />올바른 예 : btn, btn2, btn, btn, section-list, procude-list3</code></pre>
                 </li>
               </ol>
-              <h6></h6>
-              <p class="">
-                '[타입] 페이지 or 컴포넌트 / 내용'으로 작성한다. <br />
-                -로 각 항목을 구분 한다.
-            </p>
-          </div>
-          <div class="content-wrapper dropdown" hidden>
-            <p class="text-block">중첩 태그 사용시 3단계 권장한다.</p>
-            <p class="text-block">사용단위는 rem을 권장한다.</p>
-            <p class="text-block">논리속성 사용한다.</p>
-            <p class="code-block">
-              header {<br />
-              inline-size:100%; (O)<br />
-              width:100% (X)<br />
-              padding-inline-start: 1rem; (O)<br />
-              padding-left: 1rem; (X)<br />
-              }
-            </p>
-            <p class="text-block">논리속성 사용한다.</p>
-
-            <p class="text-block">컴포넌트 파일은 src/components 폴더 하위에 생성하며 `component-메뉴명(컴포넌트명).html`으로 네이밍한다.<br /></p>
-            <p class="text-block">페이지 파일은 src/pages 폴더 하위에 생성하며 페이지명으로 네이밍한다.</p>
-            <p class="text-block">
-              모바일 퍼스트로 작업한다.<br />
-              반응형 breakpoint
-            </p>
-            <p class="code-block">
-              /* BreakPoint */<br />
-              --breakpoint-sm: 40rem;<br />
-              --breakpoint-lg: 64rem;<br />
-              --breakpoint-xl: 80rem;<br />
-            </p>
+              <p class="coding-convention-title">★ id, class 규칙</p>
+              <ol>
+                <li>id는 문서 전체의 고유 식별자이므로 한 문서에서 동일한 id를 여러 번 사용하지 않는다.</li>
+                <li>레이아웃을 제외한 id는 스타일을 지정하지 않는다.</li>
+                <li>class는 문서에서 여러 번 사용할 수 있다.</li>
+              </ol>
+              <p class="coding-convention-title">★ 주석문 규칙</p>
+              <ol>
+                <li>css는 코드 위에 간단히 설명정도 적고, 슬래시-별표로 시작하고, 별표-슬래시로 끝내며, 줄 바꿈 가능 하다. (/* 내용 */) 단, 중첩 주석은 불가하다. (/* 주석 안에 /* 또 주석 */)</li>
+              </ol>
+              <p class="coding-convention-title">★ 들여쓰기&줄바꿈</p>
+              <ol>
+                <li>CSS는 들여쓰기를 허용하지 않는다.</li>
+              </ol>
+              <p class="coding-convention-title">★ 이미지 네이밍 규칙</p>
+              <ol>
+                <li>같은 분류의 이미지가 두 개 이상이면 파일 이름 마지막에 숫자를 추가하여 구분한다 (올바른 예 : bu-dot1.gif, bu-dot2.jpg, bu-dot3.png)</li>
+                <li>형태-의미-상태 순서로 조합한다. (올바른 예 : btn-search-on.jpg)</li>
+                <li>임의로 축약하지 않는다.</li>
+                <li>영문 소문자를 사용한다.</li>
+                <li>숫자로 시작하지 않는다.</li>
+              </ol>
+              <h6>html 기본정의</h6>
+              <p class="coding-convention-title">★ 기본규칙(표준문법 사용)</p>
+              <ol>
+                <li>
+                  DTD를 제외한 모든 요소와 애트리뷰트는 소문자로 작성한다.
+                  <pre class="code-block"><code>잘못된 예 : &lt;SPAN Class="desc"&gt;간단한 설명&lt;/SPAN&gt;<br />올바른 예 : &lt;span class="desc"&gt;간단한 설명&lt;/span&gt;</code></pre>
+                </li>
+                <li>
+                  DTD 선언 앞에 주석, 공백, 줄바꿈, 문자 등의 내용이 없어야 한다.
+                  <pre class="code-block"><code>잘못된 예 :<br />&lt;!-- Made by 3 --&gt;<br />&lt;!DOCTYPE html&gt;<br />올바른 예 :<br />&lt;!DOCTYPE html&gt;<br />&lt;!-- Made by 3 --&gt;</code></pre>
+                </li>
+                <li>&lt;p&gt; 태그 안에는 &lt;p&gt;, &lt;div&gt;, &lt;ul&gt; 등 다른 블록 요소가 들어갈 수 없다. (display : inline 속성을 적용해도 소용없음)</li>
+                <li>&lt;p&gt; 태그는 문단을 구분하는 용도로만 사용하고 영역을 구분하는 용도로 사용할 수 없다.</li>
+                <li>&lt;a&gt; 태그 안에는 &lt;a&gt; 태그가 들어갈 수 없다.</li>
+                <li>&lt;form&gt; 태그 안에는 &lt;form&gt; 태그가 들어갈 수 없다.</li>
+                <li>&lt;label&gt; 태그 안에는 &lt;label&gt; 태그가 들어갈 수 없다.</li>
+                <li>&lt;button&gt; 태그 안에는 &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;, &lt;label&gt;, &lt;button&gt;, &lt;form&gt;, &lt;fieldset&gt; 태그가 들어갈 수 없다.</li>
+                <li>
+                  태그의 중첩에 유의한다.
+                  <pre class="code-block"><code>잘못된 예 : &lt;em&gt;&lt;strong&gt;내용&lt;/em&gt;&lt;/strong&gt;<br />올바른 예 : &lt;em&gt;&lt;strong&gt;내용&lt;/strong&gt;&lt;/em&gt;</code></pre>
+                </li>
+                <li>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;에 &lt;label&gt; 을 작성할 수 없을 경우 title을 작성해야 한다. (웹 접근성 관련 지침)</li>
+                <li>종료 태그가 필요한 요소는 반드시 종료 태그를 선언한다.</li>
+                <li>태그 사용 등 관련 오류의 체크를 위해 반드시 페이지 완료 전에 체크해야 한다.</li>
+              </ol>
+              <p class="coding-convention-title">★ 들여쓰기</p>
+              <ol>
+                <li>앞은 탭(1탭=2스페이스)으로 들여쓰고 그 이외 부분은 1 스페이스로 한다.</li>
+              </ol>
+              <p class="coding-convention-title">★ 반응형 규칙</p>
+              <ol>
+                <li>반응형 작업은 ‘모바일(first) → 태블릿 → 웹’ 순서로 작업한다.</li>
+                <li>
+                  반응형 breakpoint
+                  <pre class="code-block"><code>/* BreakPoint 중단점 정의 */<br />모바일 : ~ 640px, 테블릿 : 641px ~ 1024px, 데스크탑 : 1025px ~ <br />/* BreakPoint 사용자 속성 정의*/<br />--breakpoint-sm: 40rem;<br />--breakpoint-lg: 64rem;<br />--breakpoint-xl: 80rem;</code></pre>
+                </li>
+              </ol>
+            </div>
           </div>
           <div class="accordion-content">
             <button type="button" class="accordion-button" aria-expanded="false">
               <span>폴더 구조</span>
               <span><img class="arrow-icon" src="./src/assets/images/arrow-right.svg" alt="" /></span>
             </button>
-            <div class="content-wrapper dropdown" hidden></div>
+            <div class="content-wrapper dropdown" hidden>
+              <h6>폴더 구조 정의</h6>
+              <ol>
+                <li>
+                  public 정적 파일
+                  <pre class="code-block">- fonts 폴더<br />- favicon 폴더</pre>
+                </li>
+                <li>
+                  src 동적 파일
+                  <pre class="code-block">- assets 폴더 -> 이미지 파일<br />- components 폴더 -> 컴포넌트<br />- pages 폴더 -> 페이지</pre>
+                </li>
+              </ol>
+              <h6>폴더 구조 규칙</h6>
+              <ol>
+                <li>컴포넌트 파일은 src/components 폴더 하위에 생성하며 `component-메뉴명(컴포넌트명).html`으로 네이밍한다.</li>
+                <li>페이지 파일은 src/pages 폴더 하위에 생성하며 페이지명으로 네이밍한다.</li>
+              </ol>
+              <pre class="code-block project-folder">
+                <img src="./src/assets/images/index-page/folder.svg" alt="폴더" />UI-PROJECT-TEAM3<br />
+                ├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> public<br />
+                │&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> favicon<br />
+                │&nbsp;&nbsp;&nbsp;&nbsp;└─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> font<br />
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> woff2<br />
+                │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 📋 pretendardvariable.css<br />
+                └─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> src<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> assets<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> images<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> common<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 a11y.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 base.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 index.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 reset.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└─ 📋 theme.css<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> components<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> common<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> CustomerService<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> findstore<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> itemlist<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> login<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> product-detail<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> ...<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> page<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> js<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img src="./src/assets/images/index-page/folder.svg" alt="폴더" /> style<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ ...<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 📋 main.html<br />
+              </pre>
+            </div>
           </div>
         </div>
       </section>
