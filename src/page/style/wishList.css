@@ -85,7 +85,7 @@
 .small {
   margin: 0;
   position: relative;
-  font-weight: 400;
+  font-weight: 400 !important;
   margin-block-start: 0.75rem;
   margin-block-end: 1.5rem;
 
@@ -143,23 +143,48 @@
   position: relative;
 }
 
-.edit-button {
-  display: block;
+.toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 36px;
   margin: 0;
   cursor: pointer;
+  border: 1px solid var(--light-gray);
+  background-color: #fff;
+  color: #000;
+  border-radius: 30px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.complete-button {
-  display: none;
-  margin: 0;
-  cursor: pointer;
+/* 기본 상태 - "수정" 텍스트 */
+.toggle-button::after {
+  content: '수정';
+}
+
+/* 호버 효과 */
+.toggle-button:hover {
+  background-color: whitesmoke;
+}
+
+/* 체크박스가 체크된 상태 - "완료" 텍스트와 검은 배경 */
+#edit-mode-checkbox:checked ~ .title-box .toggle-button {
   border: none;
   background-color: var(--black);
   color: var(--white);
+}
 
-  &:hover {
-    opacity: 0.8;
-  }
+#edit-mode-checkbox:checked ~ .title-box .toggle-button::after {
+  content: '완료';
+}
+
+#edit-mode-checkbox:checked ~ .title-box .toggle-button:hover {
+  opacity: 0.8;
+  background-color: var(--black);
 }
 
 #edit-mode-checkbox {
@@ -168,20 +193,8 @@
   pointer-events: none;
 }
 
-#edit-mode-checkbox:checked ~ .title-box .edit-button {
-  display: none;
-}
-
-#edit-mode-checkbox:checked ~ .title-box .complete-button {
-  display: block;
-}
-
 #edit-mode-checkbox:checked ~ .product-wrapper .heart-button {
   display: none;
-}
-
-#edit-mode-checkbox:checked ~ .product-wrapper .exit-button {
-  display: block;
 }
 
 #edit-mode-checkbox:checked ~ .product-wrapper .exit-button {
