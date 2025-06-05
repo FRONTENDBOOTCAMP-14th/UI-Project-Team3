@@ -8,7 +8,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: url('../src/assets/images/index-page/bgimg.png') no-repeat center / cover;
+    background: url('../src/assets/images/index-page/index-bg.avif') no-repeat center / cover;
     opacity: 0;
     animation: fadeInBg 4s forwards;
     z-index: -10;
