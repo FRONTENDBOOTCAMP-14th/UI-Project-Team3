@@ -15,7 +15,6 @@
     <script type="module" src="../components/common/js/layout.js"></script>
   </head>
   <body>
-    <header id="header"></header>
     <a href="../../index.html">메인 페이지 이동</a>
     <br />
     <h1>나이키 상품 컴포넌트</h1>
@@ -57,6 +56,30 @@
 
       <button class="button midum" type="button" aria-label="장바구니">장바구니에 추가</button>
     </div>
+
+    <figure class="item-card">
+      <picture>
+        <source srcset="./../assets/images/air-force-1.avif" type="image/avif" />
+        <img src="./../assets/images/air-force-1.avif" alt="나이키 에어 포스 1 '07" />
+      </picture>
+
+      <figcaption class="product-info-box">
+        <div class="product-info">
+          <h3 class="product-name">나이키 에어 포스 1 '07</h3>
+          <p class="product-category">남성 신발</p>
+        </div>
+        <data class="product-price" value="139,000">139,000 원</data>
+      </figcaption>
+
+      <!-- 버튼 마크업 -->
+      <button class="button midum" type="button" aria-label="장바구니">장바구니에 추가</button>
+      <button type="button" class="heart-button">
+        <picture>
+          <source class="heart-icon" srcset="./../assets/images/wish-heart.avif" type="image/avif" />
+          <img class="heart-icon" src="./../assets/images/wish-heart.avif" alt="찜 하기" />
+        </picture>
+      </button>
+    </figure>
     <hr />
 
     <!-- 위시리스트에 x버튼이 들어간 상품 컴포넌트 -->
@@ -83,6 +106,5 @@
         </picture>
       </button>
     </div>
-    <footer id="footer"></footer>
   </body>
 </html>
