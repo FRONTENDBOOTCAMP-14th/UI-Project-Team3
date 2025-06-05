@@ -1,8 +1,86 @@
-# 코딩 컨벤션 (HTML/CSS)
+# UI Project Team3 삼위일체
 
----
+멋쟁이사자처럼 14기 3팀 삼위일체 입니다.
 
-## 코딩 컨벤션을 사용해야하는 이유?
+## 프로젝트 개요
+
+나이키 공식 웹사이트를 클론 코딩하여 UI 디자인 및 인터랙션을 구현한 프로젝트 입니다.<br/>반응형 웹사이트 제작 및 컴포넌트 개발 연습을 위해 제작 되었습니다.
+
+## 배포 사이트
+
+[삼위일체 바로가기](https://trinity-team3.netlify.app/)
+
+## 팀원 소개
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/JYJ7435"><img src="./src/assets/images/index-page/youngju.avif" width="130" height="130" style="border-radius: 50%;" alt=""/><br /><sub><b> GitHub </b></a></td>
+      <td align="center"><a href="https://github.com/namil66"><img src="./src/assets/images/index-page/Namil.avif" width="130" height="130" style="border-radius: 50%;" alt=""/><br /><sub><b> GitHub </b></a></td>
+      <td align="center"><a href="https://github.com/beomwon"><img src="./src/assets/images/index-page/leebeomwon.avif" width="130" height="130" style="border-radius: 50%;" alt=""/><br /><sub><b> GitHub </b></a></td>
+      <td align="center"><a href="https://github.com/jeongeunsung"><img src="./src/assets/images/index-page/sungjeongeun.avif" width="130" style="border-radius: 50%;" height="130" alt=""/><br /><sub><b> GitHub </b></a></td>
+      <td align="center"><a href="https://github.com/hana12051"><img src="./src/assets/images/index-page/Sunhyeon_Jo.avif" width="130" height="130" style="border-radius: 50%;" alt=""/><br /><sub><b> GitHub </b></a></td>
+    </tr>
+    <tr>
+      <td align="center">장영주</td>
+      <td align="center">신남일</td>
+      <td align="center">이범원</td>
+      <td align="center">성정은</td>
+      <td align="center">조선현</td>
+    </tr>
+  </tbody>
+</table>
+
+### 역할 및 구현 페이지
+
+- **장영주** : ItemList, CS-Service, FindStore, Header
+- **신남일** : WishList
+- **이범원** : Main
+- **성정은** : ProductDetail, Footer
+- **조선현** : SignIn, SignUp
+
+## 기술 스택
+
+- 버전 관리: ![Git](https://img.shields.io/badge/Git-F05032style=flat&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+- 협업 도구: ![Notion](https://img.shields.io/badge/Notion-000000?style=flat&logo=notion&logoColor=white) ![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white)
+- 패키지 매니저: ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)
+- 프론트엔드 개발: ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+- 개발 도구: ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)
+
+## 파일 구조
+
+<img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" />UI-PROJECT-TEAM3<br />
+├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> public<br />
+│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> favicon<br />
+│&nbsp;&nbsp;&nbsp;&nbsp;└─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> font<br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> woff2<br />
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 📋 pretendardvariable.css<br />
+└─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> src<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> assets<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> images<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> common<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 a11y.css<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 base.css<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 index.css<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ 📋 reset.css<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└─ 📋 theme.css<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> components<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> common<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> CustomerService<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> findstore<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> itemlist<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> login<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> product-detail<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> ...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> page<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> js<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ <img width="20" heght="20" align="center" src="./src/assets/images/index-page/folder.svg" alt="폴더" /> style<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ ...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 📋 main.html<br />
+
+## 코딩 컨벤션 (HTML/CSS)
+
+### 코딩 컨벤션을 사용해야하는 이유?
 
 누구나 쉽게 코드를 이해할 수 있어서 협업하기 편해지며 여러 사람이 작업해도 한 사람이 짠 것처럼 일관성 있게 코드를 작성할 수 있다.
 규칙을 지키면 실수나 혼동을 줄이고, 디버깅이 쉬워진다. 시간이 지나도 코드를 고치거나 개선하기가 쉬워지며, Prettier나 formatting 같은 툴이 잘 작동해서 생산성이 올라간다.
@@ -134,3 +212,12 @@ CSS는 들여쓰기를 허용하지 않는다.
 ## 반응형 규칙
 
 1. 반응형 작업은 ‘모바일(first) → 태블릿 → 웹’ 순서로 작업한다.
+
+2.
+
+```
+  /* BreakPoint */
+  --breakpoint-sm: 40rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+```
