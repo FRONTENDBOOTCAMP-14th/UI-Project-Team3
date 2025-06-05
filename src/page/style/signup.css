@@ -80,7 +80,7 @@
 }
 
 .input-field::placeholder {
-  color: var(--gray);
+  color: var(--dark-gray);
 }
 
 .password-hint-list {
