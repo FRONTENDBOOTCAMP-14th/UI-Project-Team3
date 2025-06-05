@@ -47,6 +47,7 @@ export function headerFunction() {
   const mbSearchBtn = document.querySelector('.mb-search-btn');
   const readOnlyGroup = document.querySelector('.read-only-group');
   const inputPopBtn = document.querySelector('.cancel-btn');
+  const readOnlyInput = document.querySelector('.readonly-input');
 
   let removeFocusTrap = null;
 
@@ -173,7 +174,6 @@ export function headerFunction() {
 
   mbSearchBtn.addEventListener('click', () => {
     searchPopupOpenFn();
-    navbar.classList.add('overflow');
   });
 
   inputPopBtn.addEventListener('click', (e) => {
@@ -184,7 +184,13 @@ export function headerFunction() {
   readOnlyGroup.addEventListener('click', (e) => {
     e.preventDefault();
     searchPopupOpenFn();
-    navbar.classList.add('overflow');
+  });
+
+  readOnlyInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      searchPopupOpenFn();
+    }
   });
 
   searchInput.addEventListener('input', () => {
