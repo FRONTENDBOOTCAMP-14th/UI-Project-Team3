@@ -17,7 +17,7 @@
       left: 1rem;
 
       transform: translateY(-50%);
-      color: var(--gray);
+      color: var(--dark-gray);
       font-size: var(--text-2xs);
       transition: all 300ms ease;
     }
@@ -34,7 +34,7 @@
   left: 3.1875rem;
   z-index: 500;
   transform: translateY(-50%);
-  color: var(--gray);
+  color: var(--dark-gray);
   pointer-events: none;
   background-color: transparent;
   transition: all 300ms ease;
@@ -62,11 +62,15 @@
   background-position: center;
   pointer-events: none;
   opacity: 0.5;
+
+  &:focus-visible {
+    outline: 0;
+  }
 }
 
 .store-number {
   margin-block-start: 1.75rem;
-  color: var(--gray);
+  color: var(--dark-gray);
   font-size: var(--text-xs);
 }
 
@@ -81,7 +85,7 @@
     }
 
     & p {
-      color: var(--gray);
+      color: var(--dark-gray);
 
       & strong {
         color: var(--red);
