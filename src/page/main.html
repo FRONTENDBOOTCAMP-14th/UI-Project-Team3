@@ -294,83 +294,57 @@
     </main>
     <footer id="footer"></footer>
     <script>
-      /* ───────── 기본 셋업 ───────── */
+      /* ── 기본 셋업 ─────────────────────────────── */
       const track = document.querySelector('.carousel-track');
       const prevBtn = document.querySelector('.carousel-btn.prev');
       const nextBtn = document.querySelector('.carousel-btn.next');
-      const status = document.getElementById('carousel-status');
 
-      /* 카드 폭 계산 */
+      const slides = Array.from(track.children); // 실제 카드만
+      let idx = 0; // 현재 인덱스 (0부터)
+
+      /* 카드 한 칸 폭 계산 */
       let CARD_W = 0;
       function calcCardW() {
-        const first = track.querySelector('.carousel-slide');
         const gap = parseFloat(getComputedStyle(track).gap) || 0;
-        CARD_W = first.offsetWidth + gap;
+        CARD_W = slides[0].offsetWidth + gap;
       }
       window.addEventListener('load', calcCardW);
       window.addEventListener('resize', calcCardW);
 
-      /* 앞·뒤 클론 1개씩만 추가 */
-      const real = Array.from(track.children);
-      track.append(real[0].cloneNode(true)); // 맨 뒤
-      track.prepend(real.at(-1).cloneNode(true)); // 맨 앞
+      /* 이동 + 버튼 표시 제어 ----------------------------------- */
+      function updateButtons() {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const nearStart = track.scrollLeft <= 1; // ±1 px 오차 허용
+        const nearEnd = maxScroll - track.scrollLeft <= 1;
 
-      /* 인덱스 & 이동 함수 */
-      let i = 1; // 0 = 앞쪽 클론, 1 = 첫 실카드
-      function jumpTo(n) {
-        track.scrollLeft = n * CARD_W;
+        prevBtn.style.display = nearStart ? 'none' : '';
+        nextBtn.style.display = nearEnd ? 'none' : '';
       }
+
       function goTo(n) {
-        track.scrollTo({ left: n * CARD_W, behavior: 'smooth' });
+        idx = Math.max(0, Math.min(slides.length - 1, n)); // 0 ~ 끝 인덱스
+        track.scrollTo({ left: idx * CARD_W, behavior: 'smooth' });
+        updateButtons();
       }
 
-      /* 초기 정렬 */
+      /* 초기 위치 & 버튼 상태 */
       window.addEventListener('load', () => {
-        jumpTo(i);
-        status.textContent = `${i} / ${real.length}`;
+        track.scrollLeft = 0;
+        updateButtons();
       });
 
-      /* 중복 클릭 방지용 플래그 */
-      let animating = false;
-      function lock() {
-        animating = true;
-        setTimeout(() => (animating = false), 350);
-      } // 350ms ≈ 기본 smooth 시간
+      /* 화살표 이벤트 ------------------------------------------ */
+      prevBtn.addEventListener('click', () => goTo(idx - 1));
+      nextBtn.addEventListener('click', () => goTo(idx + 1));
 
-      /* ─────── 이전/다음 버튼 ─────── */
-      prevBtn.addEventListener('click', () => {
-        if (animating) return;
-        i--;
-        goTo(i);
-        lock();
-      });
-
-      nextBtn.addEventListener('click', () => {
-        if (animating) return;
-        i++;
-        goTo(i);
-        lock();
-      });
-
-      /* ─────── 스크롤 종료 후 위치 보정 ─────── */
-      let debounceT;
+      /* 스와이프(수동 스크롤) 시에도 버튼 상태 동기화 ---------- */
+      let t;
       track.addEventListener('scroll', () => {
-        clearTimeout(debounceT);
-        debounceT = setTimeout(() => {
-          const max = real.length;
-          i = Math.round(track.scrollLeft / CARD_W);
-
-          if (i === 0) {
-            // 앞쪽 클론 → 마지막 실카드
-            i = max;
-            jumpTo(i);
-          } else if (i === max + 1) {
-            // 뒤쪽 클론 → 첫 실카드
-            i = 1;
-            jumpTo(i);
-          }
-          status.textContent = `${i} / ${max}`;
-        }, 60); // 디바운스
+        clearTimeout(t);
+        t = setTimeout(() => {
+          idx = Math.round(track.scrollLeft / CARD_W);
+          updateButtons();
+        }, 60); // 스크롤 디바운스
       });
     </script>
   </body>

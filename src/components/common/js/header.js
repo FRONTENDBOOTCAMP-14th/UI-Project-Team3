@@ -41,9 +41,30 @@ export function headerFunction() {
   const navbar = document.getElementById('navbar');
   const sideFilterMenu = document.querySelector('.itemlist-filter-wrapper');
   const storelist = document.querySelector('.list-wrapper');
+  const searchInput = document.getElementById('search-input');
+  const searchPopup = document.querySelector('.search-popup');
+  const searchForm = document.querySelector('.search-form');
+  const mbSearchBtn = document.querySelector('.mb-search-btn');
+  const readOnlyGroup = document.querySelector('.read-only-group');
+  const inputPopBtn = document.querySelector('.cancel-btn');
+  const readOnlyInput = document.querySelector('.readonly-input');
+
   let removeFocusTrap = null;
 
   if (!openBtn || !sideMenu || !overlay || !closeBtn || !navbar) return;
+
+  // 네브바 검색창 함수
+  const searchPopupOpenFn = () => {
+    document.body.classList.add('scrollhidden');
+    searchForm.classList.add('active');
+    readOnlyGroup.classList.add('hidden');
+    searchPopup.classList.add('active');
+    overlay.classList.add('active');
+
+    removeFocusTrap = keyFocus(searchPopup);
+    const firstFocusable = searchPopup.querySelector('input');
+    firstFocusable?.focus();
+  };
 
   // 메뉴 열기
   openBtn.addEventListener('click', () => {
@@ -63,6 +84,11 @@ export function headerFunction() {
     overlay.classList.remove('active');
     document.body.classList.remove('scrollhidden');
     navbar.classList.remove('overflow');
+    searchPopup.classList.remove('active');
+
+    searchPopup.classList.remove('active');
+    searchForm.classList.remove('active');
+    readOnlyGroup.classList.remove('hidden');
 
     // 포커스 트랩 해제
     if (removeFocusTrap) {
@@ -132,7 +158,10 @@ export function headerFunction() {
     const isInsdeStoreList = storelist?.contains(event.target);
     const isInsideFilter = sideFilterMenu?.contains(event.target);
     const isInsideAside = sideMenu?.classList.contains('active') && sideMenu.contains(event.target);
-    if (isInsideFilter || isInsideAside || isInsdeStoreList) return;
+    const isInsideOverlay = overlay?.classList.contains('active') && overlay.contains(event.target);
+    const isInsideSearchPopup = searchForm?.classList.contains('active') && searchForm.contains(event.target);
+
+    if (isInsideFilter || isInsideAside || isInsdeStoreList || isInsideOverlay || isInsideSearchPopup) return;
 
     if (event.deltaY > 0) {
       navbar.classList.add('hidden');
@@ -140,6 +169,39 @@ export function headerFunction() {
       navbar.classList.remove('hidden');
     }
   };
+
+  // 검색창
+
+  mbSearchBtn.addEventListener('click', () => {
+    searchPopupOpenFn();
+  });
+
+  inputPopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeMenu();
+  });
+
+  readOnlyGroup.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchPopupOpenFn();
+  });
+
+  readOnlyInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      searchPopupOpenFn();
+    }
+  });
+
+  searchInput.addEventListener('input', () => {
+    searchPopup.classList.add('active');
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
+  });
 
   // 윈도우 리사이즈 대응
   window.addEventListener('resize', () => {

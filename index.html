@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>삼위일체/Team3 UI Project</title>
-    <link rel="icon" href="/vite.svg" />
+    <link rel="icon" href="./src/assets/images/index-favicon.svg" />
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
     <link rel="preload" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="/font/pretendardvariable.css" />
@@ -77,7 +77,7 @@
               <div class="grid-item">
                 <picture>
                   <source srcset="./src/assets/images/index-page/youngju.avif" type="image/avif" />
-                  <img src="./src/assets/images/index-page/youngju.jpg" alt="장영주 이미지" />
+                  <img src="./src/assets/images/index-page/youngju.jpg" alt="장영주" />
                 </picture>
                 <span>장영주</span>
                 <span>Team Leader</span>
@@ -87,7 +87,7 @@
               <div class="grid-item">
                 <picture>
                   <source srcset="./src/assets/images/index-page/Namil.avif" type="image/avif" />
-                  <img src="./src/assets/images/index-page/Namil.jpg" alt="신남일 이미지" />
+                  <img src="./src/assets/images/index-page/Namil.jpg" alt="신남일" />
                 </picture>
                 <span>신남일</span>
                 <span>Team Member</span>
@@ -97,7 +97,7 @@
               <div class="grid-item">
                 <picture>
                   <source srcset="./src/assets/images/index-page/leebeomwon.avif" type="image/avif" />
-                  <img src="./src/assets/images/index-page/leebeomwon.png" alt=" 이미지" />
+                  <img src="./src/assets/images/index-page/leebeomwon.png" alt="이범원" />
                 </picture>
                 <span>이범원</span>
                 <span>Team Member</span>
@@ -107,7 +107,7 @@
               <div class="grid-item">
                 <picture>
                   <source srcset="./src/assets/images/index-page/sungjeongeun.avif" type="image/avif" />
-                  <img src="./src/assets/images/index-page/sungjeongeun.jpg" alt=" 이미지" />
+                  <img src="./src/assets/images/index-page/sungjeongeun.jpg" alt="성정은" />
                 </picture>
                 <span>성정은</span>
                 <span>Team Member</span>
@@ -117,7 +117,7 @@
               <div class="grid-item">
                 <picture>
                   <source srcset="./src/assets/images/index-page/Sunhyeon_Jo.avif" type="image/avif" />
-                  <img src="./src/assets/images/index-page/Sunhyeon_Jo.jpg" alt=" 이미지" />
+                  <img src="./src/assets/images/index-page/Sunhyeon_Jo.jpg" alt="조선현" />
                 </picture>
                 <span>조선현</span>
                 <span>담당 페이지 : SignIn, SignUp</span>
@@ -428,7 +428,7 @@
               <div>
                 <dt>&dot; 위시리스트 컴포넌트</dt>
                 <dd>
-                  <a href="./src/components/wishtitle.html" target="_blank" rel="noopenner noreferrer">위시리스트 컴포넌트 바로가기</a>
+                  <a href="./src/components/itemcard.html" target="_blank" rel="noopenner noreferrer">위시리스트 컴포넌트 바로가기</a>
                 </dd>
               </div>
               <div>
@@ -511,6 +511,36 @@
               </div>
             </div>
           </details>
+          <details class="improvement-detail">
+            <summary>반응형 웹 그리드 재배치</summary>
+            <div class="improvement-item">
+              <div class="before">
+                <h5>수정 전</h5>
+                <img src="./src/assets/images/index-page/wishlist-before.png" alt="수정 전 이미지" />
+                <p>레이아웃을 flex로 배치</p>
+              </div>
+              <div class="after">
+                <h5>수정 후</h5>
+                <img src="./src/assets/images/index-page/wishlist-after.png" alt="수정 후 이미지" />
+                <p>반응형에 유연한 grid로 재배치</p>
+              </div>
+            </div>
+          </details>
+          <details class="improvement-detail">
+            <summary>적합한 시멘틱 태그로 구현</summary>
+            <div class="improvement-item">
+              <div class="before">
+                <h5>수정 전</h5>
+                <img src="./src/assets/images/index-page/wishlist-before02.png" alt="수정 전 이미지" />
+                <p>이미지 요소를 단순한 박스 레이아웃으로 잡아 시각적으로만 구분되며 의미전달이 부족함</p>
+              </div>
+              <div class="after">
+                <h5>수정 후</h5>
+                <img src="./src/assets/images/index-page/wishlist-after02.png" alt="수정 후 이미지" />
+                <p>이미지 요소에 적합한 시멘틱 태그 figure, figcaption을 이용하여 콘텐츠의 구조적 가독성과 접근성을 높여 의미있는 콘텐츠라는 걸 표현함</p>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -539,30 +569,53 @@
             <details class="retrospect-item">
               <summary>신남일</summary>
               <p class="retrospect-text">
-                이번 프로젝트를 하면서 단기간에 많이 성장했다고 느꼈습니다. CSS 파트에서 복습을 많이 못 했기 때문에 아는 내용이 너무 적어서 "내가 맡은 페이지를 잘 만들 수 있을까?"라는 생각이 프로젝트 기간 내내 떠나지 않았습니다. 다행히 컴포넌트를 만드는 데까지는 별 문제 없었고 중간중간 pr을 올리면 다른 조원 분이 코드를 확인해서 "이런이런 부분은 변경해달라"고 피드백을 열심히 해 주신 덕에 몰랐거나 까먹었던 내용도 알게 돼서 너무 좋았습니다. 코드도 많이 망쳐보고, AI한테 물어봐서 속성에 대해 공부까지
-                하게되니 지금보면 그렇게 오래걸릴 작업이 아니었지만 생각보다 시간을 많이 쏟아서 페이지 완성이 늦어지는 바람에 회고록을 쓰는 지금까지도 조원들에게 미안한 마음이 듭니다. 앞에서 많이 성장했다고 이야기하긴 했으나 아직도 깃을 완벽하게 다루지도, 다른 컴포넌트를 잘 만들 지도 못하지만 이번 프로젝트가 저에겐 새로운 영감과 폭발적인 성장을 이뤄준 것 같아 만족스럽습니다. 끝까지 기다려준 조원분들에게 감사의 인사를 전하며 회고록을 마무리 짓습니다.
+                이번 프로젝트를 하면서 단기간에 많이 성장했다고 느꼈습니다. CSS 파트에서 복습을 많이 못 했기 때문에 아는 내용이 너무 적어서 "내가 맡은 페이지를 잘 만들 수 있을까?"라는 생각이 프로젝트 기간 내내 떠나지 않았습니다.
+                <br /><br />
+                다행히 컴포넌트를 만드는 데까지는 별 문제 없었고 중간중간 pr을 올리면 다른 조원 분이 코드를 확인해서 "이런이런 부분은 변경해달라"고 피드백을 열심히 해 주신 덕에 몰랐거나 까먹었던 내용도 알게 돼서 너무 좋았습니다. 코드도 많이 망쳐보고, AI한테 물어봐서 속성에 대해 공부까지 하게되니 지금보면 그렇게 오래걸릴 작업이 아니었지만 생각보다 시간을 많이 쏟아서 페이지 완성이 늦어지는 바람에 회고록을 쓰는 지금까지도 조원들에게 미안한 마음이 듭니다.
+                <br /><br />
+                앞에서 많이 성장했다고 이야기하긴 했으나 아직도 깃을 완벽하게 다루지도, 다른 컴포넌트를 잘 만들 지도 못하지만 이번 프로젝트가 저에겐 새로운 영감과 폭발적인 성장을 이뤄준 것 같아 만족스럽습니다.
+                <br /><br />
+                끝까지 기다려준 조원분들에게 감사의 인사를 전하며 회고록을 마무리 짓습니다.
               </p>
             </details>
 
             <!-- 이범원 -->
             <details class="retrospect-item">
               <summary>이범원</summary>
-              <p class="retrospect-text">이곳에 이범원님의 회고 내용이 들어갑니다.</p>
+              <p class="retrospect-text">
+                이번 프론트-UI 프로젝트는 HTML·CSS조차 서툰 상태에서 컴포넌트화, 반응형 레이아웃, 접근성까지 챙기며 시행착오를 거듭한 경험의 연속이었습니다.
+                <br /><br />
+                일본 일정으로 뒷 부분의 중요한 수업을 놓친 뒤 프로젝트에 참여하려다 보니 더 힘들었고, 시간이 빠듯했습니다.
+                <br /><br />
+                초반에는 “시간이 없더라도 AI 없이 해 보자”는 고집으로 Flexbox와 Grid 문서를 뒤적이며 시간을 허비하며 초안은 완성했지만, 마지막엔 시간을 맞추기 위해 팀원들과 GPT의 도움을 받아 부족한 부분을 채우며 완성했습니다. <br /><br />
+                커밋 메시지와 브랜치 네이밍이 팀 전체의 약속임을 실감하며 협업 커뮤니케이션의 중요성을 깨달았고, 팀원들이 합심해서 일을 나누니 늦을 것 같던 일정도 맞출 수 있게 되었습니다. 특히 부족한 저를 끝까지 챙겨 주신 팀원들의 배려와 실질적인 도움 덕분에 프로젝트를 무사히 마칠 수 있었기에 감사드립니다.
+              </p>
             </details>
 
             <!-- 장영주 -->
             <details class="retrospect-item">
               <summary>장영주</summary>
-              <p class="retrospect-text">이곳에 장영주님의 회고 내용이 들어갑니다.</p>
+              <p class="retrospect-text">
+                이번 UI프로젝트는 개인이 아닌 팀원들과 협업을 진행하는 프로젝트 였기에 기대도 됐었고 다른 팀원들에게 민폐만 끼치지 말자는 생각으로 시작하였으며 함께 성장해보고 싶은 의지도 컸습니다. <br /><br />
+                하지만 프로젝트 첫날 팀 회의 과정에서 PM을 맡게되어 프로젝트가 끝 날 때까지 큰 부담감을 느낀거 같습니다.
+                <br /><br />
+                협업 프로젝트는 처음이라 Branch 관리, 업무 분담, 일정 조율등 전반적으로 PM의 역할을 충분히 수행 하지 못한 것 같아 아쉬움이 큰 것 같습니다. 특히 협업 툴을 능숙하게 다루지 못한 점, 팀원들의 업무 진행 상황, 문서 정리, 일정이 마무리 되어가는 시점에는 의사소통 문제 등 부족한 부분이 많았던 것 같습니다.
+                <br /><br />
+                그럼에도 끝까지 프로젝트를 완수할 수 있도록 도와주신 팀원분들께 감사의 말씀을 전하고 싶습니다. 이번 경험을 통해 협업에 있어 소통과 역할 분담의 중요성을 느낄 수 있었고, 아쉬움이 컸던 만큼 다음 프로젝트에서는 더 나은 모습으로 임할 수 있을거라 생각합니다.
+              </p>
             </details>
 
             <!-- 조선현 -->
             <details class="retrospect-item">
               <summary>조선현</summary>
               <p class="retrospect-text">
-                UI 프로젝트를 시작하면서, 사실 기대보다는 "내가 잘할 수 있을까?" 하는 걱정이 더 컸습니다. 저는 비전공자이고 이 부트캠프에서 처음으로 코딩을 배우기 시작했기 때문에, "적어도 팀의 발목을 잡지 말자. 실수하지 말자."라는 마음으로 시작했습니다. 팀원이 정해지고 첫 회의를 할 때, 무엇을 어떻게 해야 할지 몰라 굉장히 긴장됐고, 감도 잘 잡히지 않았습니다. 그런데 경험이 있는 팀원 분들께서 분위기를 잘 이끌어주셨고, 그 덕분에 저도 용기를 내어 **“로그인과 회원가입 페이지를 하고 싶습니다.”**라고
-                말할 수 있었습니다. 그때부터 나이키의 로그인 및 회원가입 페이지를 맡게 되었고, "누군가가 나를 믿고 페이지를 맡겨준다"는 감각은 더 이상 무섭지 않고, 오히려 두근거리고 설레는 일이라는 걸 알게 되었습니다. 작업을 진행하면서 가장 크게 느낀 점은, 기술적으로 잘 만드는 것만큼이나 협업이 정말 중요하다는 것이었습니다. UI나 기술적인 부분은 강사님이나 책, 혹은 AI(ChatGPT)에게도 배울 수 있지만, "협업"은 이런 팀 프로젝트 안에서만 제대로 겪어보고 배울 수 있는 소중한 실습이라는 걸 알게
-                되었습니다. 서로의 코드를 확인해주고, 브랜치 충돌이 날 때 알려주고 도와주는 과정 자체가 저에겐 아주 좋은 경험이었고, “혼자 하는 개발”이 아닌 “같이 만드는 결과물”이라는 걸 실감할 수 있었습니다
+                UI 프로젝트를 시작하면서, 사실 기대보다는 "내가 잘할 수 있을까?" 하는 걱정이 더 컸습니다. 저는 비전공자이고 이 부트캠프에서 처음으로 코딩을 배우기 시작했기 때문에, "적어도 팀의 발목을 잡지 말자. 실수하지 말자."라는 마음으로 시작했습니다.
+                <br /><br />
+                팀원이 정해지고 첫 회의를 할 때, 무엇을 어떻게 해야 할지 몰라 굉장히 긴장됐고, 감도 잘 잡히지 않았습니다. 그런데 경험이 있는 팀원 분들께서 분위기를 잘 이끌어주셨고, 그 덕분에 저도 용기를 내어 **“로그인과 회원가입 페이지를 하고 싶습니다.”**라고 말할 수 있었습니다. 그때부터 나이키의 로그인 및 회원가입 페이지를 맡게 되었고, "누군가가 나를 믿고 페이지를 맡겨준다"는 감각은 더 이상 무섭지 않고, 오히려 두근거리고 설레는 일이라는 걸 알게 되었습니다.
+                <br /><br />
+                작업을 진행하면서 가장 크게 느낀 점은, 기술적으로 잘 만드는 것만큼이나 협업이 정말 중요하다는 것이었습니다. UI나 기술적인 부분은 강사님이나 책, 혹은 AI(ChatGPT)에게도 배울 수 있지만, "협업"은 이런 팀 프로젝트 안에서만 제대로 겪어보고 배울 수 있는 소중한 실습이라는 걸 알게 되었습니다.
+                <br /><br />
+                서로의 코드를 확인해주고, 브랜치 충돌이 날 때 알려주고 도와주는 과정 자체가 저에겐 아주 좋은 경험이었고, “혼자 하는 개발”이 아닌 “같이 만드는 결과물”이라는 걸 실감할 수 있었습니다
               </p>
             </details>
           </div>

@@ -12,7 +12,7 @@
     <!-- 모바일 메뉴 -->
     <ul class="icons-list mobile-menu">
       <li class="icon">
-        <button type="button" aria-label="상품 검색 버튼">
+        <button class="mb-search-btn" type="button" aria-label="상품 검색 버튼">
           <img src="../../../src/assets/images/search.svg" alt="" />
         </button>
       </li>
@@ -146,23 +146,44 @@
         </ul>
       </li>
     </ul>
+    <!-- 검색 폼 -->
+    <form class="search-form" role="search" aria-label="상품 검색">
+      <div class="read-only-group">
+        <button type="button" aria-label="검색" class="search-input-btn00">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.962 16.296C12.916 16.9224 11.7192 17.2521 10.5 17.25C9.6134 17.2512 8.7353 17.0772 7.91618 16.7379C7.09707 16.3986 6.35308 15.9008 5.72701 15.273C5.09924 14.6469 4.6014 13.9029 4.26212 13.0838C3.92284 12.2647 3.7488 11.3866 3.75001 10.5C3.75001 8.63601 4.50501 6.94901 5.72701 5.72701C6.35308 5.09924 7.09707 4.6014 7.91618 4.26212C8.7353 3.92284 9.6134 3.7488 10.5 3.75001C12.364 3.75001 14.051 4.50501 15.273 5.72701C15.9008 6.35308 16.3986 7.09707 16.7379 7.91618C17.0772 8.7353 17.2512 9.6134 17.25 10.5C17.2517 11.6974 16.9338 12.8736 16.329 13.907C15.812 14.789 15.895 15.895 16.618 16.618L20.471 20.471"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+          </svg>
+        </button>
+        <input id="readonly-input" class="readonly-input" type="search" placeholder="검색" tabindex="0" readonly aria-label="검색창 열기" />
+      </div>
+      <div class="search-popup">
+        <div class="search-popup-inner">
+          <div aria-hidden="true">
+            <img src="../../../src/assets/images/nikelogo.svg" alt="나이키 로고" />
+          </div>
+          <div class="search-input-wrapper">
+            <button type="submit" aria-label="검색" class="search-input-btn01">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.962 16.296C12.916 16.9224 11.7192 17.2521 10.5 17.25C9.6134 17.2512 8.7353 17.0772 7.91618 16.7379C7.09707 16.3986 6.35308 15.9008 5.72701 15.273C5.09924 14.6469 4.6014 13.9029 4.26212 13.0838C3.92284 12.2647 3.7488 11.3866 3.75001 10.5C3.75001 8.63601 4.50501 6.94901 5.72701 5.72701C6.35308 5.09924 7.09707 4.6014 7.91618 4.26212C8.7353 3.92284 9.6134 3.7488 10.5 3.75001C12.364 3.75001 14.051 4.50501 15.273 5.72701C15.9008 6.35308 16.3986 7.09707 16.7379 7.91618C17.0772 8.7353 17.2512 9.6134 17.25 10.5C17.2517 11.6974 16.9338 12.8736 16.329 13.907C15.812 14.789 15.895 15.895 16.618 16.618L20.471 20.471"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </button>
+            <label for="search-input" class="sr-only"> 상품 검색 하기 </label>
+            <input id="search-input" class="search-input" type="search" placeholder="검색" />
+          </div>
+          <button class="cancel-btn" type="button">취소</button>
+        </div>
+      </div>
+    </form>
 
     <ul class="icons-list desk-menu">
-      <li>
-        <form class="search-form" role="search" aria-label="상품 검색">
-          <button type="submit" aria-label="검색">
-            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.962 16.296C12.916 16.9224 11.7192 17.2521 10.5 17.25C9.6134 17.2512 8.7353 17.0772 7.91618 16.7379C7.09707 16.3986 6.35308 15.9008 5.72701 15.273C5.09924 14.6469 4.6014 13.9029 4.26212 13.0838C3.92284 12.2647 3.7488 11.3866 3.75001 10.5C3.75001 8.63601 4.50501 6.94901 5.72701 5.72701C6.35308 5.09924 7.09707 4.6014 7.91618 4.26212C8.7353 3.92284 9.6134 3.7488 10.5 3.75001C12.364 3.75001 14.051 4.50501 15.273 5.72701C15.9008 6.35308 16.3986 7.09707 16.7379 7.91618C17.0772 8.7353 17.2512 9.6134 17.25 10.5C17.2517 11.6974 16.9338 12.8736 16.329 13.907C15.812 14.789 15.895 15.895 16.618 16.618L20.471 20.471"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
-            </svg>
-          </button>
-          <label for="search-input" class="sr-only"> 상품 검색 하기 </label>
-          <input id="search-input" type="search" placeholder="검색" />
-        </form>
-      </li>
       <li class="icon">
         <a href="../../../src/page/wishList.html" aria-label="위시리스트로 이동">
           <img src="../../../src/assets/images/heart.svg" alt="" />
@@ -175,7 +196,6 @@
       </li>
     </ul>
   </div>
-
   <!-- 사이드 메뉴 -->
   <aside class="aside-menu">
     <div class="div-button">

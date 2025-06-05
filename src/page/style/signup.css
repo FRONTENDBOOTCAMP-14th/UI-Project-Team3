@@ -80,7 +80,7 @@
 }
 
 .input-field::placeholder {
-  color: var(--gray);
+  color: var(--dark-gray);
 }
 
 .password-hint-list {
@@ -97,7 +97,7 @@
 }
 
 .password-hint-list .invalid {
-  color: var(--gray);
+  color: var(--dark-gray);
 }
 
 .password-hint-list .icon {
@@ -109,7 +109,7 @@
   align-items: flex-start;
   gap: 0.5rem;
   font-size: var(--text-xs);
-  color: var(--gray);
+  color: var(--dark-gray);
   line-height: 1.6;
 }
 
