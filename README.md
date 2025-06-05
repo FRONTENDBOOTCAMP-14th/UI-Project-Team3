@@ -33,11 +33,11 @@
 
 ### 역할 및 구현 페이지
 
-- **장영주** : ItemList, CS-Service, FindStore, Header
-- **신남일** : WishList
-- **이범원** : Main
-- **성정은** : ProductDetail, Footer
-- **조선현** : SignIn, SignUp
+- **장영주**(TeamLeader) : ItemList, CS-Service, FindStore, Header
+- **신남일**(TeamMember) : WishList
+- **이범원**(TeamMember) : Main
+- **성정은**(TeamMember) : ProductDetail, Footer
+- **조선현**(TeamMember) : SignIn, SignUp
 
 ## 기술 스택
 
